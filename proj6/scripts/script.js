@@ -36,21 +36,21 @@ const sliderNext = (k) => {
 }
 
 document.querySelector(".services__back").onclick = function() {
-  sliderBack(2);
+  sliderNext(2);
 }
 
 document.querySelector(".services__next").onclick = function() {
-  sliderNext(2);
+  sliderBack(2);
 }
 
 if(screen.width <= 900){
   reverse(document.querySelector(".services__direction"));
   document.querySelector(".services__back").onclick = function() {
-    sliderBack(1);
+    sliderNext(1);
   }
 
   document.querySelector(".services__next").onclick = function() {
-    sliderNext(1);
+    sliderBack(1);
   }
 }
 
