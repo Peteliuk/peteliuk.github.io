@@ -1,0 +1,86 @@
+body {
+	font-family: 'Arial';
+	color: #fff;
+}
+
+canvas {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.head-content {
+	z-index: 2;
+	position: relative;
+	color: #fff;
+	font-size: 40px;
+	margin: 20%;
+	font-weight: bold;
+	height: 100vh;
+}
+
+.head-content__name {
+	font-size: 80px;
+	margin-bottom: 0px;
+}
+
+.head-content__vacation {
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+
+.about-me {
+	z-index: 3;
+	position: relative;
+	padding: 0px 5%;
+	font-size: 30px;
+	height: 100vh;
+}
+
+.about-me__header {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+
+.my-projects {
+	z-index: 3;
+	position: relative;
+	padding: 0px 5%;
+	font-size: 30px;
+	height: 100vh;
+}
+
+.my-projects__header {
+	text-transform: uppercase;
+	font-size: 40px;
+	font-weight: bold;
+}
+
+.alert {
+	z-index: 3;
+	position: fixed;
+	top: 0;
+	font-weight: bold;
+}
+
+.links {
+	z-index: 3;
+	position: fixed;
+	top: 0;
+	right: 0;
+	font-weight: bold;
+	padding-right: 20px;
+	font-size: 20px;
+}
+
+.fab {
+	color: gray;
+}
+
+.fab:hover {
+	color: #fff;
+}
