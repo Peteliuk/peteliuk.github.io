@@ -10,77 +10,65 @@ canvas {
 	z-index: 1;
 }
 
-.head-content {
+.header {
 	z-index: 2;
 	position: relative;
 	color: #fff;
 	font-size: 40px;
-	margin: 20%;
+	line-height: 80px;
+	margin: 230px 20%;
 	font-weight: bold;
-	height: 100vh;
 }
 
-.head-content__name {
+.header__title {
 	font-size: 80px;
 	margin-bottom: 0px;
 }
 
-.head-content__vacation {
+.header__subtitle {
 	text-transform: uppercase;
-	margin-top: 10px;
+	letter-spacing: .2em;
 }
 
-
-.about-me {
-	z-index: 3;
-	position: relative;
-	padding: 0px 5%;
-	font-size: 30px;
-	height: 100vh;
+.navbar {
+	background: rgba(0,0,0,.2);
+	border-top: 3px solid rgba(200, 10, 10, .8);
 }
 
-.about-me__header {
-	text-transform: uppercase;
-	font-size: 40px;
-	font-weight: bold;
-}
-
-
-.my-projects {
-	z-index: 3;
-	position: relative;
-	padding: 0px 5%;
-	font-size: 30px;
-	height: 100vh;
-}
-
-.my-projects__header {
-	text-transform: uppercase;
-	font-size: 40px;
-	font-weight: bold;
-}
-
-.alert {
-	z-index: 3;
-	position: fixed;
-	top: 0;
-	font-weight: bold;
-}
-
-.links {
-	z-index: 3;
-	position: fixed;
-	top: 0;
-	right: 0;
-	font-weight: bold;
-	padding-right: 20px;
+.nav-item {
+	color: #fff;
 	font-size: 20px;
+	height: fit-content;
+	margin: auto 3px;
+}
+
+.dropdown, .nav-link {
+	color: #fff;
+}
+
+.dropdown:hover, .nav-link:hover {
+	color: rgba(200, 10, 10, .8);
 }
 
 .fab {
-	color: gray;
+	color: #fff;
 }
 
 .fab:hover {
-	color: #fff;
+	color: rgba(200, 10, 10, .8);
+}
+
+
+.dropdown-menu {
+	border: 1px solid rgba(200, 10, 10, .8) !important;
+	margin-left: 10% !important;
+	background: #000 !important;
+}
+
+.dropdown-item {
+	color: #fff !important;
+}
+
+.dropdown-item:hover {
+	color: #000 !important;
 }

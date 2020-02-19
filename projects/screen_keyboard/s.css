@@ -1,0 +1,184 @@
+.keyboard, .keyboard_ua, .keyboard_symb {
+	border: 2px solid slategrey;
+	padding: 2px;
+	position: relative;
+	width: 573px;
+	margin: 50px 105px;
+	background-color: #000;
+}
+
+.keyboard_ua {
+	width: 677px;
+}
+
+.keyboard_symb {
+	width: 677px;
+	margin: auto auto;
+}
+
+.slider {
+	width: 755px;
+	height: 316px;
+	margin: auto auto;
+	overflow: hidden;
+}
+
+.polosa1 {
+	width: 3000px;
+	position: relative;
+	left: 0;
+	transition: all ease 1s;
+}
+
+.polosa1 div{
+	float: left;
+}
+
+.polosa div{
+	float: top;
+}
+
+.polosa {
+	height: 1400px;
+	position: relative;
+	top: 0;
+	transition: all ease 1s;
+}
+
+.polosa1::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.polosa::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.line::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.key, .key_ua, .key_symb, .caps, .space, .space_ua, .space_symb, .lang, .symb, .enter, .backspace {
+	float: left;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 36px;
+	margin: 1px;
+	padding: 4px;
+	border: 1px solid slategrey;
+	background: #4b4b4a;
+	font-family: Arial Black;
+	color: #fbfaf7;
+}
+
+
+.space {
+	width: 560px;
+}
+
+.space_ua {
+	width: 612px;
+}
+
+.space_symb {
+	width: 664px;
+}
+
+.key_ua:hover {
+	background: #f30101;
+}
+
+.key_symb:hover {
+	background: #f30101;
+}
+
+.space:hover {
+	background: #f30101;
+}
+
+.space_ua:hover {
+	background: #f30101;
+}
+
+.space_symb:hover {
+	background: #f30101;
+}
+
+.backspace:hover {
+	background: #f30101;
+}
+
+.lang:hover {
+	background: #f30101;
+}
+
+.caps:hover {
+	background: #f30101;
+}
+
+.symb:hover {
+	background: #f30101;
+}
+
+.enter:hover {
+	background: #f30101;
+}
+
+.key:hover {
+	background: #f30101;
+}
+
+.backspace_img {
+	padding-top: 5px;
+}
+
+.symb_img {
+	padding-top: 5px;
+}
+
+.enter_img {
+	padding-top: 11px;
+}
+
+.lang_img {
+	padding-top: 3px;
+}
+
+.backspace {
+	background-color: #696969;
+}
+
+.symb {
+	background-color: #696969;
+}
+
+.enter {
+	background-color: #696969;
+}
+
+.lang {
+	background-color: #696969;
+}
+
+.caps {
+	background-color: #696969;
+}
+
+.field {
+	margin: 20px auto;
+	width: 300px;
+}
+
+.text {
+	width: 300px;
+}
+
+.active {
+	background-color: #c50101;
+}
