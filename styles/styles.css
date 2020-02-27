@@ -35,6 +35,10 @@ canvas {
 	border-top: 3px solid rgba(200, 10, 10, .8);
 }
 
+.navbar-brand {
+	cursor: pointer;
+}
+
 .nav-item {
 	color: #fff;
 	font-size: 20px;
@@ -56,6 +60,7 @@ canvas {
 
 .fab:hover {
 	color: rgba(200, 10, 10, .8);
+	text-decoration: none;
 }
 
 
@@ -71,4 +76,14 @@ canvas {
 
 .dropdown-item:hover {
 	color: #000 !important;
+}
+
+.modal-content {
+	border: 1px solid rgba(200, 10, 10, .8) !important;
+	background: #000 !important;
+	color: #fff !important;
+}
+
+.close {
+	color: #fff !important;
 }
