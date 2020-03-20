@@ -1,0 +1,190 @@
+[
+    {
+        "key": "group_5e730fc83c77b",
+        "title": "Companies",
+        "fields": [
+            {
+                "key": "field_5e73155e7dfd4",
+                "label": "Company name",
+                "name": "c_name",
+                "type": "text",
+                "instructions": "Company name",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Input name here......",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e73158b7dfd5",
+                "label": "Company logo",
+                "name": "c_logo",
+                "type": "image",
+                "instructions": "Logo size must be 40x40px and under 2MB. If no company logo, it will display painted block.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": 40,
+                "min_height": 40,
+                "min_size": "",
+                "max_width": 40,
+                "max_height": 40,
+                "max_size": 2,
+                "mime_types": "jpg, png, gif"
+            },
+            {
+                "key": "field_5e7316537dfd6",
+                "label": "Company website",
+                "name": "c_website",
+                "type": "url",
+                "instructions": "Company website, must start with http or https",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Input url here....."
+            },
+            {
+                "key": "field_5e7316bd7dfd7",
+                "label": "Company games",
+                "name": "c_games",
+                "type": "checkbox",
+                "instructions": "Type of sport games",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "Sport": "Sport",
+                    "Esport": "Esport"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [
+                    "Sport"
+                ],
+                "layout": "horizontal",
+                "toggle": 1,
+                "return_format": "value"
+            },
+            {
+                "key": "field_5e7317257dfd8",
+                "label": "Company num",
+                "name": "c_num",
+                "type": "text",
+                "instructions": "Num",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "9.52",
+                "placeholder": "Input num here.....",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "top_rated_companies"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": "Top rated companies"
+    },
+    {
+        "key": "group_5e7226a9c5bcc",
+        "title": "Home Page Content",
+        "fields": [
+            {
+                "key": "field_5e7226d16a0da",
+                "label": "Table Shortcode",
+                "name": "table_shortcode",
+                "type": "text",
+                "instructions": "Insert your table shortcode to display it on da page",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "[peteliuk table]",
+                "placeholder": "[peteliuk table]",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5e72272e6a0db",
+                "label": "Content under table",
+                "name": "under_table",
+                "type": "wysiwyg",
+                "instructions": "Content what will be displayed underr table",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "basic",
+                "media_upload": 0,
+                "delay": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "26"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": "Setups metaboxes for home page"
+    }
+]
