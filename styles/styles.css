@@ -12,11 +12,12 @@ canvas {
 
 .header {
 	z-index: 2;
+	width: fit-content;
 	position: relative;
 	color: #fff;
 	font-size: 40px;
 	line-height: 80px;
-	margin: 230px 20%;
+	margin: 230px auto;
 	font-weight: bold;
 }
 
@@ -86,4 +87,46 @@ canvas {
 
 .close {
 	color: #fff !important;
+}
+
+@media screen and (min-width: 1400px) {
+	.header {
+		font-size: 60px;
+	}
+
+	.header__title {
+		font-size: 120px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.show {
+		display: flex;
+	}
+
+	.navbar-nav {
+		display: -webkit-box !important;
+	}
+
+	.nav-item:first-child {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.header__title {
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 520px){
+	.header__title {
+		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 425px){
+	.header {
+		font-size: 30px;
+	}
 }
