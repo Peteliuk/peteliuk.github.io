@@ -63,37 +63,11 @@
                 "placeholder": "Input url here....."
             },
             {
-                "key": "field_5e7316bd7dfd7",
-                "label": "Company games",
-                "name": "c_games",
-                "type": "checkbox",
-                "instructions": "Type of sport games",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "choices": {
-                    "Sport": "Sport",
-                    "Esport": "Esport"
-                },
-                "allow_custom": 0,
-                "save_custom": 0,
-                "default_value": [
-                    "Sport"
-                ],
-                "layout": "horizontal",
-                "toggle": 1,
-                "return_format": "value"
-            },
-            {
                 "key": "field_5e7317257dfd8",
-                "label": "Company num",
-                "name": "c_num",
+                "label": "Company rate",
+                "name": "c_rate",
                 "type": "text",
-                "instructions": "Num",
+                "instructions": "Rate",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -102,7 +76,7 @@
                     "id": ""
                 },
                 "default_value": "9.52",
-                "placeholder": "Input num here.....",
+                "placeholder": "Input rate here.....",
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
