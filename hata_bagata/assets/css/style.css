@@ -1,0 +1,280 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Medium.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Medium.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Black.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Black.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Bold.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Bold.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-BlackItalic.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-BlackItalic.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-BlackItalic.ttf) format("truetype");
+  font-weight: 900;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Light.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Light.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-LightItalic.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-LightItalic.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-LightItalic.ttf) format("truetype");
+  font-weight: 300;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-BoldItalic.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-BoldItalic.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+  font-weight: 700;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-ThinItalic.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-ThinItalic.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-ThinItalic.ttf) format("truetype");
+  font-weight: 100;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-MediumItalic.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-MediumItalic.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-MediumItalic.ttf) format("truetype");
+  font-weight: 500;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Regular.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Regular.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Italic.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Italic.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Italic.ttf) format("truetype");
+  font-weight: 400;
+  font-style: italic
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/Roboto-Thin.woff2) format("woff2");
+  src: url(../fonts/Roboto/Roboto-Thin.woff) format("woff");
+  src: url(../fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: Roboto;
+  -webkit-transition: all 0.5s ease-in;
+  -moz-transition: all 0.5s ease-in;
+  -ms-transition: all 0.5s ease-in;
+  -o-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  z-index: 1001;
+}
+
+.preloader__row {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  margin-top: -35px;
+  margin-left: -35px;
+  text-align: center;
+  animation: preloader-rotate 2s infinite linear;
+}
+
+.preloader__item {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  background-color: #ba1f90;
+  border-radius: 100%;
+  width: 35px;
+  height: 35px;
+  animation: preloader-bounce 2s infinite ease-in-out;
+}
+
+.preloader__item:last-child {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes preloader-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes preloader-bounce {
+
+  0%,
+  100% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
+/* Content */
+.content {
+  padding: 130px 0 100px;
+  position: relative;
+}
+
+/*.content .content__logo {
+  margin: 0 auto;
+  display: block;
+}*/
+
+.content .content__text {
+  font-size: 3em;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+}
+
+.content .content__dark {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,.8);
+}
+
+/* Footer */
+.footer {
+  background: rgba(0,0,0,.8);
+  padding: 48px 100px 10px 100px;
+}
+
+.footer .footer__content {
+  display: flex;
+}
+
+.footer .footer__logo {
+  display: block;
+  margin-left: auto;
+}
+
+.footer .contacts__text {
+  font-size: 25px;
+}
+
+.footer .contacts__phones {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1300px) {
+  .content .content__text {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content .content__text {
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .content .content__text {
+    font-size: 1.6em;
+  }
+
+  .footer {
+    padding: 15px 10%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .content .content__text {
+    font-size: 1.1em;
+  }
+
+  .footer .contacts__text {
+    font-size: 20px;
+  }
+
+  .footer .contacts__phones {
+    font-size: 15px;
+  }  
+
+  .footer__logo {
+    height: 150px;
+  }
+}
