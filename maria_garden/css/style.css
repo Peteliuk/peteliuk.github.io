@@ -85,8 +85,7 @@ h2, h3, section {
       position: absolute;
       top: -176px;
       z-index: -1;
-      color: #D3A153;
-      opacity: 0.08; }
+      color: #F9F3E9; }
   .about__subtitle {
     font-size: 22px;
     line-height: 27px;
@@ -97,13 +96,13 @@ h2, h3, section {
     font-size: 16.3606px;
     line-height: 20px;
     margin-top: 44px;
-    margin-bottom: 0;
+    margin-bottom: 220px;
     width: 56%; }
   .about__logo-wrapper {
     width: 180px;
     height: 180px;
     position: absolute;
-    right: 130px;
+    right: 7%;
     top: -110px;
     background-color: #fff;
     border-radius: 50%; }
@@ -123,9 +122,9 @@ h2, h3, section {
       .about__booking-container .booking__link--instagram {
         margin-right: 16px; }
       .about__booking-container .booking__link img:hover {
-        -webkit-filter: invert(0.3);
+        -webkit-filter: brightness(0.3);
         /* safari 6.0 - 9.0 */
-        filter: invert(0.3); }
+        filter: brightness(0.3); }
     .about__booking-container .booking__button {
       width: 276px;
       border: 2px solid #D3A153;
@@ -138,21 +137,20 @@ h2, h3, section {
       text-align: center;
       padding: 11px 0;
       margin-left: 33%;
-      transition: all ease .3s; }
+      transition: all ease .2s; }
       .about__booking-container .booking__button:hover {
-        background: #D3A153;
-        color: #fff;
-        border: 2px solid #fff;
-        outline: 2px solid #D3A153; }
+        -webkit-filter: brightness(0.3);
+        /* safari 6.0 - 9.0 */
+        filter: brightness(0.3); }
   .about__image {
     width: 30%;
-    height: 296px;
+    height: 15.4vw;
     position: absolute;
     right: 0;
     top: 150px; }
     .about__image-mask {
       width: 30%;
-      height: 296px;
+      height: 15.4vw;
       position: absolute;
       right: 30px;
       top: 174px;
@@ -250,12 +248,11 @@ h2, h3, section {
       text-decoration: none;
       color: #D3A153;
       padding: 11px 74px 11px 72px;
-      transition: all ease .3s; }
+      transition: all ease .2s; }
       .rooms__booking-container .booking__button:hover {
-        background: #D3A153;
-        color: #fff;
-        border: 2px solid #fff;
-        outline: 2px solid #D3A153; }
+        -webkit-filter: brightness(0.3);
+        /* safari 6.0 - 9.0 */
+        filter: brightness(0.3); }
   .rooms__gallery {
     position: absolute;
     top: 115px;
@@ -277,10 +274,10 @@ h2, h3, section {
         height: 100%; }
       .rooms__gallery .gallery__image-wrapper--large {
         width: 100%;
-        height: 391.89px; }
+        height: 20.41vw; }
       .rooms__gallery .gallery__image-wrapper--small {
         width: 47%;
-        height: 237.29px; }
+        height: 12.36vw; }
       .rooms__gallery .gallery__image-wrapper--alone {
         margin-left: auto; }
 
@@ -334,7 +331,7 @@ h2, h3, section {
           height: 18px;
           margin-right: 17px; }
         .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data {
-          width: 18%;
+          width: 130px;
           margin-top: -4px; }
           .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data .data__phone-number {
             margin: 0;
@@ -354,7 +351,7 @@ h2, h3, section {
           height: 18px;
           margin-right: 17px; }
         .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data {
-          width: 25%;
+          width: 250px;
           margin-top: -2px; }
           .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data .data__email {
             margin: 0;
@@ -410,7 +407,12 @@ h2, h3, section {
       font-size: 42.0816px;
       line-height: 53px;
       color: #F9F3E9;
-      text-decoration: none; }
+      text-decoration: none;
+      transition: all ease .2s; }
+      .footer__content .content__this-project-link:hover {
+        -webkit-filter: invert(0.3);
+        /* safari 6.0 - 9.0 */
+        filter: invert(0.3); }
     .footer__content .content__other-project-link {
       font-family: Ruslan Display;
       font-size: 30.3149px;
@@ -419,7 +421,12 @@ h2, h3, section {
       opacity: 0.8;
       text-decoration: none;
       color: #fff;
-      margin-top: 20px; }
+      margin-top: 20px;
+      transition: all ease .2s; }
+      .footer__content .content__other-project-link:hover {
+        -webkit-filter: invert(0.3);
+        /* safari 6.0 - 9.0 */
+        filter: invert(0.3); }
   .footer__join-team {
     margin-top: 44px;
     border-top: 2px solid rgba(255, 255, 255, 0.3);
@@ -465,11 +472,51 @@ h2, h3, section {
           text-transform: uppercase; }
 
 @media screen and (max-width: 1400px) {
-  .rooms__content {
-    padding-bottom: 20px; }
-  .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data {
-    width: 25%; }
-  .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data {
-    width: 45%; } }
+  .header {
+    padding: 64px 3% 0; }
+    .header__navigation--sticky {
+      padding: 35px 3%; }
+  .about {
+    padding: 69px 0 11px 3%; }
+    .about__booking-container {
+      padding-left: 3%; }
+    .about__logo-wrapper {
+      right: 3%; }
+  .rooms {
+    padding: 109px 4% 15px 3%;
+    margin-top: 200px; }
+    .rooms__title {
+      left: 3%; }
+    .rooms__content {
+      padding-bottom: 20px; }
+    .rooms__gallery {
+      right: 2%; }
+      .rooms__gallery .gallery__images {
+        margin-top: 30px; }
+    .rooms__booking-container {
+      padding: 40px 0 38px 3%; }
+  .contacts {
+    padding: 109px 3% 68px;
+    margin-top: 200px; }
+    .contacts__title {
+      left: 3%; }
+  .footer {
+    padding: 42px 3% 61px; } }
+
+@media screen and (max-width: 1140px) {
+  .header__navigation-menu .navigation-menu__item {
+    font-size: 16px; }
+  .about__title {
+    font-size: 85px; }
+  .about__booking-container .booking__button {
+    margin-left: 30%; }
+  .rooms__gallery .gallery__images {
+    margin-top: 40px; }
+  .rooms__under-content {
+    width: 100%; }
+    .rooms__under-content .under-content__room-switcher:nth-child(2n) {
+      margin-right: 53px; }
+  .footer__content .content__socials {
+    margin-right: 15%; } }
 
 /*# sourceMappingURL=style.css.map */
