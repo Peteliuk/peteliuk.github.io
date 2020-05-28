@@ -280,6 +280,8 @@ h2, h3, section {
         height: 12.36vw; }
       .rooms__gallery .gallery__image-wrapper--alone {
         margin-left: auto; }
+    .rooms__gallery .gallery__mask {
+      display: none; }
 
 .contacts {
   margin-top: 304px;
@@ -508,6 +510,8 @@ h2, h3, section {
     font-size: 16px; }
   .about__title {
     font-size: 85px; }
+    .about__title--section-title {
+      top: -161px; }
   .about__booking-container .booking__button {
     margin-left: 30%; }
   .rooms__gallery .gallery__images {
@@ -518,5 +522,642 @@ h2, h3, section {
       margin-right: 53px; }
   .footer__content .content__socials {
     margin-right: 15%; } }
+
+@media screen and (max-width: 900px) {
+  .header {
+    padding: 46px 51px 0; }
+    .header__navigation-menu {
+      display: block; }
+      .header__navigation-menu .navigation-menu__item {
+        display: block;
+        margin-bottom: 31px;
+        font-size: 22px;
+        line-height: 25px; }
+        .header__navigation-menu .navigation-menu__item:last-child {
+          margin-bottom: 0; }
+        .header__navigation-menu .navigation-menu__item-link--active {
+          font-size: 31px;
+          line-height: 37px; }
+  .about {
+    padding: 63px 0 9px;
+    margin-top: 145px; }
+    .about__title {
+      font-size: 90.5649px;
+      line-height: 102px;
+      text-align: center;
+      display: block;
+      width: 100%;
+      margin: 20px auto 46px; }
+      .about__title--section-title {
+        font-size: 102px;
+        line-height: 21px;
+        left: 4.3%;
+        top: -50px;
+        z-index: 1;
+        text-align: left;
+        margin: 0;
+        width: 90%; }
+    .about__subtitle {
+      text-align: center;
+      font-size: 25px;
+      line-height: 28px; }
+    .about__logo-wrapper {
+      width: 175px;
+      height: 175px;
+      right: 7%; }
+      .about__logo-wrapper .about__logo {
+        position: relative;
+        z-index: 2; }
+    .about__image {
+      width: 100vw;
+      height: 60.5vw;
+      position: relative;
+      margin: 0;
+      top: 0; }
+      .about__image-mask {
+        width: 70.4%;
+        height: 66.2vw;
+        left: 0;
+        right: 0;
+        top: 249.5px;
+        margin: 0 auto; }
+    .about__description {
+      font-size: 33px;
+      line-height: 45px;
+      padding-left: 0;
+      margin-bottom: 32px;
+      width: 70.4%;
+      margin: 44px auto 32px; }
+    .about__booking-container {
+      position: relative;
+      bottom: 0;
+      padding: 21px 0; }
+      .about__booking-container .booking__link {
+        position: absolute;
+        bottom: -85px;
+        left: 41.08%;
+        width: 50px;
+        height: 50px;
+        margin: 0; }
+        .about__booking-container .booking__link img {
+          width: 100%;
+          height: 100%; }
+        .about__booking-container .booking__link--facebook {
+          left: 52.53%; }
+      .about__booking-container .booking__button {
+        margin: 0 auto;
+        font-size: 34px;
+        line-height: 50px;
+        padding: 10px 0;
+        width: 70.4%; }
+  .rooms {
+    padding: 50px 0 9px;
+    margin-top: 230px; }
+    .rooms__title {
+      font-size: 132.5649px;
+      line-height: 0px;
+      color: #D3A153;
+      opacity: 0.14;
+      left: 0;
+      right: 0;
+      top: -155px;
+      text-align: center; }
+    .rooms__over-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .rooms__over-content .over-content__decorative-image {
+        width: 40px;
+        height: 30px; }
+      .rooms__over-content .over-content__title {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.015em;
+        margin: 0;
+        width: calc(100% - 40px); }
+    .rooms__gallery {
+      position: relative;
+      top: 0;
+      width: 100%;
+      margin: 50px 0 35px;
+      right: 0; }
+      .rooms__gallery .gallery__image-wrapper {
+        border: 0; }
+        .rooms__gallery .gallery__image-wrapper--large {
+          height: 60.53vw; }
+        .rooms__gallery .gallery__image-wrapper--small {
+          width: 48%;
+          height: 30.93vw; }
+      .rooms__gallery .gallery__images {
+        margin-top: 20px;
+        position: relative;
+        z-index: 1; }
+      .rooms__gallery .gallery__mask {
+        display: block;
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 70.4%;
+        height: 99.47vw;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box; }
+    .rooms__content {
+      padding: 0;
+      border: 0; }
+      .rooms__content .content__info {
+        padding: 0;
+        width: 70.4%;
+        margin: 0 auto; }
+        .rooms__content .content__info-price {
+          font-size: 27.75px;
+          line-height: 25px;
+          color: #F9F3E9;
+          opacity: 0.61; }
+        .rooms__content .content__info-description {
+          font-size: 40px;
+          line-height: 50px;
+          margin-bottom: 30px; }
+    .rooms__under-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .rooms__under-content .under-content__room-switcher {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+        font-size: 34px;
+        line-height: 50px; }
+        .rooms__under-content .under-content__room-switcher:last-child {
+          margin-bottom: 0; }
+        .rooms__under-content .under-content__room-switcher:nth-child(2n) {
+          margin-right: 0; }
+    .rooms__booking-container {
+      position: relative;
+      bottom: 0;
+      margin-top: 26px;
+      padding: 22px 0 20px; }
+      .rooms__booking-container .booking__button {
+        display: block;
+        width: 70.4%;
+        margin: 0 auto;
+        font-size: 34px;
+        line-height: 50px;
+        padding: 11px 0;
+        text-align: center; }
+  .contacts {
+    padding: 50px 0 60px;
+    margin-top: 200px; }
+    .contacts__title {
+      font-size: 110px;
+      line-height: 25px;
+      color: #D3A153;
+      opacity: .14;
+      left: 0;
+      right: 0;
+      top: -48px;
+      text-align: center;
+      margin: 0; }
+    .contacts__over-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .contacts__over-content .over-content__decorative-image {
+        width: 40px;
+        height: 30px; }
+      .contacts__over-content .over-content__title {
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.015em;
+        margin: 0;
+        width: calc(100% - 40px); }
+    .contacts__content {
+      margin: 30px auto 40px;
+      width: 70.4%;
+      padding: 0;
+      display: block;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+      border-top: 2px solid rgba(255, 255, 255, 0.4); }
+      .contacts__content .content__contacts-blog {
+        width: 100%;
+        margin: 38px 0; }
+        .contacts__content .content__contacts-blog:first-child {
+          padding-bottom: 38px;
+          position: relative; }
+          .contacts__content .content__contacts-blog:first-child:before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 78px;
+            background-color: rgba(255, 255, 255, 0.4); }
+        .contacts__content .content__contacts-blog .contacts-blog__title {
+          font-size: 28px;
+          line-height: 30px; }
+        .contacts__content .content__contacts-blog .contacts-blog__phone-numbers {
+          margin-top: 30px; }
+          .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__logo {
+            width: 30px;
+            height: 30px; }
+          .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data {
+            width: 40%; }
+            .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data .data__phone-number {
+              font-size: 28px;
+              line-height: 30px; }
+        .contacts__content .content__contacts-blog .contacts-blog__emails {
+          margin-top: 10px; }
+          .contacts__content .content__contacts-blog .contacts-blog__emails .emails__logo {
+            width: 30px;
+            height: 30px; }
+          .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data {
+            width: 65%; }
+            .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data .data__email {
+              font-size: 28px;
+              line-height: 30px; }
+    .contacts__under-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .contacts__under-content .under-content__city {
+        font-size: 37px;
+        line-height: 50px; }
+      .contacts__under-content .under-content__street {
+        font-size: 28px;
+        line-height: 30px; }
+  .map {
+    height: 300px; }
+  .footer {
+    padding: 35px 0 54px; }
+    .footer__content {
+      display: block;
+      width: 70.4%;
+      margin: 0 auto; }
+      .footer__content .content__socials {
+        margin: 0 0 24px 0;
+        display: flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center; }
+        .footer__content .content__socials .socials__link img {
+          width: 50px;
+          height: 50px; }
+        .footer__content .content__socials .socials__link--instagram {
+          margin-right: 19px; }
+      .footer__content .content__this-project-link {
+        width: 100%;
+        font-size: 70.2686px;
+        line-height: 73px;
+        text-align: center;
+        display: block; }
+      .footer__content .content__other-project-link {
+        width: 100%;
+        font-size: 28px;
+        line-height: 30px;
+        text-align: center;
+        display: block; }
+    .footer__join-team {
+      width: 70.4%;
+      margin: 50px auto 0; }
+      .footer__join-team .join-team__title {
+        font-size: 28px;
+        line-height: 30px;
+        margin: 35px 0 32px; }
+      .footer__join-team .join-team__form {
+        display: block; }
+        .footer__join-team .join-team__form .form__input {
+          width: 100%;
+          margin: 0;
+          margin-bottom: 20px;
+          font-size: 28px;
+          line-height: 30px;
+          text-align: center;
+          padding: 10px 0;
+          border: 1px solid rgba(255, 255, 255, 0.5); }
+          .footer__join-team .join-team__form .form__input::placeholder {
+            color: rgba(255, 255, 255, 0.3); }
+          .footer__join-team .join-team__form .form__input--submit {
+            margin: 0;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.3); } }
+
+@media screen and (max-width: 750px) {
+  .header__navigation-menu .navigation-menu__item {
+    font-size: 20px;
+    line-height: 22px; }
+    .header__navigation-menu .navigation-menu__item-link--active {
+      font-size: 25.3333px;
+      line-height: 31px; }
+  .about {
+    margin-top: 100px; }
+    .about__title {
+      font-size: 60.5649px;
+      line-height: 77px; }
+      .about__title--section-title {
+        font-size: 67px;
+        line-height: 53px;
+        top: -50px; }
+    .about__subtitle {
+      font-size: 18px;
+      line-height: 17px; }
+    .about__logo-wrapper {
+      width: 120px;
+      height: 120px;
+      top: -66px;
+      right: 40px; }
+      .about__logo-wrapper .about__logo {
+        margin: 15px auto; }
+    .about__image {
+      width: 100vw;
+      height: 60.5vw; }
+      .about__image-mask {
+        width: 70.4%;
+        height: 71.2vw;
+        top: 203.5px; }
+    .about__description {
+      font-size: 18px;
+      line-height: 21px; }
+    .about__booking-container .booking__link {
+      bottom: -70px;
+      width: 40px;
+      height: 40px; }
+    .about__booking-container .booking__button {
+      font-size: 14px;
+      line-height: 17px; }
+  .rooms {
+    padding: 50px 0 9px;
+    margin-top: 177px; }
+    .rooms__title {
+      font-size: 70px;
+      line-height: 16px;
+      top: -89px; }
+    .rooms__over-content .over-content__decorative-image {
+      width: 21.44px;
+      height: 14.55px; }
+    .rooms__over-content .over-content__title {
+      font-size: 14px;
+      line-height: 17px;
+      width: calc(100% - 21.44px); }
+    .rooms__gallery .gallery__mask {
+      top: -20px;
+      width: 70.4%;
+      height: 100.47vw; }
+    .rooms__content .content__info-price {
+      font-size: 13.75px;
+      line-height: 17px; }
+    .rooms__content .content__info-description {
+      font-size: 14px;
+      line-height: 17px; }
+    .rooms__under-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .rooms__under-content .under-content__room-switcher {
+        font-size: 14px;
+        line-height: 17px; }
+    .rooms__booking-container .booking__button {
+      font-size: 14px;
+      line-height: 17px; }
+  .contacts {
+    padding: 50px 0 60px;
+    margin-top: 128px; }
+    .contacts__title {
+      font-size: 70px;
+      line-height: 49px;
+      top: -48px; }
+    .contacts__over-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .contacts__over-content .over-content__decorative-image {
+        width: 21.44px;
+        height: 14.55px; }
+      .contacts__over-content .over-content__title {
+        font-size: 14px;
+        line-height: 17px;
+        width: calc(100% - 21.44px); }
+    .contacts__content .content__contacts-blog .contacts-blog__title {
+      font-size: 14px;
+      line-height: 17px; }
+    .contacts__content .content__contacts-blog .contacts-blog__phone-numbers {
+      margin-top: 15px; }
+      .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__logo {
+        width: 17px;
+        height: 17px; }
+      .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data {
+        width: 120px; }
+        .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data .data__phone-number {
+          font-size: 14px;
+          line-height: 17px; }
+    .contacts__content .content__contacts-blog .contacts-blog__emails {
+      margin-top: 10px; }
+      .contacts__content .content__contacts-blog .contacts-blog__emails .emails__logo {
+        width: 17px;
+        height: 17px; }
+      .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data {
+        width: 120px; }
+        .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data .data__email {
+          font-size: 14px;
+          line-height: 17px; }
+    .contacts__under-content .under-content__city {
+      font-size: 22.4309px;
+      line-height: 28px; }
+    .contacts__under-content .under-content__street {
+      font-size: 13.4586px;
+      line-height: 17px; }
+  .map {
+    height: 300px; }
+  .footer {
+    padding: 35px 0 54px; }
+    .footer__content .content__socials .socials__link img {
+      width: 25px;
+      height: 25px; }
+    .footer__content .content__this-project-link {
+      font-size: 33.2686px;
+      line-height: 42px; }
+    .footer__content .content__other-project-link {
+      font-size: 15.6893px;
+      line-height: 17px; }
+    .footer__join-team .join-team__title {
+      font-size: 14px;
+      line-height: 15px; }
+    .footer__join-team .join-team__form .form__input {
+      font-size: 14px;
+      line-height: 17px; } }
+
+@media screen and (max-width: 500px) {
+  .header__navigation-menu .navigation-menu__item {
+    font-size: 14px;
+    line-height: 17px; }
+    .header__navigation-menu .navigation-menu__item-link--active {
+      font-size: 23.3333px;
+      line-height: 29px; }
+  .about {
+    margin-top: 67px; }
+    .about__title {
+      font-size: 49.5649px;
+      line-height: 62px; }
+      .about__title--section-title {
+        font-size: 50px;
+        line-height: 63px;
+        top: -50px; }
+    .about__subtitle {
+      font-size: 14px;
+      line-height: 17px; }
+    .about__logo-wrapper {
+      width: 92px;
+      height: 92px;
+      top: -66px;
+      right: 40px; }
+      .about__logo-wrapper .about__logo {
+        width: 56px;
+        height: 63px;
+        margin: 15px auto; }
+    .about__image {
+      width: 100vw;
+      height: 60.5vw; }
+      .about__image-mask {
+        width: 70.4%;
+        height: 71.2vw;
+        top: 203.5px; }
+    .about__description {
+      font-size: 14px;
+      line-height: 17px; }
+    .about__booking-container .booking__link {
+      bottom: -70px;
+      width: 25px;
+      height: 25px; }
+    .about__booking-container .booking__button {
+      font-size: 14px;
+      line-height: 17px; }
+  .rooms {
+    padding: 50px 0 9px;
+    margin-top: 177px; }
+    .rooms__title {
+      font-size: 50px;
+      line-height: 63px;
+      top: -89px; }
+    .rooms__over-content .over-content__decorative-image {
+      width: 21.44px;
+      height: 14.55px; }
+    .rooms__over-content .over-content__title {
+      font-size: 14px;
+      line-height: 17px;
+      width: calc(100% - 21.44px); }
+    .rooms__gallery .gallery__mask {
+      top: -20px;
+      width: 70.4%;
+      height: 107.47vw; }
+    .rooms__content .content__info-price {
+      font-size: 13.75px;
+      line-height: 17px; }
+    .rooms__content .content__info-description {
+      font-size: 14px;
+      line-height: 17px; }
+    .rooms__under-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .rooms__under-content .under-content__room-switcher {
+        font-size: 14px;
+        line-height: 17px; }
+    .rooms__booking-container .booking__button {
+      font-size: 14px;
+      line-height: 17px; }
+  .contacts {
+    padding: 50px 0 60px;
+    margin-top: 128px; }
+    .contacts__title {
+      font-size: 50px;
+      line-height: 63px;
+      top: -48px; }
+    .contacts__over-content {
+      width: 70.4%;
+      margin: 0 auto; }
+      .contacts__over-content .over-content__decorative-image {
+        width: 21.44px;
+        height: 14.55px; }
+      .contacts__over-content .over-content__title {
+        font-size: 14px;
+        line-height: 17px;
+        width: calc(100% - 21.44px); }
+    .contacts__content .content__contacts-blog .contacts-blog__title {
+      font-size: 14px;
+      line-height: 17px; }
+    .contacts__content .content__contacts-blog .contacts-blog__phone-numbers {
+      margin-top: 15px; }
+      .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__logo {
+        width: 17px;
+        height: 17px; }
+      .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data {
+        width: 120px; }
+        .contacts__content .content__contacts-blog .contacts-blog__phone-numbers .phone-numbers__data .data__phone-number {
+          font-size: 14px;
+          line-height: 17px; }
+    .contacts__content .content__contacts-blog .contacts-blog__emails {
+      margin-top: 10px; }
+      .contacts__content .content__contacts-blog .contacts-blog__emails .emails__logo {
+        width: 17px;
+        height: 17px; }
+      .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data {
+        width: 120px; }
+        .contacts__content .content__contacts-blog .contacts-blog__emails .emails__data .data__email {
+          font-size: 14px;
+          line-height: 17px; }
+    .contacts__under-content .under-content__city {
+      font-size: 22.4309px;
+      line-height: 28px; }
+    .contacts__under-content .under-content__street {
+      font-size: 13.4586px;
+      line-height: 17px; }
+  .map {
+    height: 300px; }
+  .footer {
+    padding: 35px 0 54px; }
+    .footer__content .content__socials .socials__link img {
+      width: 25px;
+      height: 25px; }
+    .footer__content .content__this-project-link {
+      font-size: 33.2686px;
+      line-height: 42px; }
+    .footer__content .content__other-project-link {
+      font-size: 15.6893px;
+      line-height: 17px; }
+    .footer__join-team .join-team__title {
+      font-size: 14px;
+      line-height: 15px; }
+    .footer__join-team .join-team__form .form__input {
+      font-size: 14px;
+      line-height: 17px; } }
+
+@media screen and (max-width: 370px) {
+  .about__title {
+    font-size: 43px; }
+  .about__description {
+    padding: 0;
+    margin: 44px auto 32px;
+    width: 80%; }
+  .about__image-mask {
+    width: 80%; }
+  .about__booking-container .booking__button {
+    width: 80%; }
+  .rooms__over-content {
+    width: 80%; }
+  .rooms__gallery .gallery__mask {
+    width: 80%; }
+  .rooms__content .content__info {
+    width: 80%; }
+  .rooms__under-content {
+    width: 80%; }
+  .rooms__booking-container .booking__button {
+    width: 80%;
+    padding: 11px 0;
+    text-align: center; }
+  .contacts__over-content {
+    width: 80%; }
+  .contacts__content {
+    width: 80%; }
+  .contacts__under-content {
+    width: 80%; }
+  .footer__content {
+    width: 80%; }
+  .footer__join-team {
+    width: 80%; } }
 
 /*# sourceMappingURL=style.css.map */

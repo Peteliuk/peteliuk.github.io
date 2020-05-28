@@ -121,7 +121,7 @@ $(document).ready(function(){
 	});
 
 	// Window on scroll
-	$(window).scroll(stickyNavbar);
+	//$(window).scroll(stickyNavbar);
 });
 
 function stickyNavbar(){
