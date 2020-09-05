@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Miniliga</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="author" content="CIT Lab">
+    <link rel="stylesheet" href="css/main.min.css">
+    <style>
+      body{
+          opacity: 1;
+          overflow-x: hidden;
+      }
+      html{
+          background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="line-sidebar">
+      <div class="burger-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.75 11.25H11.25V18.75H18.75V11.25Z" fill="#EDCFA4"/><path d="M7.49998 0H0V7.49998H7.49998V0Z" fill="#EDCFA4"/><path d="M18.75 22.5H11.25V30H18.75V22.5Z" fill="#EDCFA4"/><path d="M7.49998 11.25H0V18.75H7.49998V11.25Z" fill="#EDCFA4"/><path d="M7.49998 22.5H0V30H7.49998V22.5Z" fill="#EDCFA4"/><path d="M30 0H22.5V7.49998H30V0Z" fill="#EDCFA4"/><path d="M18.75 0H11.25V7.49998H18.75V0Z" fill="#EDCFA4"/><path d="M30 11.25H22.5V18.75H30V11.25Z" fill="#EDCFA4"/><path d="M30 22.5H22.5V30H30V22.5Z" fill="#EDCFA4"/></svg></div>
+      <div class="breadcrumbs">
+        <div class="breadcrumbs_rotated">
+          <span class="breadcrumbs__page">Головна</span>
+          <!-- <span class="breadcrumbs__table-info visible-text" data-table-type="first">Перша Ліга</span>
+          <span class="breadcrumbs__table-info" data-table-type="second">Друга Ліга</span> -->
+        </div>
+      </div>
+      <ul class="social-icons-list">
+        <li class="social-icons-list__item"><a href="#"><img src="img/instagram-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item"><a href="#"><img src="img/youtube-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item"><a href="#"><img src="img/mail-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item"><a href="#"><img src="img/phone-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item feedback-icon"><img src="img/feedback-icon.svg" alt="feedback icon"></li>
+      </ul>
+    </div>
+    <div class="header-wrapper">
+      <div class="header-row">
+        <header class="header">
+          <div class="header-inner">
+            <div class="logo">
+              <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202.44 311.12">
+                <defs>
+                  <style>
+                    .cls-1{fill:#806d54;}.cls-2{fill:#bfbfbf;}.cls-3{fill:none;stroke-width:12.66px;}.cls-3,.cls-4{stroke:#231f20;}.cls-3,.cls-4,.cls-7{stroke-miterlimit:10;}.cls-4,.cls-5{fill:#fff;}.cls-4{stroke-width:0.25px;}.cls-6{fill:#b4a285;}.cls-7{fill:#231f20;stroke:#404041;stroke-linecap:round;stroke-width:4.92px;}
+                  </style>
+                </defs>
+                <title>logopatriots_full_end</title>
+                <path class="cls-1" d="M103.81,229.15c-.35.12-.41.52,0,1.33Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-2" d="M105.61,315.32c-3.49-.52-9-3.44-10.64-4.33-11.22-6-37.13-24.31-42.09-65.85a241.5,241.5,0,0,0-29.66,8.72L4.94,260.54V37.07L32.52,48.91c6.28,2.67,38,17.73,44.3,51.3,1.21,6.47,2.63,17.45,3.89,28.21,1.3-9.18.82-14.62.64-16.12l-.06-.47,0-.47c-.07-1.43-1.93-35.33-4-51.86C74.77,40.1,84,24.72,92.17,15.23c3.89-4.53,11.06-9.15,11.37-9.34L106,4.31l2.46,1.59c.82.54,8.13,5.33,11.57,9.29,6.72,7.71,17.58,23.72,15,44.31-2.11,16.58-4,51.51-4,51.86l0,.47-.05.46a62,62,0,0,0,.66,16.63c1.28-10.92,2.73-22.15,4-28.71,6.29-33.57,38-48.6,44.24-51.27l27.63-11.87V260.54l-18.28-6.68a239.22,239.22,0,0,0-29.44-8.67c-5,41.43-30.79,59.71-42.07,65.79-.86.5-6,3.41-10.41,4.3l-.78.15Z" transform="translate(-4.94 -4.31)"/>
+                <path d="M202.84,181.62V44l-21.32,9.16c-5.91,2.51-35.69,16.64-41.56,47.94-2.32,12.38-5.47,42.1-6.63,53.41-5-15-8.4-30.93-7-42.72l0-.31,0-.31c0-.35,1.91-35.28,4.06-52.19,2.42-19-7.71-33.66-13.89-40.76C113.49,14.58,106,9.71,106,9.71s-6.88,4.4-10.39,8.48c-6.14,7.12-16.28,21.73-13.87,40.74,2.15,16.9,4,51.84,4.06,52.19l0,.31,0,.31c.4,3.25,1.48,17.84-6.85,42.75-1.16-11.29-4.32-41.05-6.64-53.44-5.87-31.3-35.65-45.43-41.63-48L9.48,44V181.62h0v72.43l12.19-4.45a243.79,243.79,0,0,1,35.23-10c3.14,42.51,28.4,61,40.26,67.37,0,0,6.15,3.38,9.11,3.82,3.93-.8,9.11-3.81,9.11-3.81,11.84-6.37,37.11-24.84,40.26-67.33a242.55,242.55,0,0,1,35,9.91l12.19,4.45V181.62Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-3" d="M75.82,229.49" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-3" d="M78.69,229.24" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-3" d="M125.83,190.68" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-4" d="M189.37,214.76" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-5" d="M147.41,192.11a6.64,6.64,0,0,0-4.7-1.42H131.84a5.9,5.9,0,0,0-4.32,1.35,4.83,4.83,0,0,0-1.34,3.6v25.21a7.68,7.68,0,0,0,.28,2.11,4.75,4.75,0,0,0,1,1.81,5.54,5.54,0,0,0,1.84,1.39,8.78,8.78,0,0,0,2.92.77L142.34,228a8.68,8.68,0,0,0,3.13-.13,4.92,4.92,0,0,0,2-1,3.85,3.85,0,0,0,1.08-1.71,6.88,6.88,0,0,0,.33-2.18V196A5.09,5.09,0,0,0,147.41,192.11Zm-7.72,26.4a1,1,0,0,1-.16.61c-.1.12-.33.16-.7.13l-3.32-.3a.72.72,0,0,1-.84-.85V199.76c0-.5.26-.75.78-.74h3.44a.71.71,0,0,1,.8.78Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-5" d="M59.37,190.69H49.59L41.37,233.9l9.51-2.32.7-5.31,5.7-.89.61,4.77,8.8-1.51Zm-6.85,28.67,1.94-15.78,1.93,15.18Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-5" d="M39.86,192.21a4.28,4.28,0,0,0-3.6-1.52H18.59l0,50.36,9.33-3.25V224.1l7.4-1.31a8.24,8.24,0,0,0,2.83-1,5.59,5.59,0,0,0,2.67-3.69,12.11,12.11,0,0,0,.24-2.47V196.23A6.36,6.36,0,0,0,39.86,192.21ZM33.08,214.3a1.56,1.56,0,0,1-.15.78c-.09.17-.32.27-.67.32l-4.37.6V199.07h4.42c.51,0,.77.27.77.88Z" transform="translate(-4.94 -4.31)"/>
+                <polygon class="cls-5" points="146.39 194.67 152.26 194.67 152.26 226.4 161.21 228.33 161.21 194.67 167.07 194.67 167.07 186.38 146.39 186.38 146.39 194.67"/>
+                <polygon class="cls-5" points="108.84 221.4 117.61 221.81 117.61 186.38 108.84 186.38 108.84 221.4"/>
+                <path class="cls-5" d="M192.66,211.89a6.25,6.25,0,0,0-3.2-1.47l-5.54-1.56c-1-.22-1.33-.84-1.33-1.29V200c0-.65.36-1,1.09-1h9.91l0-8.29H180a5.8,5.8,0,0,0-4.51,1.57,6,6,0,0,0-1.42,4.2v13.7a9.46,9.46,0,0,0,.39,2.64c.33,1.14,1.87,2.61,4.51,3.27l4.88,1.39a1.67,1.67,0,0,1,1.29,1.54v9.39c0,.61-.35.92-1,.92l-10-3v8.34l12.91,4c2.33.85,4.33-.76,5.32-1.79s1.48-2.76,1.48-5.22V215.51C193.77,213.83,193.66,212.84,192.66,211.89Z" transform="translate(-4.94 -4.31)"/>
+                <polygon class="cls-5" points="59.43 194.67 65.3 194.67 65.3 223.81 74.25 222.76 74.25 194.67 80.11 194.67 80.11 186.38 59.43 186.38 59.43 194.67"/>
+                <rect class="cls-5" x="65.29" y="198.93" width="8.95" height="11.23"/>
+                <path class="cls-6" d="M39.86,192.21s0,0,0,0l-2.91,2.91a2.79,2.79,0,0,1,.13,1.13v19.42a7.54,7.54,0,0,1-.16,1.64,1.73,1.73,0,0,1-.26.62,2,2,0,0,1-.58.5,4.34,4.34,0,0,1-1.47.47l-11.35,2v14.66l-4.69,5.48,9.33-3.25v0h0V224.1h0l7.4-1.31a8.24,8.24,0,0,0,2.83-1,5.59,5.59,0,0,0,2.67-3.69,12.11,12.11,0,0,0,.24-2.47V196.23A6.36,6.36,0,0,0,39.86,192.21Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M27.88,214.33l0-15.26h4.42a.65.65,0,0,1,.53.18l4.08-4.12a.71.71,0,0,0-.67-.46h-13v2.87h0v23.32L27.88,216Z" transform="translate(-4.94 -4.31)"/>
+                <polygon class="cls-6" points="76.17 190.52 69.77 190.52 69.77 194.08 69.77 194.08 69.77 223.27 74.25 222.77 74.25 194.67 80.11 194.67 80.11 190.52 80.11 186.38 76.17 190.52"/>
+                <polygon class="cls-6" points="59.43 194.67 65.29 194.67 69.77 190.52 63.37 190.52 59.43 194.67"/>
+                <polygon class="cls-6" points="113.22 190.51 113.22 218.55 108.84 221.4 117.67 221.84 117.69 186.38 113.22 190.51"/>
+                <polygon class="cls-6" points="163.13 190.52 156.73 190.52 156.73 194.67 156.73 194.67 156.73 224.25 152.28 226.39 161.21 228.33 161.21 194.67 167.07 194.67 167.07 190.52 167.07 186.38 163.13 190.52"/>
+                <polygon class="cls-6" points="146.39 194.67 152.25 194.67 156.73 190.52 150.33 190.52 146.39 194.67"/>
+                <polygon class="cls-6" points="42.79 218.85 47.66 215.01 49.51 199.27 51.45 190.71 47.57 190.63 42.79 218.85"/>
+                <polygon class="cls-6" points="61.75 224.33 54.43 186.38 51.45 190.71 56.02 217.14 42.75 219.06 41.8 224.6 36.43 229.59 45.93 227.27 46.66 221.95 52.34 221.07 56.03 217.15 56.86 221.96 52.95 225.84 61.75 224.33"/>
+                <path class="cls-6" d="M147.45,192.16l-3.26,3a2,2,0,0,0-1.14-.27H131.84a1.39,1.39,0,0,0-1.41,1.53v24.08a2.06,2.06,0,0,0,.46,1.36l3.88-3.22a1.06,1.06,0,0,1-.1-.49V199.76c0-.5.26-.75.78-.74h3.44a.75.75,0,0,1,.67.31l4.64-4.21a1.5,1.5,0,0,1,.47,1.32V222.1a1.64,1.64,0,0,1-1.87,1.67l-10.16-1.09a2.87,2.87,0,0,1-1.75-.87l-3.5,2.91,0,.05a5.54,5.54,0,0,0,1.84,1.39,8.78,8.78,0,0,0,2.92.77L142.34,228a8.68,8.68,0,0,0,3.13-.13,4.92,4.92,0,0,0,2-1,3.85,3.85,0,0,0,1.08-1.71,6.88,6.88,0,0,0,.33-2.18V196A5.09,5.09,0,0,0,147.45,192.16Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-4" d="M176.15,210.92" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M189.9,194.83l-9.17,0a2.26,2.26,0,0,0-2.41,2.5v12.45a2.26,2.26,0,0,0,.49,1.55L175.17,214a7.45,7.45,0,0,0,3.79,2.1l4.88,1.39a1.77,1.77,0,0,1,1,.64l4.37-3.24a1.23,1.23,0,0,0-.66-.47c-2.26-.63-7.73-2.19-8.66-2.46a2.29,2.29,0,0,1-1.05-.63l4.07-3a1.13,1.13,0,0,1-.29-.74V200c0-.65.36-1,1.09-1h9.91v-.13l.18.18v-8.28Z" transform="translate(-4.94 -4.31)"/>
+                <polygon class="cls-6" points="181.25 205.19 181.22 205.18 181.18 205.26 181.25 205.19"/>
+                <path class="cls-6" d="M189.19,214.87a1.64,1.64,0,0,1,.3,1c0,3.19,0,12,0,15.82,0,3.58-3.13,2.35-3.13,2.35l-8.77-2.61-3.55,3.24,12.91,4c2.33.85,4.33-.76,5.32-1.79s1.48-2.76,1.48-5.22V215.51c0-1.53-.1-2.49-.88-3.37Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-5" d="M100.65,225.67l9.07,0-3.37-11.55a4.87,4.87,0,0,0,3.37-4.89V195.6a4.68,4.68,0,0,0-1.41-3.57,6.4,6.4,0,0,0-4.48-1.33H87.16v35.65l8.82-.53V215.3l1.92-.17ZM96,199.07h4.3c.56,0,.85.26.85.78v5.87c0,.52-.29.8-.85.85l-4.3.37Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M96,199h4.3a.91.91,0,0,1,.64.21l4.27-4.15a1.23,1.23,0,0,0-1-.32H91.47v16.76l4.5-4.66Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M106.35,214.08a4.87,4.87,0,0,0,3.37-4.89V195.6a4.71,4.71,0,0,0-1.4-3.56l-3.14,3.06a.92.92,0,0,1,.23.64v13.14c0,.91-.6,1.55-2,1.67l-12,1.06v.25h0v10.91l-4.35,3.57,8.89-.53,0,0V215.31l1.94-.18,3.18-4.37,1.09,4h0l2.09,7.72h0l-3.57,3.21,9-.05Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-3" d="M140,154.17" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-7" d="M201.22,251" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M63.45,102.72c-5.38-28.67-35.14-40.8-36.3-41.31l-8.6-3.69V181.59h.06v0h36.3l0-5.27a15.5,15.5,0,0,1,15.48-15.48v-1.1S66.24,117.63,63.45,102.72ZM41.72,166.85h-8.4V83.18c5.57,5,13.76,12.39,15.61,22.26C51.63,119.87,54,139,55.3,150.17A30.3,30.3,0,0,0,41.72,166.85Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-1" d="M33.41,83.57,26,70.5l0,103.72,7.47-7.37Zm30,19.15c-5.38-28.67-35.14-40.8-36.3-41.31l-8.6-3.69,7.39,12.36c5.7,2.93,26.25,12.7,30.25,34,2.1,11.23,5.07,38.9,6.31,50.82a22.91,22.91,0,0,0-14.84,19.32l0,0-21.69,0-7.39,7.37H54.89l0,0v0H55l-.06-.06,0-5.18a15.5,15.5,0,0,1,15.48-15.48v-1.1S66.24,117.63,63.45,102.72Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M185.17,61.41c-1.16.51-30.92,12.64-36.29,41.31-2.79,14.91-7,57.05-7,57.05v1.1a15.5,15.5,0,0,1,15.47,15.48l0,5.27h36.3v0h.05V57.72ZM179,166.85h-8.4A30.34,30.34,0,0,0,157,150.17c1.28-11.14,3.66-30.3,6.37-44.73,1.85-9.87,10-17.23,15.61-22.26Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-1" d="M164.68,174.22l5.93-7.37A30.34,30.34,0,0,0,157,150.17c1.28-11.14,3.66-30.3,6.37-44.73,1.85-9.87,10-17.23,15.61-22.26l7.38-13.1c-5.71,2.93-26.26,12.7-30.25,34-2.11,11.23-5.08,38.9-6.31,50.82a22.94,22.94,0,0,1,14.84,19.32l-7.26,7.4,36.36,0-7.38-7.37ZM186.36,70.35V174.12l7.41,7.37V57.62Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M117.38,110.63s1.9-35.42,4.12-52.84c2.78-21.84-15.3-37.35-15.35-37.3h-.06C106,20.44,88,36,90.73,57.79c2.22,17.42,4.12,52.84,4.12,52.84C98,136.38,82,172.78,77.9,181.42H94.83c3.23-7.61,8.61-21,11.28-31,3.41,9,8.7,23.27,11.68,31.19h16.63C130.53,173.36,114.18,136.59,117.38,110.63Zm-11.27,14.89h0c0,13.88,0,23.76,0,24.81Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-1" d="M94.83,181.42c3.14-7.39,8.29-20.19,11-30.1l.24-.89V109.84c-2.16,28.19-18.4,68.64-19.73,71.58Zm22.55-70.79s1.9-35.42,4.12-52.84c2.6-20.47-13.11-35.37-15.14-37.13l-.21-.17.21,43.89s-.19,14.36-.24,35.41v9.33c.28,25.76,17.9,67.27,20.17,72.5h8.13C130.53,173.36,114.18,136.59,117.38,110.63Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M103.81,259.74H97.39a2.46,2.46,0,1,1,0-4.92h6.42v-3.69H97.39a2.46,2.46,0,1,1,0-4.92h6.42v-3.7H97.39a2.46,2.46,0,0,1,0-4.92h6.42v-2.86A248.31,248.31,0,0,0,65.87,238c2.73,42.55,29.36,58.25,37.94,62.23Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-6" d="M108.73,234.73v2.86h6.66a2.46,2.46,0,1,1,0,4.92h-6.66v3.7h6.66a2.46,2.46,0,1,1,0,4.92h-6.66v3.69h6.66a2.46,2.46,0,1,1,0,4.92h-6.66v40.49c8.58-4,35.2-19.67,37.94-62.19A248.23,248.23,0,0,0,108.73,234.73Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-1" d="M108.73,234.74v2.85h6.66a2.46,2.46,0,1,1,0,4.92h-6.66v3.7h6.66a2.46,2.46,0,1,1,0,4.92h-6.66v3.69h6.66a2.46,2.46,0,1,1,0,4.92h-6.66v40.49c8.59-4,35.21-19.67,38-62.19A247.1,247.1,0,0,0,108.73,234.74Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-5" d="M103.81,273.35H75.64a67.06,67.06,0,0,0,8.85,12.38h19.32Z" transform="translate(-4.94 -4.31)"/>
+                <path class="cls-5" d="M108.73,273.35v12.38h19.32a67.08,67.08,0,0,0,8.86-12.38Z" transform="translate(-4.94 -4.31)"/>
+              </svg>
+            </div>
+            <div class="header-content">
+              <h1 class="header-title">KYIV PATRIOTS AMERICAN FOOTBALL</h1>
+              <p class="header-text">
+                Kyiv Patriots - спортивный клуб американского футбола. Чемпионы Украины 2018 г.
+              </p>
+            </div>
+            <div class="join-wrapper">
+              <div class="join"><span class="decoration-text outline-light">registration</span><svg class='direction-arrow' width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6654 23.5H2.84199L9.78127 13.3464L10.3597 12.5L9.78127 11.6536L2.84199 1.5H13.6654L21.1832 12.5L13.6654 23.5Z" stroke="#EDCFA4" stroke-width="3"/></svg>
+                <div class="join__text">реєстрація</div>
+              </div>
+            </div>
+          </div>
+          <div class="header-about-us">
+            <div class="header-about-us__icon"><img src="img/play-icon.svg" alt="play icon"></div>
+            <div class="header-about-us__text"><span class="header-about-us__text-top">БІЛЬШЕ</span><span class="header-about-us__text-bottom">ПРО НАС</span></div>
+          </div>
+        </header>
+        <div class="header-content mobile-header-content">
+          <h1 class="header-title">KYIV PATRIOTS AMERICAN FOOTBALL</h1>
+          <p class="header-text">
+            Kyiv Patriots - спортивный клуб американского футбола. Чемпионы Украины 2018 г.
+          </p>
+        </div>
+      </div>
+      <div class="mobile-line">
+        <div class="mobile-line-inner">
+          <div class="burger-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.75 11.25H11.25V18.75H18.75V11.25Z" fill="#EDCFA4"/><path d="M7.49998 0H0V7.49998H7.49998V0Z" fill="#EDCFA4"/><path d="M18.75 22.5H11.25V30H18.75V22.5Z" fill="#EDCFA4"/><path d="M7.49998 11.25H0V18.75H7.49998V11.25Z" fill="#EDCFA4"/><path d="M7.49998 22.5H0V30H7.49998V22.5Z" fill="#EDCFA4"/><path d="M30 0H22.5V7.49998H30V0Z" fill="#EDCFA4"/><path d="M18.75 0H11.25V7.49998H18.75V0Z" fill="#EDCFA4"/><path d="M30 11.25H22.5V18.75H30V11.25Z" fill="#EDCFA4"/><path d="M30 22.5H22.5V30H30V22.5Z" fill="#EDCFA4"/></svg></div>
+          <div class="about-us-line">
+            <div class="header-about-us">
+              <div class="header-about-us__text"><span class="header-about-us__text-top">БІЛЬШЕ</span><span class="header-about-us__text-bottom">ПРО НАС</span></div>
+              <div class="header-about-us__icon"><svg width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="25.5" cy="25.5" r="22.5" fill="white" stroke="#EDCFA4" stroke-width="6"/><path d="M37.2881 25.5L19.6065 35.7085L19.6065 15.2915L37.2881 25.5Z" fill="#EDCFA4"/></svg></div>
+            </div>
+          </div>
+        </div>
+        <ul class="social-icons-list">
+          <li class="social-icons-list__item"><a href="#"><img src="img/instagram-social-icon.svg" alt="social icon"></a></li>
+          <li class="social-icons-list__item"><a href="#"><img src="img/youtube-social-icon.svg" alt="social icon"></a></li>
+          <li class="social-icons-list__item"><a href="#"><img src="img/mail-social-icon.svg" alt="social icon"></a></li>
+          <li class="social-icons-list__item"><a href="#"><img src="img/phone-social-icon.svg" alt="social icon"></a></li>
+          <li class="social-icons-list__item feedback-icon"><img src="img/feedback-icon.svg" alt="feedback icon"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navigation">
+      <div class="navigation-top">
+        <div class="join-wrapper">
+          <div class="join"><span class="decoration-text outline-light">registration</span><svg class='direction-arrow' width="23" height="25" viewBox="0 0 23 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.6654 23.5H2.84199L9.78127 13.3464L10.3597 12.5L9.78127 11.6536L2.84199 1.5H13.6654L21.1832 12.5L13.6654 23.5Z" stroke="#EDCFA4" stroke-width="3"/></svg>
+            <div class="join__text">реєстрація</div>
+          </div>
+        </div>
+        <div class="burger-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.75 11.25H11.25V18.75H18.75V11.25Z" fill="#EDCFA4"/><path d="M7.49998 0H0V7.49998H7.49998V0Z" fill="#EDCFA4"/><path d="M18.75 22.5H11.25V30H18.75V22.5Z" fill="#EDCFA4"/><path d="M7.49998 11.25H0V18.75H7.49998V11.25Z" fill="#EDCFA4"/><path d="M7.49998 22.5H0V30H7.49998V22.5Z" fill="#EDCFA4"/><path d="M30 0H22.5V7.49998H30V0Z" fill="#EDCFA4"/><path d="M18.75 0H11.25V7.49998H18.75V0Z" fill="#EDCFA4"/><path d="M30 11.25H22.5V18.75H30V11.25Z" fill="#EDCFA4"/><path d="M30 22.5H22.5V30H30V22.5Z" fill="#EDCFA4"/></svg></div>
+      </div>
+      <ul class="navigation-list">
+        <li class="navigation-list__item navigation-list__item_active"><a href="#">ГОЛОВНА</a>
+          <!-- <ul class="liga-list">
+            <li class="liga-list__item" data-switch-table="first">ПЕРША ЛІГА</li>
+            <li class="liga-list__item" data-switch-table="second">ДРУГА ЛІГА</li>
+          </ul> -->
+        </li>
+        <li class="navigation-list__item"><a href="#video-section">YOUTUBE</a></li>
+        <li class="navigation-list__item"><a href="#gallery-section">ГАЛЕРЕЯ</a></li>
+        <li class="navigation-list__item"><a href="#">ГРАВЦІ</a></li>
+        <li class="navigation-list__item"><a href="#partners-section">ПАРТНЕРИ</a></li>
+      </ul>
+      <ul class="social-icons-list">
+        <li class="social-icons-list__item"><a href="#"><img src="img/instagram-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item"><a href="#"><img src="img/youtube-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item"><a href="#"><img src="img/mail-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item"><a href="#"><img src="img/phone-social-icon.svg" alt="social icon"></a></li>
+        <li class="social-icons-list__item feedback-icon"><img src="img/feedback-icon.svg" alt="feedback icon"></li>
+      </ul>
+    </div>
+
+    <!-- Registration form -->
+    
+    <div class="form-wrapper team-form">
+      <div class="registration-form" data-simplebar="">
+        <div class="modal-header">
+          <div class="burger-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.75 11.25H11.25V18.75H18.75V11.25Z" fill="#EDCFA4"/><path d="M7.49998 0H0V7.49998H7.49998V0Z" fill="#EDCFA4"/><path d="M18.75 22.5H11.25V30H18.75V22.5Z" fill="#EDCFA4"/><path d="M7.49998 11.25H0V18.75H7.49998V11.25Z" fill="#EDCFA4"/><path d="M7.49998 22.5H0V30H7.49998V22.5Z" fill="#EDCFA4"/><path d="M30 0H22.5V7.49998H30V0Z" fill="#EDCFA4"/><path d="M18.75 0H11.25V7.49998H18.75V0Z" fill="#EDCFA4"/><path d="M30 11.25H22.5V18.75H30V11.25Z" fill="#EDCFA4"/><path d="M30 22.5H22.5V30H30V22.5Z" fill="#EDCFA4"/></svg></div>
+        </div>
+        <div class="form-title-wrapper"><span class="form-title">Реєстрація</span><span class="decoration-text outline-bold">registration</span></div>
+        <form>
+          <div class="inputs-group" id="inputs-teams">
+            <input class="input-form col-1-2" name="team-name" placeholder="НАЗВА КОМАНДИ">
+            <input class="input-form col-1-2 no-margin" name="liga" placeholder="ЛІГА">
+            <input class="input-form col-1" name="capitan-name" placeholder="ІМ’Я КАПІТАНА">
+            <input class="input-form col-1-2" name="team-phone" placeholder="НОМЕР ТЕЛЕФОНУ">
+            <input class="input-form col-1-2 no-margin" name="team-email" placeholder="E-MAIL">
+            <div class="inputs-adding">
+              <input class="input-form" name="team-layer-1" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <div class="icon-wrapper add-layer-field"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.423828" y1="15.1024" x2="29.9746" y2="15.1024" stroke="#EDCFA4" stroke-width="3"/><line x1="15.3906" y1="29.6863" x2="15.3906" y2="0.135538" stroke="#EDCFA4" stroke-width="3"/></svg></div>
+            </div>
+            <div class="players-input">
+              <input class="input-form col-1" name="team-layer-2" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-3" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-4" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-5" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-6" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-7" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-8" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-9" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-10" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-11" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-12" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-13" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-14" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-15" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-16" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-17" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-18" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-19" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <input class="input-form col-1" name="team-layer-20" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
+              <div class="add-input-button add-layer-field"><span>Додати гравця</span><svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.24851 6.925V0.526367H6.39897V6.925H0V8.77455H6.39897V15.3289H8.24851V8.77455H14.8025V6.925H8.24851Z" fill="#EDCFA4"/></svg></div>
+            </div>
+          </div>
+          <div class="button-wrapper">
+            <button class="button send-form" type="button"><span class="button__title">зареєструватись</span><svg class='button__arrow' width="21" height="54" viewBox="0 0 21 54" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1.5625 1L19.0307 26.8663L1.5625 52.7327" stroke="#EDCFA4" stroke-width="2"/> </svg>          </button><svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+          </div>
+          <div class="form-footer"><svg class='close-button-mobile' width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/><line x1="19.8065" y1="44.9393" x2="45.8066" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/><circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/></svg></div>
+        </form>
+      </div>
+      <div class="close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="33.2401" cy="33.2401" r="32.2401" fill="white" stroke="#EDCFA4" stroke-width="2"/><line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/><line x1="19.8065" y1="44.9394" x2="45.8066" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/></svg></div>
+    </div>
+
+    <!-- Form's notification modal window -->
+
+    <div class="form-wrapper last-step">
+      <div class="registration-form">
+        <div class="modal-header">
+          <div class="burger-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.75 11.25H11.25V18.75H18.75V11.25Z" fill="#EDCFA4"/><path d="M7.49998 0H0V7.49998H7.49998V0Z" fill="#EDCFA4"/><path d="M18.75 22.5H11.25V30H18.75V22.5Z" fill="#EDCFA4"/><path d="M7.49998 11.25H0V18.75H7.49998V11.25Z" fill="#EDCFA4"/><path d="M7.49998 22.5H0V30H7.49998V22.5Z" fill="#EDCFA4"/><path d="M30 0H22.5V7.49998H30V0Z" fill="#EDCFA4"/><path d="M18.75 0H11.25V7.49998H18.75V0Z" fill="#EDCFA4"/><path d="M30 11.25H22.5V18.75H30V11.25Z" fill="#EDCFA4"/><path d="M30 22.5H22.5V30H30V22.5Z" fill="#EDCFA4"/></svg></div>
+        </div>
+        <div class="form-title-wrapper"><span class="form-title">Реєстрація</span><span class="decoration-text outline-bold">registration</span></div>
+        <p class="form-text">Ваш запит на реєстрацію принято. В найблищий час з вами звяжеться наш оператор.</p>
+        <div class="form-footer"><svg class='close-button-mobile' width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/><line x1="19.8065" y1="44.9393" x2="45.8066" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/><circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/></svg></div>
+      </div>
+      <div class="close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="33.2401" cy="33.2401" r="32.2401" fill="white" stroke="#EDCFA4" stroke-width="2"/><line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/><line x1="19.8065" y1="44.9394" x2="45.8066" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/></svg></div>
+    </div>
+
+    <!-- Feedback form -->
+
+    <div class="form-wrapper feedback-wrapper">
+      <div class="feedback-form" data-simplebar="">
+        <div class="modal-header">
+          <div class="burger-icon"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.75 11.25H11.25V18.75H18.75V11.25Z" fill="#EDCFA4"/><path d="M7.49998 0H0V7.49998H7.49998V0Z" fill="#EDCFA4"/><path d="M18.75 22.5H11.25V30H18.75V22.5Z" fill="#EDCFA4"/><path d="M7.49998 11.25H0V18.75H7.49998V11.25Z" fill="#EDCFA4"/><path d="M7.49998 22.5H0V30H7.49998V22.5Z" fill="#EDCFA4"/><path d="M30 0H22.5V7.49998H30V0Z" fill="#EDCFA4"/><path d="M18.75 0H11.25V7.49998H18.75V0Z" fill="#EDCFA4"/><path d="M30 11.25H22.5V18.75H30V11.25Z" fill="#EDCFA4"/><path d="M30 22.5H22.5V30H30V22.5Z" fill="#EDCFA4"/></svg></div>
+        </div>
+        <div class="form-title-wrapper"><span class="form-title">ЗВОРОТНІЙ ЗВЯЗОК</span><span class="decoration-text outline-bold">FEEDBACK</span></div>
+        <form>
+          <textarea class="feedback-text" placeholder="Повідомлення"></textarea>
+          <div class="inputs-group">
+            <input class="input-form col-1-2" name="feedback-name" placeholder="НОМЕР ТЕЛЕФОНУ">
+            <input class="input-form col-1-2 no-margin" name="feedback-contact" placeholder="E-MAIL">
+          </div>
+          <div class="button-wrapper">
+            <button class="button send-form" type="button"><span class="button__title">Надіслати</span><svg class='button__arrow' width="21" height="54" viewBox="0 0 21 54" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1.5625 1L19.0307 26.8663L1.5625 52.7327" stroke="#EDCFA4" stroke-width="2"/> </svg></button><svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M36.0447 62.73H1.94363L22.3999 32.4389L22.7099 31.98L22.3999 31.5211L1.94363 1.22997H36.0447L56.8109 31.98L36.0447 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/></svg>
+          </div>
+          <div class="form-footer"><svg class='close-button-mobile' width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/><line x1="19.8065" y1="44.9393" x2="45.8066" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/><circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/></svg></div>
+        </form>
+      </div>
+      <div class="close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="33.2401" cy="33.2401" r="32.2401" fill="white" stroke="#EDCFA4" stroke-width="2"/><line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/><line x1="19.8065" y1="44.9394" x2="45.8066" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/></svg></div>
+    </div>
+
+    <!-- About Us -->
+
+    <div class="single-slider-wrapper" id="about-us-slider">
+      <div class="single-slider-inner">
+        <div class="single-slider">
+          <div class="single-slider__video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/w0D2nadzBSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="single-slider__text">
+            <h4 class="heading-uppercase">Nor again is there anyone who loves or <br/> pursues or desires</h4>
+            <h4 class="heading-bold">Nor again is there anyone who loves or <br/> pursues or desires</h4>
+            <p class="paragraph">
+              "But I must explain to you how all this mistaken idea 
+              of denouncing pleasure and praising pain was born and 
+              I will give you a complete account of the system, and 
+              expound the actual teachings of the great explorer of 
+              the truth, the master-builder of human happiness. No 
+              one rejects, dislikes, or avoids pleasure itself, because 
+              it is pleasure, but because those who do not know 
+              how to pursue pleasure rationally encounter 
+              consequences that are extremely painful.
+            </p>
+            <h4 class="heading">Nor again is there anyone who loves or <br/> pursues or desires</h4>
+          </div>
+        </div>
+        <div class="close-button gallery-close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#EDCFA4" stroke-width="3"/> <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#EDCFA4" stroke-width="3"/> </svg></div>
+      </div>
+    </div>
+
+    <!-- Liga -->
+
+    <div class="liga-info">
+      <div class="liga-switch">
+        <span class="liga-switch__item liga-switch__item_active" data-switch-table="first">ULAF</span>
+        <!-- <div class="liga-switch-inner"><span class="liga-switch__item" data-switch-table="second">ДРУГА ЛІГА</span><svg class='next-liga' data-switch-table='second' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M102.5 26.9904L111 14L102.5 1.00964" stroke="#EDCFA4" stroke-width="3"/><path d="M110 14L0 14" stroke="#EDCFA4" stroke-width="3"/></svg></div> -->
+      </div>
+      <div class="liga-table-wrapper visible" data-table-type="first"><svg class='liga-table-btn' width="129" height="80" viewBox="0 0 129 129" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M64.4522 77.8402L62.48 85.1945L64.4373 85.7193L66.3965 85.2019L64.4522 77.8402ZM119.679 55.3785L62.5078 70.4785L66.3965 85.2019L123.567 70.1019L119.679 55.3785ZM66.4243 70.4859L10.1147 55.3859L6.17048 70.0945L62.48 85.1945L66.4243 70.4859Z" fill="#EDCFA4"/><path d="M64.4522 77.8402L63.7619 80.4142L64.447 80.5979L65.1327 80.4168L64.4522 77.8402ZM120.942 60.1636L63.7716 75.2636L65.1327 80.4168L122.304 65.3168L120.942 60.1636ZM65.1424 75.2662L8.83285 60.1662L7.45236 65.3142L63.7619 80.4142L65.1424 75.2662Z" fill="black"/></svg>
+        <div class="liga-table-inner" data-simplebar="" data-simplebar-auto-hide="false">
+          <div class="arrows-swipe"><svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M35.6443 62.73H1.54324L21.9996 32.4389L22.3095 31.98L21.9996 31.5211L1.54324 1.22997H35.6443L56.4105 31.98L35.6443 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/> </svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M35.6443 62.73H1.54324L21.9996 32.4389L22.3095 31.98L21.9996 31.5211L1.54324 1.22997H35.6443L56.4105 31.98L35.6443 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/> </svg>
+<svg width="58" height="64" viewBox="0 0 58 64" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M35.6443 62.73H1.54324L21.9996 32.4389L22.3095 31.98L21.9996 31.5211L1.54324 1.22997H35.6443L56.4105 31.98L35.6443 62.73Z" stroke="#EDCFA4" stroke-width="1.64"/> </svg>
+          </div>
+          <div class="liga-table-switch-wrapper"><svg class='liga-table-switch__prev' width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M16.25 8.75L12.5 15L16.25 21.25" stroke="#EDCFA4" stroke-width="2"/> <circle cx="15" cy="15" r="14" stroke="#EDCFA4" stroke-width="2"/> </svg>
+            <ul class="liga-table-switch">
+              <li class="liga-table-switch__item liga-table-switch__item_active liga-table-switch_js" data-table="teams-table">КОМАНДИ</li>
+              <li class="liga-table-switch__item liga-table-switch_js" data-table="statistics-table">СТАТИСТИКА</li>
+              <li class="liga-table-switch__item liga-table-switch_js" data-table="disqualification-table">Дискваліфікації</li>
+              <li class="liga-table-switch__item liga-table-switch_js" data-table="scorers-table">Бомбардири</li>
+            </ul>
+            <div class="liga-table-switch_js liga-table-calendar" data-table="calendar-game"><span>КАЛЕНДАР ІГОР</span><svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 33.3817H34.6531V10.1579H0V33.3817ZM25.692 13.544H29.277V17.129H25.692V13.544ZM25.692 19.6388H29.277V23.2238H25.692V19.6388ZM25.692 25.7336H29.277V29.3185H25.692V25.7336ZM18.92 13.544H22.505V17.129H18.92V13.544ZM18.92 19.6388H22.505V23.2238H18.92V19.6388ZM18.92 25.7336H22.505V29.3185H18.92V25.7336ZM12.148 13.544H15.733V17.129H12.148V13.544ZM12.148 19.6388H15.733V23.2238H12.148V19.6388ZM12.148 25.7336H15.733V29.3185H12.148V25.7336ZM5.37613 13.544H8.96106V17.129H5.37613V13.544ZM5.37613 19.6388H8.96106V23.2238H5.37613V19.6388ZM8.96106 25.7336V29.3185H5.37613V25.7336H8.96106Z" fill="#EDCFA4"/><path d="M34.6531 2.03166H28.5583V6.09479H26.5268V2.03166H8.12626V6.09479H6.0948V2.03166H0V8.12639H34.6531V2.03166Z" fill="#EDCFA4"/><path d="M8.12619 0H6.09473V2.03146H8.12619V0Z" fill="#EDCFA4"/><path d="M28.5588 0H26.5273V2.03146H28.5588V0Z" fill="#EDCFA4"/></svg></div><svg class='liga-table-switch__next' width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M13.75 21.25L17.5 15L13.75 8.75" stroke="#EDCFA4" stroke-width="2"/> <circle cx="15" cy="15" r="14" transform="rotate(-180 15 15)" stroke="#EDCFA4" stroke-width="2"/> </svg>
+          </div>
+          <div class="liga-table">
+            <div class="liga-table-teams active-table" data-table="teams-table">
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">0</div>
+                  <div class="liga-table__item-name">Команди</div>
+                </div>
+                <div class="liga-table__group-items liga-table__group-header">
+                  <div class="liga-table__item-played">З</div>
+                  <div class="liga-table__item-elemet liga-table__item-played liga-table__item-played_mobile liga-table__item_active">Зіграно</div>
+                  <div class="liga-table__item-won">В</div>
+                  <div class="liga-table__item-elemet liga-table__item-won liga-table__item-won_mobile">Виграно</div>
+                  <div class="liga-table__item-a-draw">Н</div>
+                  <div class="liga-table__item-elemet liga-table__item-a-draw liga-table__item-a-draw_mobile">Ничія</div>
+                  <div class="liga-table__item-losers">П</div>
+                  <div class="liga-table__item-elemet liga-table__item-losers liga-table__item-losers_mobile">Програші</div>
+                  <div class="liga-table__item-goals-scored">З</div>
+                  <div class="liga-table__item-elemet liga-table__item-goals-scored liga-table__item-goals-scored_mobile">Забито голів</div>
+                  <div class="liga-table__item-missed-goals">П</div>
+                  <div class="liga-table__item-elemet liga-table__item-missed-goals liga-table__item-missed-goals_mobile">Пропущено голів</div>
+                  <div class="liga-table__item-points">ОЧК</div>
+                  <div class="liga-table__item-elemet liga-table__item-points liga-table__item-points_mobile">Очки</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div><a class="liga-table__item-name" href="#">L.A Pirates</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">4</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">5</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">6</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">7</div><a class="liga-table__item-name" href="#">L.A Pirates</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-played liga-table__item_active">08</div>
+                  <div class="liga-table__item-won">08</div>
+                  <div class="liga-table__item-a-draw">09</div>
+                  <div class="liga-table__item-losers">10</div>
+                  <div class="liga-table__item-goals-scored">08</div>
+                  <div class="liga-table__item-missed-goals">13</div>
+                  <div class="liga-table__item-points">16</div>
+                </div>
+              </div>
+            </div>
+            <div class="liga-table-statistics" data-table="statistics-table">
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">0</div>
+                  <div class="liga-table__item-name">Команди</div>
+                </div>
+                <div class="liga-table__group-items">
+                  <div class="liga-table__item-goals-scored">Г</div>
+                  <div class="liga-table__item-elemet liga-table__item-goals-scored liga-table__item-goals-scored_mobile liga-table__item_active">Голів забито</div>
+                  <div class="liga-table__item-missed-goals">П</div>
+                  <div class="liga-table__item-elemet liga-table__item-missed-goals liga-table__item-missed-goals_mobile">Голів пропущено</div>
+                  <div class="liga-table__item-yellow-cards">Ж</div>
+                  <div class="liga-table__item-elemet liga-table__item-yellow-cards liga-table__item-yellow-cards_mobile">Жовті карточки</div>
+                  <div class="liga-table__item-red-card">Ч</div>
+                  <div class="liga-table__item-elemet liga-table__item-red-card liga-table__item-red-card_mobile">Червоні карточки</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div><a class="liga-table__item-name" href="#">L.A Pirates</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-goals-scored liga-table__item_active">08</div>
+                  <div class="liga-table__item-missed-goals">08</div>
+                  <div class="liga-table__item-yellow-cards">09</div>
+                  <div class="liga-table__item-red-card">16</div>
+                </div>
+              </div>
+            </div>
+            <div class="liga-table-disqualification" data-table="disqualification-table">
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">0</div>
+                  <div class="liga-table__item-name">Команди</div>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-elemet liga-table__item_active liga-table__item-player">Гравець</div>
+                  <div class="liga-table__item-elemet liga-table__item-description">Опис</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div><a class="liga-table__item-name" href="#">L.A Pirates </a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Роман Дудкович</div>
+                  <div class="liga-table__item-description">But I must explain to you how all this mistaken idea of ..... </div>
+                  <div class="liga-table-statistics" data-table="disqualification-table"></div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Роман Дудкович</div>
+                  <div class="liga-table__item-description">But I must explain to you how all this mistaken idea of ..... </div>
+                  <div class="liga-table-statistics" data-table="disqualification-table"></div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Роман Дудкович</div>
+                  <div class="liga-table__item-description">But I must explain to you how all this mistaken idea of ..... </div>
+                  <div class="liga-table-statistics" data-table="disqualification-table"></div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Роман Дудкович</div>
+                  <div class="liga-table__item-description">But I must explain to you how all this mistaken idea of ..... </div>
+                  <div class="liga-table-statistics" data-table="disqualification-table"></div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Роман Дудкович</div>
+                  <div class="liga-table__item-description">But I must explain to you how all this mistaken idea of ..... </div>
+                  <div class="liga-table-statistics" data-table="disqualification-table"></div>
+                </div>
+              </div>
+            </div>
+            <div class="liga-table-scorers" data-table="scorers-table">
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">0</div>
+                  <div class="liga-table__item-name">Команди</div>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-elemet liga-table__item-player liga-table__item_active">Гравець</div>
+                  <div class="liga-table__item-elemet liga-table__item-goals-scored">ГОЛИ</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div><a class="liga-table__item-name" href="#">L.A Pirates</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-goals-scored">16</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">2</div><a class="liga-table__item-name" href="#">Ocean Kings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Роман Дудкович </div>
+                  <div class="liga-table__item-goals-scored">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-goals-scored">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-goals-scored">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-goals-scored">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-goals-scored">15</div>
+                </div>
+              </div>
+              <div class="liga-table__item">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">3</div><a class="liga-table__item-name" href="#">Red Wings</a>
+                </div>
+                <div class="liga-table__group-items liga-table__content">
+                  <div class="liga-table__item-player liga-table__item_active">Віталій Попадинець</div>
+                  <div class="liga-table__item-goals-scored">15</div>
+                </div>
+              </div>
+            </div>
+            <div class="liga-table-calendar-game" data-table="calendar-game">
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 Середа 14:00</div>
+                </div><a class="liga-table__videos liga-table__videos_live live" href="#"><?xml  version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969 l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160 c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969 S360.813,263.01,357.771,264.969z"/> </g> </svg></a>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a>
+                    <div class="team-info__logo-text"><span>L</span></div>
+                  </div><span class="match-score">--:--</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 Понеділок 14:00</div>
+                </div><a class="liga-table__videos liga-table__videos_live" href="#"><?xml  version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969 l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160 c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969 S360.813,263.01,357.771,264.969z"/> </g> </svg></a>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a><img class="team-info__logo" src="img/team-logo-1.png" alt="team logo"></div><span class="match-score">3:2</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 Вівторок 14:00</div>
+                </div><a class="liga-table__videos liga-table__videos_live" href="#"><?xml  version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969 l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160 c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969 S360.813,263.01,357.771,264.969z"/> </g> </svg></a>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a><img class="team-info__logo" src="img/team-logo-1.png" alt="team logo"></div><span class="match-score">3:2</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 CУБОТА 14:00</div>
+                </div>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a><img class="team-info__logo" src="img/team-logo-1.png" alt="team logo"></div><span class="match-score">3:2</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 CУБОТА 14:00</div>
+                </div>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a><img class="team-info__logo" src="img/team-logo-1.png" alt="team logo"></div><span class="match-score">3:2</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 CУБОТА 14:00</div>
+                </div>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a><img class="team-info__logo" src="img/team-logo-1.png" alt="team logo"></div><span class="match-score">3:2</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+              <div class="liga-table__item liga-table__content">
+                <div class="liga-table__group">
+                  <div class="liga-table__item-counter">1</div>
+                  <div class="liga-table__item-date">29.02.2020 CУБОТА 14:00</div>
+                </div>
+                <div class="liga-table__group-match">
+                  <div class="team-info"><a class="team-info__name" href="#">L.A Pirates</a><img class="team-info__logo" src="img/team-logo-1.png" alt="team logo"></div><span class="match-score">3:2</span>
+                  <div class="team-info"><img class="team-info__logo" src="img/team-logo-2.png" alt="team logo"><a class="team-info__name" href="#">Ocean Kings</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Board -->
+
+    <div class="board">
+      
+      <!-- Board line -->
+      <div class="board-line">
+        <img class="board-line__image" src="img/line-image.png">
+      </div>
+
+      <!-- Board content wrapper -->
+      <div class="content-wrapper">
+        <div class="section-title-box">
+          <h3 class="section-title">youtube</h3><img class="section-title-image" src="img/footballer.svg" alt="footballer"><img class="section-title-image_mobile" src="img/board-line.png" alt="decoration line">
+        </div>
+
+        <!-- Video -->
+        <div class="video">
+          <div class="video-box">
+            <div class="video__item video__item_large">
+              <div class="live-box"><span>Live</span><span class="live dot">•</span></div>
+              <div class="video__control"><svg width="242" height="242" viewBox="0 0 242 242" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="121" cy="121" r="118" stroke="#EDCFA4" stroke-width="6"/><path d="M176.934 121L93.0326 169.44L93.0326 72.5598L176.934 121Z" fill="#EDCFA4"/></svg></div><img src="img/footballers.png" alt="image">
+            </div>
+          </div>
+          <div class="video-box">
+            <div class="video__item">
+              <div class="video__control"><svg width="98" height="98" viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="49" cy="49" r="47" stroke="#EDCFA4" stroke-width="4"/><path d="M66.582 49.0001L32.6056 68.6164L32.6056 29.3838L66.582 49.0001Z" fill="#EDCFA4"/><path d="M65.0518 29.9914V68.431" stroke="#EDCFA4" stroke-width="4"/></svg></div><img src="img/football.png" alt="image">
+            </div>
+            <div class="video__item video__item_chanell"><img src="img/youtube-backgroun.svg" alt="image"><svg class='chanell-logo' width="135" height="135" viewBox="0 0 135 135" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="65.5717" cy="65.5715" r="61.7143" fill="white"/><path d="M35.46 72.4818H40.8116V101.447H45.8746V72.4818H51.3257V67.7378H35.46V72.4818Z" fill="#EDCFA4"/><path d="M78.2702 76.0228C76.5963 76.0228 75.0344 76.937 73.5663 78.7463V67.7363H69.0156V101.447H73.5663V99.0135C75.0896 100.893 76.6502 101.794 78.2702 101.794C80.0808 101.794 81.2989 100.841 81.9066 98.9707C82.2118 97.9059 82.3679 96.2334 82.3679 93.9091V83.9073C82.3679 81.5291 82.2118 79.8691 81.9066 78.8595C81.3003 76.9757 80.0794 76.0228 78.2702 76.0228ZM77.8145 94.2654C77.8145 96.5359 77.1488 97.6545 75.834 97.6545C75.0868 97.6545 74.3259 97.2969 73.5649 96.5345V81.2267C74.3259 80.474 75.0868 80.1177 75.834 80.1177C77.1474 80.1177 77.8145 81.2805 77.8145 83.5455V94.2654Z" fill="#EDCFA4"/><path d="M60.5227 95.5248C59.5132 96.9514 58.5589 97.6544 57.6446 97.6544C57.0369 97.6544 56.6903 97.2967 56.5798 96.5896C56.5383 96.4432 56.5383 95.888 56.5383 94.8218V76.3292H51.9863V96.1877C51.9863 97.9624 52.1396 99.1611 52.3882 99.9235C52.8454 101.197 53.8563 101.793 55.3202 101.793C56.9955 101.793 58.7135 100.783 60.5227 98.7081V101.448H65.0775V76.3292H60.5227V95.5248Z" fill="#EDCFA4"/><path d="M64.4322 53.1247C65.9141 53.1247 66.6254 51.9494 66.6254 49.6016V38.9245C66.6254 36.5753 65.9141 35.4055 64.4322 35.4055C62.949 35.4055 62.2363 36.5767 62.2363 38.9245V49.6016C62.2363 51.9508 62.949 53.1247 64.4322 53.1247Z" fill="#EDCFA4"/><path d="M67.5 0C30.2207 0 0 30.2207 0 67.5C0 104.779 30.2207 135 67.5 135C104.779 135 135 104.779 135 67.5C135 30.2207 104.779 0 67.5 0ZM75.0075 31.5714H79.5941V50.26C79.5941 51.3387 79.5941 51.898 79.6493 52.0485C79.7501 52.7612 80.112 53.1258 80.7279 53.1258C81.6477 53.1258 82.6131 52.4131 83.6337 50.9727V31.5714H88.2327V56.9541H83.6337V54.1864C81.8024 56.2857 80.0567 57.3035 78.3787 57.3035C76.8982 57.3035 75.8762 56.7028 75.4149 55.4184C75.1608 54.6491 75.0075 53.4351 75.0075 51.6439V31.5714ZM57.6364 39.8481C57.6364 37.1343 58.0976 35.1511 59.0755 33.8681C60.3474 32.1321 62.1387 31.2648 64.4313 31.2648C66.7349 31.2648 68.5248 32.1321 69.7967 33.8681C70.7607 35.1497 71.222 37.1343 71.222 39.8481V48.7367C71.222 51.4353 70.7607 53.4365 69.7967 54.7057C68.5248 56.4376 66.7349 57.3035 64.4313 57.3035C62.1387 57.3035 60.3474 56.4376 59.0755 54.7057C58.0976 53.4365 57.6364 51.434 57.6364 48.7367V39.8481ZM45.3365 22.8927L48.9577 36.2684L52.4366 22.8927H57.5949L51.4588 43.16V56.9555H46.3599V43.16C45.8972 40.7154 44.8766 37.1343 43.2401 32.3834C42.1656 29.2221 41.0455 26.0512 39.9711 22.8927H45.3365ZM103.837 103.665C102.915 107.669 99.6404 110.624 95.6974 111.065C86.3572 112.107 76.9093 112.113 67.4959 112.107C58.0866 112.113 48.6331 112.107 39.2957 111.065C35.3527 110.624 32.0768 107.67 31.157 103.665C29.8436 97.9623 29.8436 91.7351 29.8436 85.8628C29.8436 79.9904 29.8602 73.7645 31.1722 68.0607C32.0934 64.0556 35.3665 61.1001 39.3095 60.6609C48.6483 59.6182 58.1004 59.6127 67.5124 59.6182C76.9217 59.6127 86.3738 59.6182 95.7126 60.6609C99.6556 61.1015 102.931 64.0556 103.855 68.0607C105.165 73.7645 105.156 79.9904 105.156 85.8628C105.156 91.7351 105.151 97.9623 103.837 103.665Z" fill="#EDCFA4"/><path d="M92.7672 76.0227C90.4387 76.0227 88.6309 76.8776 87.3161 78.597C86.3507 79.8676 85.9102 81.8315 85.9102 84.5149V93.3137C85.9102 95.9834 86.4032 97.9611 87.3727 99.2192C88.6861 100.935 90.4995 101.792 92.8804 101.792C95.2573 101.792 97.1231 100.893 98.3826 99.0687C98.9351 98.2621 99.2941 97.3492 99.4461 96.3411C99.4889 95.8853 99.5427 94.8757 99.5427 93.4077V92.7461H94.9009C94.9009 94.5691 94.8416 95.5815 94.8015 95.8287C94.5419 97.0454 93.8872 97.6531 92.7672 97.6531C91.2038 97.6531 90.4387 96.493 90.4387 94.17V89.7147H99.5427V84.5122C99.5427 81.8287 99.0884 79.8649 98.1341 78.5943C96.8621 76.879 95.0515 76.0227 92.7672 76.0227ZM94.9935 85.9278H90.4415V83.6034C90.4415 81.2804 91.2052 80.119 92.7258 80.119C94.2311 80.119 94.9935 81.2818 94.9935 83.6034V85.9278Z" fill="#EDCFA4"/></svg><a class="video__description" href="#"><span>ВІДКРИТИ НА YOUTUBE</span><svg id='link-arrow' width="80" height="20" viewBox="0 0 80 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M72.2949 0.999966L78.29 10.1623L72.2949 19.3246" stroke="#EDCFA4" stroke-width="2"/><path d="M77.5847 10.1625L0 10.1625" stroke="#EDCFA4" stroke-width="2"/></svg></a></div>
+          </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="gallery-wrapper" id="gallery-section">
+          <h3 class="section-title">галерея</h3>
+          <div class="gallery">
+            <div class="gallery__item gallery__item_large">
+              <img src="img/gallery-img5.jpg" alt="footbal image">
+            </div>
+            <div class="gallery__item"><img src="img/gallery-img2.jpg" alt="footbal image"></div>
+            <div class="gallery__item"><img src="img/gallery-img3.jpg" alt="footbal image"></div>
+            <div class="gallery__item"><img src="img/gallery-img4.jpg" alt="footbal image"></div>
+            <div class="gallery__item"><img src="img/gallery-img1.jpg" alt="footbal image"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video slider -->
+
+    <div class="single-slider-wrapper" id="video-slider">
+      <div class="single-slider-inner">
+        <div class="single-slider">
+          <div class="single-slider__video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/w0D2nadzBSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="single-slider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/UiDhYtUz0RU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="single-slider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/Lv89FZpKd18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+        <div class="close-button gallery-close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#EDCFA4" stroke-width="3"/> <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#EDCFA4" stroke-width="3"/> </svg></div>
+      </div>
+    </div>
+
+    <!-- Gallery slider -->
+    
+    <div class="photo-gallery-wrapper">
+      <div class="photo-gallery-inner">
+        <div class="photo-gallery"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"></div>
+        <div class="gallery-settings"><svg id='prev-arrow' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.5 1.00962L2 14L10.5 26.9904" stroke="#EDCFA4" stroke-opacity="0.5" stroke-width="3"/> <path d="M3 14L113 14" stroke="#EDCFA4" stroke-opacity="0.5" stroke-width="3"/> </svg>
+          <div class="gallery-close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#EDCFA4" stroke-width="3"/> <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#EDCFA4" stroke-width="3"/> </svg></div><svg id='next-arrow' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M102.5 26.9904L111 14L102.5 1.00964" stroke="#EDCFA4" stroke-width="3"/> <path d="M110 14L0 14" stroke="#EDCFA4" stroke-width="3"/> </svg>
+        </div>
+      </div>
+      <div class="photo-gallery-mobile">
+        <div class="slider-for">
+          <div class="slider-for__item"><img src="img/football.png" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/football.png" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
+        </div>
+        <div class="slider-nav">
+          <div class="slider-nav__item"><img src="img/football.png" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/football.png" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
+        </div><svg class='gallery-close-button' width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/> <line x1="19.8056" y1="44.9393" x2="45.8056" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/> </svg>
+      </div>
+    </div>
+
+    <!-- Partners -->
+
+    <section class="partners-section" id="partners-section">
+      <h3 class="section-title">ПАРТНЕРИ</h3><img class="partners-background" src="img/background-partners.png" alt="background partners">
+      <div class="partners-slider">
+        <div class="partners-slider__item"><img src="img/team-logo-slider-1.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-2.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-3.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-4.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-5.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-1.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-2.png" alt="team logo"></div>
+        <div class="partners-slider__item"><img src="img/team-logo-slider-3.png" alt="team logo"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="js/scripts.min.js"></script>
+  </body>
+</html>

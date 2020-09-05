@@ -1,0 +1,5025 @@
+@charset 'UTF-8';.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0
+}
+
+.slick-list:focus {
+    outline: 0
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand
+}
+
+.slick-slider .slick-list,.slick-slider .slick-track {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0)
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.slick-track:after,.slick-track:before {
+    display: table;
+    content: ''
+}
+
+.slick-track:after {
+    clear: both
+}
+
+.slick-loading .slick-track {
+    visibility: hidden
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px
+}
+
+[dir=rtl] .slick-slide {
+    float: right
+}
+
+.slick-slide img {
+    display: block
+}
+
+.slick-slide.slick-loading img {
+    display: none
+}
+
+.slick-slide.dragging img {
+    pointer-events: none
+}
+
+.slick-initialized .slick-slide {
+    display: block
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent
+}
+
+.slick-arrow.slick-hidden {
+    display: none
+}
+
+.slick-loading .slick-list {
+    background: #fff url(ajax-loader.gif) center center no-repeat
+}
+
+@font-face {
+    font-family: slick;
+    font-weight: 400;
+    font-style: normal;
+    src: url(fonts/slick.eot);
+    src: url(fonts/slick.eot?#iefix) format('embedded-opentype'),url(fonts/slick.woff) format('woff'),url(fonts/slick.ttf) format('truetype'),url(fonts/slick.svg#slick) format('svg')
+}
+
+.slick-next,.slick-prev {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: 0;
+    background: 0 0
+}
+
+.slick-next:focus,.slick-next:hover,.slick-prev:focus,.slick-prev:hover {
+    color: transparent;
+    outline: 0;
+    background: 0 0
+}
+
+.slick-next:focus:before,.slick-next:hover:before,.slick-prev:focus:before,.slick-prev:hover:before {
+    opacity: 1
+}
+
+.slick-next.slick-disabled:before,.slick-prev.slick-disabled:before {
+    opacity: .25
+}
+
+.slick-next:before,.slick-prev:before {
+    font-family: slick;
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.slick-prev {
+    left: -25px
+}
+
+[dir=rtl] .slick-prev {
+    right: -25px;
+    left: auto
+}
+
+.slick-prev:before {
+    content: 'в†ђ'
+}
+
+[dir=rtl] .slick-prev:before {
+    content: 'в†’'
+}
+
+.slick-next {
+    right: -25px
+}
+
+[dir=rtl] .slick-next {
+    right: auto;
+    left: -25px
+}
+
+.slick-next:before {
+    content: 'в†’'
+}
+
+[dir=rtl] .slick-next:before {
+    content: 'в†ђ'
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: 0;
+    background: 0 0
+}
+
+.slick-dots li button:focus,.slick-dots li button:hover {
+    outline: 0
+}
+
+.slick-dots li button:focus:before,.slick-dots li button:hover:before {
+    opacity: 1
+}
+
+.slick-dots li button:before {
+    font-family: slick;
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: 'вЂў';
+    text-align: center;
+    opacity: .25;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #000
+}
+
+[data-simplebar] {
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start
+}
+
+.simplebar-wrapper {
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    max-width: inherit;
+    max-height: inherit
+}
+
+.simplebar-mask {
+    direction: inherit;
+    position: absolute;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: auto!important;
+    height: auto!important;
+    z-index: 0
+}
+
+.simplebar-offset {
+    direction: inherit!important;
+    box-sizing: inherit!important;
+    resize: none!important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    -webkit-overflow-scrolling: touch
+}
+
+.simplebar-content-wrapper {
+    direction: inherit;
+    box-sizing: border-box!important;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: auto;
+    visibility: visible;
+    max-width: 100%;
+    max-height: 100%;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+
+.simplebar-content-wrapper::-webkit-scrollbar,.simplebar-hide-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0
+}
+
+.simplebar-content:after,.simplebar-content:before {
+    content: ' ';
+    display: table
+}
+
+.simplebar-placeholder {
+    max-height: 100%;
+    max-width: 100%;
+    width: 100%;
+    pointer-events: none
+}
+
+.simplebar-height-auto-observer-wrapper {
+    box-sizing: inherit!important;
+    height: 100%;
+    width: 100%;
+    max-width: 1px;
+    position: relative;
+    float: left;
+    max-height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    flex-grow: inherit;
+    flex-shrink: 0;
+    flex-basis: 0
+}
+
+.simplebar-height-auto-observer {
+    box-sizing: inherit;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1000%;
+    width: 1000%;
+    min-height: 1px;
+    min-width: 1px;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1
+}
+
+.simplebar-track {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden
+}
+
+[data-simplebar].simplebar-dragging .simplebar-content {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none
+}
+
+[data-simplebar].simplebar-dragging .simplebar-track {
+    pointer-events: all
+}
+
+.simplebar-scrollbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-height: 10px
+}
+
+.simplebar-scrollbar:before {
+    position: absolute;
+    content: '';
+    background: #000;
+    border-radius: 7px;
+    left: 2px;
+    right: 2px;
+    opacity: 0;
+    transition: opacity .2s linear
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: .5;
+    transition: opacity 0s linear
+}
+
+.simplebar-track.simplebar-vertical {
+    top: 0;
+    width: 11px
+}
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    top: 2px;
+    bottom: 2px
+}
+
+.simplebar-track.simplebar-horizontal {
+    left: 0;
+    height: 11px
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before {
+    height: 100%;
+    left: 2px;
+    right: 2px
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar {
+    right: auto;
+    left: 0;
+    top: 2px;
+    height: 7px;
+    min-height: 0;
+    min-width: 10px;
+    width: auto
+}
+
+[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical {
+    right: auto;
+    left: 0
+}
+
+.hs-dummy-scrollbar-size {
+    direction: rtl;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    height: 500px;
+    width: 500px;
+    overflow-y: hidden;
+    overflow-x: scroll
+}
+
+.simplebar-hide-scrollbar {
+    position: fixed;
+    left: 0;
+    visibility: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none
+}
+
+@font-face {
+    font-family: FuturaBookC;
+    src: url(../fonts/FuturaBookC/FuturaBookC.eot);
+    src: url(../fonts/FuturaBookC/FuturaBookC.eot?#iefix) format("embedded-opentype"),url(../fonts/FuturaBookC/FuturaBookC.woff2) format("woff2"),url(../fonts/FuturaBookC/FuturaBookC.woff) format("woff"),url(../fonts/FuturaBookC/FuturaBookC.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: FuturaDemiC;
+    src: url(../fonts/FuturaDemiC/FuturaDemiC.eot);
+    src: url(../fonts/FuturaDemiC/FuturaDemiC.woff2) format("woff2"),url(../fonts/FuturaDemiC/FuturaDemiC.woff) format("woff"),url(../fonts/FuturaDemiC/FuturaDemiC.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Medium.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Medium.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Medium.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Black.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Black.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Black.ttf) format("truetype");
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Bold.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Bold.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-BlackItalic.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-BlackItalic.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-BlackItalic.ttf) format("truetype");
+    font-weight: 900;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Light.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Light.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-LightItalic.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-LightItalic.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-LightItalic.ttf) format("truetype");
+    font-weight: 300;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-BoldItalic.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-BoldItalic.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-BoldItalic.ttf) format("truetype");
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-ThinItalic.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-ThinItalic.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-ThinItalic.ttf) format("truetype");
+    font-weight: 100;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-MediumItalic.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-MediumItalic.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-MediumItalic.ttf) format("truetype");
+    font-weight: 500;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Regular.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Regular.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Italic.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Italic.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Italic.ttf) format("truetype");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Thin.woff2) format("woff2");
+    src: url(../fonts/Roboto/Roboto-Thin.woff) format("woff");
+    src: url(../fonts/Roboto/Roboto-Thin.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: slick;
+    src: url(../fonts/slick/slick.eot);
+    src: url(../fonts/slick/slick.woff) format("woff");
+    src: url(../fonts/slick/slick.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+::-webkit-input-placeholder {
+    color: #edcfa4
+}
+
+::-moz-placeholder {
+    color: #edcfa4
+}
+
+:-ms-input-placeholder {
+    color: #edcfa4
+}
+
+::-ms-input-placeholder {
+    color: #edcfa4
+}
+
+::placeholder {
+    color: #edcfa4
+}
+
+::-moz-selection {
+    background-color: #edcfa4;
+    color: #fff
+}
+
+::selection {
+    background-color: #edcfa4;
+    color: #fff
+}
+
+body {
+    font-size: 16px;
+    min-width: 320px;
+    position: relative;
+    font-family: FuturaDemiC,Helvetica,Verdana,sans-serif;
+    overflow-x: hidden;
+    color: #edcfa4;
+    font-weight: 400;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto
+}
+
+.img-responsive.img-width {
+    width: 100%
+}
+
+.col-1 {
+    width: 100%
+}
+
+.header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-image: url(../img/header-bg.jpg);
+    background-position: top left;
+    background-size: cover;
+    position: relative;
+    padding: 40px 145px 0 64px
+}
+
+.header-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 100%
+}
+
+.header-content {
+    max-width: 856px
+}
+
+.header-title {
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-size: 41.6667px;
+    line-height: 51px;
+    text-transform: uppercase;
+    color: #e9cb9f;
+    font-weight: 400;
+    padding-bottom: 26px;
+    padding-top: 73px
+}
+
+.header-text {
+    font-family: Roboto,Helvetica,Verdana,sans-serif;
+    font-size: 20px;
+    line-height: 18px;
+    color: #e9cb9f;
+    max-width: 814px;
+    padding-bottom: 10px
+}
+
+.join-wrapper {
+    margin-left: auto;
+    position: relative
+}
+
+.join {
+    text-transform: uppercase;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+    z-index: 2;
+    position: relative
+}
+
+.join__text {
+    text-transform: uppercase;
+    font-family: FuturaDemiC,Helvetica,Verdana,sans-serif;
+    font-size: 38px;
+    color: #edcfa4;
+    left: 0;
+    top: 0;
+    padding-left: 9px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2
+}
+
+.join .decoration-text {
+    font-size: 71.9395px;
+    left: -90px;
+    top: -6px
+}
+
+.logo {
+    padding-right: 50px;
+    padding-left: 50px;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end
+}
+
+.logo svg {
+    margin-bottom: -90px;
+    width: 90%;
+    height: 100%
+}
+
+.mobile-header-content {
+    display: none
+}
+
+.header-about-us {
+    position: absolute;
+    bottom: -160px;
+    right: 310px
+}
+
+.header-about-us__icon {
+    cursor: pointer
+}
+
+.header-about-us__text {
+    border-right: 2px solid #e9cb9f;
+    text-align: right;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-size: 21.6619px;
+    line-height: 25px;
+    text-align: right;
+    color: #e9cb9f;
+    text-transform: uppercase;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding-right: 10px;
+    padding-top: 58px;
+    margin-top: -15px
+}
+
+.header-about-us__text span {
+    display: block
+}
+
+.header-about-us__text-bottom {
+    font-weight: 700
+}
+
+.news-section {
+    margin-top: 190px
+}
+
+.section-title {
+    font-family: FuturaDemiC;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 112.629px;
+    line-height: 132px;
+    text-transform: uppercase
+}
+
+.line-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background-color: #000;
+    height: 100%;
+    padding: 46px 29px 0 33px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.line-sidebar .social-icons-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.burger-icon {
+    cursor: pointer
+}
+
+.burger-icon_active svg path {
+    -webkit-transition: .5s all;
+    -o-transition: .5s all;
+    transition: .5s all
+}
+
+.burger-icon_active svg path:nth-child(3) {
+    opacity: .1
+}
+
+.burger-icon_active svg path:nth-child(4) {
+    opacity: .1
+}
+
+.burger-icon_active svg path:nth-child(7) {
+    opacity: .1
+}
+
+.burger-icon_active svg path:nth-child(8) {
+    opacity: .1
+}
+
+.breadcrumbs {
+    position: relative;
+    height: 500px;
+    -webkit-transform: translateX(-5px);
+    -ms-transform: translateX(-5px);
+    transform: translateX(-5px)
+}
+
+.breadcrumbs_rotated {
+    position: absolute;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    width: 500px;
+    bottom: -50px;
+    font-family: FuturaDemiC;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    color: #e9cb9f;
+    text-align: center
+}
+
+.breadcrumbs__page {
+    padding-right: 20px;
+    /*border-right: 3px solid #e9cb9f;*/
+    margin-right: 20px
+}
+
+.breadcrumbs__table-info {
+    display: none;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-weight: 400
+}
+
+.social-icons-list {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 295px
+}
+
+.social-icons-list__item {
+    margin-bottom: 22px
+}
+
+.section-title span {
+    display: block
+}
+
+.liga-info {
+    padding: 127px 0 0 115px
+}
+
+.liga-switch {
+    font-weight: 600;
+    font-size: 38.3202px;
+    line-height: 45px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.liga-switch__item {
+    cursor: pointer;
+    margin-right: 32px;
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s
+}
+
+.liga-switch__item_active {
+    font-size: 112.629px;
+    line-height: 132px
+}
+
+.liga-table-wrapper {
+    border: 5px solid #edcfa4;
+    outline: 6px solid #000;
+    -webkit-box-shadow: 0 0 0 11px #edcfa4;
+    box-shadow: 0 0 0 11px #edcfa4;
+    max-width: 1562px;
+    padding: 30px 70px 70px 54px;
+    margin-top: -25px;
+    margin-left: 20px;
+    position: relative;
+    display: none
+}
+
+.liga-table-btn {
+    position: absolute;
+    bottom: 0;
+    left: 145px;
+    -webkit-transform: translateY(55%);
+    -ms-transform: translateY(55%);
+    transform: translateY(55%);
+    background-color: #fff;
+    padding: 0 25px;
+    cursor: pointer
+}
+
+.liga-table-btn_active {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    bottom: -50px
+}
+
+.liga-table-switch {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.liga-table-switch__item {
+    font-weight: 600;
+    font-size: 23.95px;
+    margin-right: 21px;
+    padding-left: 17px;
+    cursor: pointer;
+    text-transform: uppercase
+}
+
+.liga-table-switch__item:not(:nth-child(1)) {
+    border-left: 3px solid #edcfa4
+}
+
+.liga-table-switch__item_active {
+    font-size: 38.3202px!important;
+    margin-top: -5px
+}
+
+.liga-table-switch-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.liga-table-calendar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-weight: 600;
+    font-size: 23.95px;
+    cursor: pointer
+}
+
+.liga-table-calendar span {
+    padding-right: 14px
+}
+
+.liga-table-calendar-game,.liga-table-disqualification,.liga-table-scorers,.liga-table-statistics,.liga-table-teams {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: none
+}
+
+.active-table {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.liga-table {
+    padding-top: 39px;
+    max-height: 350px;
+    overflow: hidden
+}
+
+.liga-table__group {
+    max-width: 430px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.liga-table__group-items {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.liga-table__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 25px;
+    line-height: 28px;
+    letter-spacing: .03em;
+    color: #000;
+    font-weight: 400;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    padding: 18px 47px 24px 13px;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start
+}
+
+.liga-table__item-name {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.liga-table__item-counter {
+    border: 2px solid #000;
+    border-radius: 50%;
+    padding: 4px 8px 0 8px;
+    margin-right: 47px
+}
+
+.liga-table__item-a-draw,.liga-table__item-goals-scored,.liga-table__item-losers,.liga-table__item-missed-goals,.liga-table__item-played,.liga-table__item-points,.liga-table__item-red-card,.liga-table__item-won,.liga-table__item-yellow-cards {
+    max-width: 79px;
+    width: 100%;
+    text-align: center
+}
+
+.open-table {
+    overflow: visible;
+    max-height: none!important
+}
+
+.liga-table-disqualification .liga-table__item-player {
+    max-width: 312px;
+    width: 100%
+}
+
+.liga-table-disqualification .liga-table__item-description {
+    max-width: 704px;
+    width: 100%
+}
+
+.liga-table-scorers .liga-table__group {
+    max-width: 692px
+}
+
+.liga-table-scorers .liga-table__item-goals-scored {
+    text-align: right
+}
+
+.liga-table-disqualification .liga-table__item:nth-child(even),.liga-table-scorers .liga-table__item:nth-child(even),.liga-table-statistics .liga-table__item:nth-child(even),.liga-table-teams .liga-table__item:nth-child(even) {
+    background-color: #edcfa4
+}
+
+.liga-table-disqualification .liga-table__item:first-child .liga-table__item-counter,.liga-table-scorers .liga-table__item:first-child .liga-table__item-counter,.liga-table-statistics .liga-table__item:first-child .liga-table__item-counter,.liga-table-teams .liga-table__item:first-child .liga-table__item-counter {
+    color: transparent
+}
+
+.liga-table-calendar-game .liga-table__item {
+    background-color: #edcfa4;
+    margin-bottom: 61px;
+    padding: 0 47px 0 13px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.liga-table-calendar-game .liga-table__item:last-child {
+    margin-bottom: 0
+}
+
+.liga-table-calendar-game .liga-table__group-match {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.liga-table-calendar-game .liga-table__group-match .team-info:first-child .team-info__name {
+    padding-right: 32px
+}
+
+.liga-table-calendar-game .liga-table__group-match .team-info:last-child .team-info__name {
+    padding-left: 14px
+}
+
+.liga-table-calendar-game .liga-table__item {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.team-info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 235px;
+    position: relative;
+    max-height: 59px
+}
+
+.team-info__logo {
+    border: 3px solid #edcfa4;
+    border-radius: 50%
+}
+
+.team-info__name {
+    color: #000;
+    text-decoration: none
+}
+
+.team-info__logo-text {
+    height: 96px;
+    width: 96px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #edcfa4;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 50px;
+    font-weight: 600;
+    border: 3px solid #edcfa4
+}
+
+.match-score {
+    margin: 0 46px 0 40px
+}
+
+.partners-section {
+    max-width: 1575px;
+    margin-left: 130px;
+    margin-bottom: 100px;
+    margin-top: 137px;
+    position: relative
+}
+
+.partners-section .section-title {
+    line-height: 59px;
+    padding-bottom: 4px
+}
+
+.partners-slider {
+    padding-top: 59px;
+    padding-left: 45px;
+    padding-right: 42px
+}
+
+.partners-slider__item img {
+    width: 238px;
+    height: 238px;
+    margin: auto;
+    border: 9px solid #edcfa4;
+    border-radius: 50%
+}
+
+.partners-background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    max-height: 172px;
+    height: 48%
+}
+
+.next-arrow,.prev-arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-15%);
+    -ms-transform: translateY(-15%);
+    transform: translateY(-15%);
+    cursor: pointer;
+    z-index: 2
+}
+
+#next-arrow,#prev-arrow {
+    cursor: pointer
+}
+
+.prev-arrow {
+    left: 0
+}
+
+.next-arrow {
+    right: 0
+}
+
+.section-title-box {
+    position: relative
+}
+
+.section-title-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1
+}
+
+.section-title-image_mobile {
+    display: none;
+    width: 100%;
+    margin-top: -13px
+}
+
+.content-wrapper {
+    margin-top: -20px
+}
+
+.board {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 108px 0 0 130px
+}
+
+.board-line {
+    position: relative;
+    padding-right: 43px
+}
+
+.board-line__title {
+    font-weight: 600;
+    font-size: 298.846px;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    display: inline-block;
+    white-space: nowrap;
+    text-transform: uppercase;
+    position: absolute;
+    left: -160px;
+    bottom: -10px;
+    color: #fff;
+    text-shadow: 8px 0 1px #bc9969,0 8px 1px #bc9969,-8px 0 1px #bc9969,0 -8px 1px #bc9969;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    z-index: -1;
+    opacity: .12
+}
+
+.video {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 110px;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch
+}
+
+.video__control {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    cursor: pointer
+}
+
+.video .video-box:first-child {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.video__item {
+    max-width: 475px;
+    max-height: 267px;
+    position: relative;
+    overflow: hidden
+}
+
+.video__item img {
+    margin-top: -45px
+}
+
+.video__item_large {
+    max-width: 873px;
+    max-height: 491px
+}
+
+.video__item_large img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: auto;
+    /*margin-top: -82px*/
+}
+
+.video__item_chanell {
+    max-height: 196px;
+    position: relative
+}
+
+.video__item_chanell img {
+    margin-top: 0
+}
+
+.video__description {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url(../img/detail-background.png);
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 30px 22px;
+    font-weight: 600;
+    color: #e9cb9f;
+    font-size: 16.9261px;
+    text-decoration: none
+}
+
+.video-box {
+    margin-right: 24px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.video-box:first-child .video-box {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+}
+
+.video-box:nth-child(2n) {
+    margin-right: 0
+}
+
+.chanell-logo {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 2
+}
+
+.gallery-wrapper {
+    margin-top: 55px
+}
+
+.gallery-wrapper .section-title {
+    margin-left: -8px
+}
+
+.gallery {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    max-width: 1376px;
+    margin-top: -36px
+}
+
+.gallery__item {
+    width: -webkit-calc((100% / 4) - (75px / 4));
+    width: calc((100% / 4) - (75px / 4));
+    margin-right: 25px;
+    cursor: pointer
+}
+
+.gallery__item img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery__item:not(.gallery__item_large) {
+    max-height: 185px
+}
+
+.gallery__item:nth-child(5n) {
+    margin-right: 0
+}
+
+.gallery__item_large {
+    width: 100%;
+    max-height: 775px;
+    margin-bottom: 27px;
+    margin-right: 0
+}
+
+/*.gallery__item_large img {
+    width: 100%;
+    height: 100%;
+}*/
+
+.navigation {
+    position: fixed;
+    right: -500px;
+    top: 0;
+    z-index: 99999;
+    background-color: #000;
+    height: 100vh;
+    padding: 0 0 30px 64px;
+    width: 419px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-transition: all .8s;
+    -o-transition: all .8s;
+    transition: all .8s
+}
+
+.navigation_open {
+    right: 0
+}
+
+.navigation-list {
+    list-style-type: none;
+    font-size: 42px
+}
+
+.navigation-list__item {
+    cursor: pointer;
+    position: relative
+}
+
+.navigation-list__item a {
+    text-decoration: none;
+    color: #edcfa4
+}
+
+.navigation-list__item:not(:last-child) {
+    margin-bottom: 55px
+}
+
+.liga-list {
+    font-size: 26.25px;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    list-style-type: none;
+    margin-top: 20px
+}
+
+.liga-list__item {
+    cursor: pointer
+}
+
+.liga-list__item:not(:last-child) {
+    margin-bottom: 24px
+}
+
+.navigation-top {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 46px;
+    padding-right: 49px;
+    margin-left: -35px
+}
+
+.navigation-top .join-wrapper {
+    margin: 0;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.navigation-top .join-wrapper .join__text {
+    font-size: 22px
+}
+
+.navigation-top .join-wrapper .direction-arrow {
+    width: 12.88px;
+    height: 14px
+}
+
+.navigation-top .join-wrapper .decoration-text {
+    font-size: 42.9556px;
+    top: 50%;
+    left: -30px;
+    -webkit-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    transform: translateY(-45%)
+}
+
+.blur {
+    -webkit-filter: blur(4px);
+    filter: blur(4px)
+}
+
+.form-wrapper {
+    background-image: url(../img/forms-background.png);
+    background-size: cover;
+    position: fixed;
+    z-index: 11;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border: 3px solid #edcfa4;
+    max-width: 1095px;
+    width: 100%;
+    display: none
+}
+
+.feedback-form,.registration-form {
+    padding: 110px 0 98px 65px;
+    max-height: 92vh
+}
+
+.feedback-form .decoration-text,.registration-form .decoration-text {
+    left: -8px;
+    top: 30px;
+    font-size: 167.692px
+}
+
+.feedback-form .decoration-text {
+    top: -20px
+}
+
+.form-title {
+    text-transform: uppercase;
+    color: #edcfa4;
+    font-weight: 600;
+    font-size: 112.629px
+}
+
+.form-text {
+    margin-top: 30px;
+    margin-bottom: 65px;
+    color: #edcfa4;
+    font-size: 28px;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    line-height: 32px
+}
+
+.button-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 80px
+}
+
+.button {
+    font-weight: 600;
+    font-size: 31.16px;
+    background-color: transparent;
+    color: #edcfa4;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding: 13px 0 12px 25px;
+    border: 2px solid #edcfa4;
+    max-width: 395px;
+    width: 100%;
+    font-family: FuturaDemiC,Helvetica,Verdana,sans-serif;
+    position: relative;
+    text-align: left;
+    border-right: none;
+    margin-right: 20px
+}
+
+.button__arrow {
+    position: absolute;
+    right: -40px;
+    top: -2.52px;
+    width: 60px;
+    height: 67px
+}
+
+.close-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%,50%);
+    -ms-transform: translate(-50%,50%);
+    transform: translate(-50%,50%);
+    cursor: pointer
+}
+
+.inputs-group {
+    max-width: 864px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-top: 75px
+}
+
+.inputs-group .col-1-2 {
+    width: -webkit-calc((100% / 2) - (60px / 2));
+    width: calc((100% / 2) - (60px / 2));
+    margin-right: 60px
+}
+
+.inputs-group .no-margin {
+    margin-right: 0
+}
+
+.input-form {
+    font-family: FuturaDemiC,Helvetica,Verdana,sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #edcfa4;
+    background-color: transparent;
+    outline: 0;
+    border: 1.64px solid #edcfa4;
+    padding: 24px 0 22px 23px;
+    margin-bottom: 60px
+}
+
+.last-step .form-text {
+    margin-top: 68px;
+    max-width: 867px
+}
+
+.feedback-icon {
+    cursor: pointer
+}
+
+.feedback-form {
+    padding: 80px 0 95px 50px
+}
+
+.feedback-form .form-title {
+    font-size: 90px
+}
+
+.feedback-form .inputs-group {
+    margin-top: 57px
+}
+
+.feedback-form .inputs-group .input-form {
+    margin-bottom: 51px
+}
+
+.feedback-form .button-wrapper {
+    margin-top: 0
+}
+
+.feedback-text {
+    background: 0 0;
+    border: 1.64px solid #edcfa4;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-size: 24px;
+    line-height: 27px;
+    padding-top: 26px;
+    padding-left: 28px;
+    max-width: 864px;
+    width: 100%;
+    margin-top: 89px;
+    height: 296px;
+    outline: 0;
+    color: #edcfa4
+}
+
+.photo-gallery-wrapper,.single-slider-wrapper {
+    position: fixed;
+    left: 10000px;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 4;
+    background-image: url(../img/gallery-background.png);
+    background-position: left top;
+    background-size: cover;
+    padding-right: 112px
+}
+
+.single-slider-inner {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    top: 48%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.single-slider {
+    margin: auto;
+    width: 1311px;
+    max-height: 737px
+}
+
+.single-slider__video {
+    width: 100%;
+    height: 737px;
+    border: 2px solid #edcfa4
+}
+
+.single-slider__video iframe {
+    width: 100%;
+    height: 100%
+}
+
+.single-slider__text {
+    border-top: 2px solid #edcfa4;
+    border-bottom: 2px solid #edcfa4;
+    height: 737px;
+    padding-top: 49px
+}
+
+.inputs-adding {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.inputs-adding .input-form {
+    width: 100%
+}
+
+.inputs-adding .icon-wrapper {
+    margin-left: 25px
+}
+
+.icon-wrapper {
+    padding: 16px;
+    border: 1.64px solid #edcfa4;
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+    cursor: pointer
+}
+
+.players-input {
+    width: 100%
+}
+
+.players-input .input-form {
+    display: none
+}
+
+.players-input .visible {
+    display: block
+}
+
+.team-form .button-wrapper {
+    margin-top: 0
+}
+
+.slider-arrow-next,.slider-arrow-prev {
+    bottom: -80px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 3
+}
+
+.slider-arrow-next {
+    right: 0
+}
+
+.slider-arrow-prev {
+    left: 0
+}
+
+.gallery-close-button {
+    bottom: -71px
+}
+
+.heading-uppercase {
+    font-size: 41.6667px;
+    line-height: 51px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif
+}
+
+.heading-bold {
+    font-family: FuturaDemiC,Helvetica,Verdana,sans-serif;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 44px;
+    margin-bottom: 60px
+}
+
+.paragraph {
+    font-family: Roboto,Helvetica,Verdana,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 45px
+}
+
+.heading {
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 43px
+}
+
+@supports (text-stroke:4px #EDCFA4) or (-webkit-text-stroke:4px #EDCFA4) {
+    .outline-bold {
+        color: transparent;
+        -webkit-text-stroke: 4px #edcfa4;
+        text-stroke: 4px #edcfa4;
+        text-shadow: none
+    }
+
+    .outline-light {
+        color: transparent;
+        -webkit-text-stroke: 2px #edcfa4;
+        text-stroke: 2px #edcfa4;
+        text-shadow: none
+    }
+}
+
+.decoration-text {
+    font-family: FuturaDemiC,Helvetica,Verdana,sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: .12;
+    position: absolute
+}
+
+.teams-header {
+    background-image: url(../img/teams-header-backgraund.png);
+    background-size: cover;
+    background-position: top left;
+    padding-top: 90px;
+    padding-left: 235px;
+    padding-bottom: 240px;
+    position: relative
+}
+
+.teams-header .teams-slider {
+    margin-bottom: 0
+}
+
+.teams-slider {
+    max-width: 1310px;
+    margin-bottom: 120px;
+    z-index: -4
+}
+
+.teams-slider__item a {
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    color: #e9cb9f
+}
+
+.teams-slider .slick-arrow {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.teams-slider .prev-arrow {
+    left: -72px
+}
+
+.about-team {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    position: absolute;
+    bottom: -35%;
+    left: 235px
+}
+
+.about-team__logo {
+    border: 9px solid #edcfa4;
+    border-radius: 50%;
+    margin-right: 55px
+}
+
+.about-team__logo_text {
+    font-weight: 400;
+    font-size: 121px;
+    background-color: #fff;
+    text-transform: uppercase;
+    color: #edcfa4;
+    border: 9px solid #edcfa4;
+    border-radius: 50%;
+    margin-right: 55px;
+    width: 238px;
+    height: 238px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.about-team__name {
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-weight: 400;
+    font-size: 41.6667px;
+    margin-bottom: 87px
+}
+
+.about-team__text {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 20px
+}
+
+.about-team__slogan {
+    display: block;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    font-size: 30px
+}
+
+.team-content-wrapper {
+    padding-top: 185px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.team-content {
+    margin-left: 83px;
+    max-width: 1450px
+}
+
+.team-content__paragraph {
+    font-family: Roboto,Helvetica,Verdana,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 95px;
+    color: #232323
+}
+
+.team-content__image {
+    margin-bottom: 95px
+}
+
+.team-content__image img {
+    width: 100%;
+    height: 100%
+}
+
+.team-content .heading-bold {
+    color: #232323
+}
+
+.team-content__line {
+    min-height: 100%
+}
+
+.team-content__line img {
+    height: 100%
+}
+
+.player-slider {
+    margin-top: 70px
+}
+
+.player-slider__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 32px;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    position: relative;
+    padding: 50px 105px;
+    width: 100%;
+    max-height: 91px;
+    background-image: url(../img/player-slider-background.png);
+    background-size: cover;
+    background-position: top left
+}
+
+.player-slider__photo {
+    border-radius: 50%;
+    border: 9px solid #edcfa4;
+    position: absolute;
+    max-height: 222px;
+    max-width: 222px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.player-slider__photo-text {
+    font-size: 95px;
+    background-color: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.player-slider__photo-text span {
+    margin: auto
+}
+
+.player-slider__item-wrapper {
+    height: 222px
+}
+
+.player-slider__item-inner {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative
+}
+
+.player-slider .next-arrow,.player-slider .prev-arrow {
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%)
+}
+
+.player-slider .prev-arrow {
+    left: 43px
+}
+
+.player-slider .next-arrow {
+    right: 48px
+}
+
+.photo-gallery-wrapper {
+    display: block;
+    z-index: 10;
+    padding-right: 0;
+    padding-top: 0
+}
+
+.photo-gallery-inner {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block
+}
+
+.slider-for {
+    margin-bottom: 17px
+}
+
+.slider-for .prev-arrow {
+    left: 9px
+}
+
+.slider-for .next-arrow {
+    right: 9px
+}
+
+.slider-for__item img {
+    max-height: 241px;
+    width: 100%
+}
+
+.slider-nav__item {
+    margin-right: 17px
+}
+
+.slider-nav__item img {
+    max-height: 111px
+}
+
+.photo-gallery-mobile {
+    margin: auto;
+    text-align: center;
+    display: none
+}
+
+.photo-gallery-mobile>svg {
+    margin-top: 44px;
+    cursor: pointer
+}
+
+.photo-gallery {
+    width: 100%;
+    margin: auto;
+    position: relative
+}
+
+.photo-gallery__item {
+    height: 30.1vw
+}
+
+.photo-gallery .slick-slide {
+    margin: 0 12px 0 12px
+}
+
+.photo-gallery .slick-active {
+    width: 70.1vw!important
+}
+
+.photo-gallery .slick-active img {
+    height: 39.42vw!important
+}
+
+.photo-gallery .slick-track {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end
+}
+
+.photo-gallery .slider-arrow-prev {
+    left: 275px
+}
+
+.photo-gallery .slider-arrow-next {
+    right: 305px
+}
+
+.gallery-settings {
+    max-width: 70.1vw;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 35px
+}
+
+.gallery-settings .close-button {
+    position: static;
+    margin: auto;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before,.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    background-color: #edcfa4;
+    opacity: 1
+}
+
+.active-form,.visible {
+    display: block
+}
+
+.visible-text {
+    display: inline
+}
+
+body .hide {
+    display: none
+}
+
+.visible-slider {
+    left: 0
+}
+
+.teams-slider-active {
+    z-index: 1
+}
+
+.mobile-line {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    max-width: 77px;
+    width: 100%
+}
+
+.mobile-line .burger-icon {
+    right: 22.5px;
+    top: 30px
+}
+
+.mobile-line .social-icons-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column
+}
+
+.mobile-line .header-about-us {
+    right: 0;
+    position: relative;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    margin-top: 183px;
+    height: 161px
+}
+
+.mobile-line .header-about-us__text {
+    padding: 0;
+    border: none;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    -webkit-transform: translateX(20%) rotate(-90deg);
+    -ms-transform: translateX(20%) rotate(-90deg);
+    transform: translateX(20%) rotate(-90deg);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    margin-top: 80px
+}
+
+.mobile-line .header-about-us__text-bottom {
+    text-align: left;
+    width: 77px
+}
+
+.mobile-line .header-about-us__icon {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.mobile-line .social-icons-list {
+    margin-top: 60px
+}
+
+.mobile-line .social-icons-list__item {
+    text-align: center
+}
+
+.mobile-line-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    background-color: #000;
+    max-height: 314px;
+    height: 100%;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between
+}
+
+.modal-header {
+    display: none;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #edcfa4;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-bottom: 83px
+}
+
+.add-input-button {
+    display: none;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 24px 14px 22px 14px;
+    border: 1.64px solid #edcfa4;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+.form-footer {
+    display: none;
+    text-align: center;
+    border-top: 2px solid #edcfa4;
+    margin-top: 40px;
+    padding-top: 30px
+}
+
+.teams-slider-mobile {
+    display: none;
+    background-image: url(../img/background-teams-slider-mobile.png);
+    background-size: 100% 63%;
+    background-repeat: no-repeat;
+    padding-top: 95px
+}
+
+.teams-slider-mobile .next-arrow,.teams-slider-mobile .prev-arrow {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    top: 57%
+}
+
+.teams-slider-mobile__item {
+    text-align: center
+}
+
+.teams-slider-mobile__logo {
+    margin: auto;
+    border: 5px solid #edcfa4;
+    border-radius: 50%;
+    max-width: 188px;
+    max-height: 188px;
+    height: 100%;
+    width: 100%
+}
+
+.teams-slider-mobile__logo-text {
+    font-size: 95px;
+    min-height: 188px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #fff
+}
+
+.teams-slider-mobile__logo-text span {
+    margin: auto
+}
+
+.teams-slider-mobile__name {
+    color: #e9cb9f;
+    font-size: 41.6667px;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    margin-bottom: 44px;
+    display: inline-block
+}
+
+.teams-slider-mobile__slogan {
+    font-size: 22px;
+    color: #edcfa4;
+    font-family: FuturaBookC,Helvetica,Verdana,sans-serif;
+    display: inline-block;
+    margin-top: 50px
+}
+
+.teams-menu-icon {
+    display: none
+}
+
+.liga-table-switch__next,.liga-table-switch__prev,.liga-table__item-a-draw_mobile,.liga-table__item-goals-scored_mobile,.liga-table__item-losers_mobile,.liga-table__item-missed-goals_mobile,.liga-table__item-played_mobile,.liga-table__item-points_mobile,.liga-table__item-red-card_mobile,.liga-table__item-won_mobile,.liga-table__item-yellow-cards_mobile {
+    display: none
+}
+
+.liga-table-switch__next,.liga-table-switch__prev {
+    cursor: pointer
+}
+
+.liga-table__videos {
+    cursor: pointer
+}
+
+.liga-table__videos svg {
+    width: 30px;
+    height: 30px
+}
+
+.live {
+    -webkit-animation: pulse 1.5s linear infinite;
+    animation: pulse 1.5s linear infinite
+}
+
+.live-box {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    text-transform: uppercase
+}
+
+.live-box span {
+    margin-right: 5px;
+    letter-spacing: 5px
+}
+
+.dot {
+    font-size: 25px
+}
+
+.liga-switch-inner {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.open-modal {
+    overflow: hidden
+}
+
+.arrows-swipe {
+    display: none;
+    position: absolute;
+    min-width: 100%;
+    overflow: hidden;
+    bottom: 5px;
+    right: 0;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.arrows-swipe svg {
+    margin-right: 25px;
+    max-width: 15px;
+    max-height: 15px;
+    fill: #edcfa4
+}
+
+.arrows-swipe svg:nth-child(1) {
+    -webkit-animation: pulse-first 2s linear infinite;
+    animation: pulse-first 2s linear infinite
+}
+
+.arrows-swipe svg:nth-child(2) {
+    -webkit-animation: pulse-second 2s linear infinite;
+    animation: pulse-second 2s linear infinite
+}
+
+.arrows-swipe svg:nth-child(3) {
+    -webkit-animation: pulse-third 2s linear infinite;
+    animation: pulse-third 2s linear infinite
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes pulse-first {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    100%,50% {
+        opacity: 0
+    }
+}
+
+@keyframes pulse-first {
+    0% {
+        opacity: 0
+    }
+
+    40% {
+        opacity: 1
+    }
+
+    100%,50% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes pulse-second {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100%,60% {
+        opacity: 0
+    }
+}
+
+@keyframes pulse-second {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100%,60% {
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes pulse-third {
+    0% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100%,70% {
+        opacity: 0
+    }
+}
+
+@keyframes pulse-third {
+    0% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 1
+    }
+
+    100%,70% {
+        opacity: 0
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .teams-header {
+        padding:4.6vw 0 12.5vw 12.23vw
+    }
+
+    .about-team__logo {
+        max-width: 12.39vw
+    }
+}
+
+@media screen and (max-width: 1845px) {
+    .about-team {
+        left:12.73vw
+    }
+
+    .about-team__name {
+        margin-bottom: 4.71vw
+    }
+
+    .team-content {
+        margin-left: 4.49vw;
+        max-width: 78.59vw
+    }
+
+    .team-content__image {
+        margin-bottom: 5.14vw
+    }
+
+    .team-content__line {
+        width: 8.4vw
+    }
+
+    .team-content__line img {
+        width: 100%
+    }
+
+    .team-form .registration-form {
+        padding: 5.96vw 0 5.31vw 3.52vw
+    }
+
+    .button-wrapper {
+        min-width: 1024px
+    }
+
+    .form-wrapper form {
+        overflow: hidden
+    }
+
+    #inputs-teams {
+        margin-top: 4.06vw
+    }
+
+    .feedback-form .decoration-text,.registration-form .decoration-text {
+        font-size: 9.08vw
+    }
+
+    .feedback-form {
+        padding: 4.5vw 0 5.31vw 3.52vw
+    }
+
+    .registration-form {
+        padding: 4.7vw 0 5.31vw 3.52vw
+    }
+
+    .inputs-group {
+        margin-top: 6.81vw;
+        max-width: 46.82vw
+    }
+
+    .feedback-text {
+        max-width: 46.82vw;
+        margin-top: 3.82vw
+    }
+
+    .feedback-form .form-title {
+        font-size: 4.87vw
+    }
+
+    .input-form {
+        margin-bottom: 3.25vw
+    }
+
+    .form-title {
+        font-size: 6.1vw
+    }
+
+    .header {
+        padding: 40px 145px 0 20px
+    }
+
+    .liga-info {
+        padding: 127px 0 0 45px
+    }
+
+    .board {
+        padding: 108px 0 0 55px
+    }
+
+    .partners-section {
+        margin-left: 55px
+    }
+
+    .form-wrapper {
+        max-width: 59.39vw
+    }
+}
+
+@media screen and (max-width: 1770px) {
+    .video__item_large img {
+        max-height:32.74vw
+    }
+
+    .about-team__logo_text {
+        font-size: 6.83vw;
+        width: 13.44vw;
+        height: 13.44vw;
+        margin-right: 20px
+    }
+
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-width: 74.09vw;
+        max-height: 41.63vw
+    }
+
+    .single-slider__text {
+        padding-top: 2.76vw
+    }
+
+    .single-slider__text .heading-uppercase {
+        font-size: 2.35vw
+    }
+
+    .single-slider__text .heading-bold {
+        margin-bottom: 3.38vw;
+        font-size: 2.14vw
+    }
+
+    .single-slider__text .paragraph {
+        margin-bottom: 2.54vw;
+        font-size: 1.35vw
+    }
+
+    .single-slider__text .heading {
+        font-size: 2.14vw
+    }
+
+    .teams-slider {
+        max-width: 74.01vw
+    }
+
+    .liga-table-wrapper {
+        max-width: 88.24vw
+    }
+
+    .header {
+        padding: 40px 8.19vw 0 1.12vw
+    }
+
+    .liga-info {
+        padding: 127px 0 0 2.54vw
+    }
+
+    .board {
+        padding: 108px 0 0 3.1vw
+    }
+
+    .board-line__image {
+        width: 8.75vw;
+        height: 100%
+    }
+
+    .board-line__title {
+        max-height: 100%;
+        overflow: hidden;
+        font-size: 16.88vw
+    }
+
+    .content-wrapper {
+        overflow: hidden;
+        max-width: 77.74vw
+    }
+
+    .video__item {
+        max-width: 26.66vw
+    }
+
+    .video__item img {
+        width: 100%
+    }
+
+    .video__item_large {
+        max-width: 49.32vw
+    }
+
+    .video__item_large img {
+        width: 100%;
+        height: 100%
+    }
+
+    .gallery__item img {
+        width: 100%
+    }
+
+    .line-sidebar {
+        padding: 46px 29px 0 33px
+    }
+
+    .partners-section {
+        margin-left: 3.1vw;
+        max-width: 88.98vw
+    }
+
+    .header-about-us {
+        right: 250px
+    }
+
+    .chanell-logo {
+        width: 7.62vw;
+        height: 7.62vw
+    }
+}
+
+@media screen and (max-width: 1645px) {
+    .video__item img,.video__item_large img {
+        margin-top:0
+    }
+
+    .feedback-form .decoration-text,.registration-form .decoration-text {
+        font-size: 7.08vw
+    }
+
+    .form-title {
+        font-size: 5.1vw
+    }
+
+    #inputs-teams {
+        margin-top: 3.06vw
+    }
+
+    .input-form {
+        margin-bottom: 2.8vw
+    }
+
+    .feedback-form,.registration-form {
+        max-height: 88vh
+    }
+
+    .player-slider__photo {
+        max-width: 13.42vw;
+        max-height: 13.42vw;
+        top: 10%
+    }
+
+    .player-slider__item {
+        font-size: 28px
+    }
+
+    .about-team__name {
+        font-size: 32.6667px
+    }
+
+    .about-team__slogan {
+        font-size: 26px
+    }
+
+    .team-content__paragraph {
+        font-size: 20px;
+        margin-bottom: 50px
+    }
+
+    .team-content__image {
+        margin-bottom: 50px
+    }
+
+    .team-content .heading-bold {
+        font-size: 34px;
+        margin-bottom: 40px
+    }
+
+    .team-content .heading {
+        font-size: 32px
+    }
+
+    .player-slider {
+        margin-top: 50px
+    }
+
+    .liga-table-wrapper {
+        max-width: 84.09vw;
+        padding: 30px 50px 50px 40px
+    }
+
+    .liga-table-switch__item_active {
+        font-size: 36.3202px!important
+    }
+
+    .board-line {
+        padding-right: 2.3vw
+    }
+
+    .board-line__image {
+        width: 6.75vw
+    }
+
+    .content-wrapper {
+        max-width: 76.4vw
+    }
+
+    .video {
+        padding-top: 90px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between
+    }
+
+    .video__item {
+        max-width: 26.6vw
+    }
+
+    .video__item_large {
+        max-width: 48.32vw;
+        height: 100%
+    }
+
+    .video-box {
+        margin-right: 0
+    }
+
+    .partners-section {
+        max-width: 85.5vw;
+        margin-top: 80px;
+        margin-bottom: 40px
+    }
+
+    .gallery-wrapper {
+        margin-top: 40px;
+        margin-bottom: -5px
+    }
+}
+
+@media screen and (max-width: 1512px) {
+    .liga-table__item-counter {
+        margin-right:15px
+    }
+
+    .liga-table__group {
+        max-width: 390px
+    }
+}
+
+@media screen and (max-width: 1458px) {
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-width:74.09vw;
+        max-height: 38.63vw
+    }
+
+    .single-slider__text {
+        padding-top: 2vw
+    }
+
+    .single-slider__text .heading-uppercase {
+        font-size: 2.1vw;
+        margin-bottom: 15px
+    }
+
+    .single-slider__text .heading-bold {
+        font-size: 1.9vw;
+        margin-bottom: 1.9vw
+    }
+
+    .single-slider__text .paragraph {
+        font-size: 1.3vw;
+        margin-bottom: 2.1vw
+    }
+
+    .single-slider__text .heading {
+        font-size: 1.9vw
+    }
+
+    .gallery-close-button svg {
+        width: 50px;
+        height: 50px
+    }
+
+    .partners-section .slick-arrow {
+        width: 95px
+    }
+
+    .slider-arrow-next,.slider-arrow-prev {
+        bottom: -55px
+    }
+
+    .gallery-close-button {
+        bottom: -47px
+    }
+
+    .header-about-us {
+        right: 110px
+    }
+
+    .header-title {
+        font-size: 38px;
+        padding-top: 45px
+    }
+
+    .logo {
+        -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+        align-self: flex-start;
+        padding-right: 15px
+    }
+
+    .partners-slider__item img {
+        width: 220px;
+        height: 220px
+    }
+
+    .liga-table {
+        padding-top: 30px;
+        max-height: 330px
+    }
+
+    .liga-switch {
+        padding-left: 2px
+    }
+
+    .liga-switch__item {
+        font-size: 35px
+    }
+
+    .liga-switch__item_active {
+        font-size: 96px;
+        line-height: 122px
+    }
+
+    .next-liga {
+        max-width: 100px
+    }
+
+    .liga-table,.liga-table-switch-wrapper {
+        min-width: 1126.030px
+    }
+
+    .liga-table-inner {
+        padding-bottom: 30px
+    }
+
+    .chanell-logo {
+        width: 7.59vw;
+        height: 7.59vw
+    }
+
+    .video__description {
+        padding: 35px 21px 20px 22px
+    }
+
+    .section-title {
+        font-size: 100px
+    }
+
+    .form-wrapper {
+        max-width: 69.39vw
+    }
+
+    .feedback-text,.inputs-group {
+        max-width: 57.82vw
+    }
+}
+
+@media screen and (max-width: 1358px) {
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-width:82vw;
+        max-height: 44.63vw
+    }
+
+    .header-inner {
+        position: relative;
+        padding-top: 27px
+    }
+
+    .header-inner .join-wrapper {
+        position: absolute;
+        right: 0;
+        top: -20px
+    }
+
+    .header-content {
+        max-width: 54.33vw;
+        padding-right: 25px
+    }
+
+    .logo svg {
+        width: 300px
+    }
+
+    .header-title {
+        font-size: 34px;
+        padding-top: 5px
+    }
+
+    .partners-slider__item img {
+        width: 190px;
+        height: 190px
+    }
+
+    .video__description {
+        font-size: 15px
+    }
+
+    .video__description svg {
+        width: 60px;
+        height: 15px
+    }
+
+    .team-content-wrapper {
+        padding-top: 140px
+    }
+
+    .team-content {
+        margin-left: 3.49vw
+    }
+
+    .team-content__paragraph {
+        font-size: 18px;
+        margin-bottom: 35px
+    }
+
+    .team-content__image {
+        margin-bottom: 35px
+    }
+
+    .team-content .heading-bold {
+        font-size: 30px;
+        margin-bottom: 25px
+    }
+
+    .team-content .heading {
+        font-size: 30px
+    }
+
+    .player-slider {
+        margin-top: 40px
+    }
+
+    .team-content__line {
+        width: 7.4vw
+    }
+}
+
+@media screen and (max-width: 1198px) {
+    .liga-table__item {
+        font-size:23px
+    }
+
+    .player-slider__item {
+        font-size: 25px;
+        padding: 50px 88px
+    }
+
+    .player-slider__photo {
+        top: 17%
+    }
+
+    .teams-header {
+        padding: 4.6vw 0 14.5vw 12.23vw
+    }
+
+    .about-team__logo {
+        max-width: 14.39vw
+    }
+
+    .about-team__name {
+        font-size: 26.6667px
+    }
+
+    .about-team__slogan {
+        font-size: 22px
+    }
+
+    .team-content__paragraph {
+        font-size: 16px;
+        margin-bottom: 30px
+    }
+
+    .team-content .heading-bold {
+        font-size: 27px
+    }
+
+    .team-content__image {
+        margin-bottom: 25px
+    }
+
+    .team-content .heading {
+        font-size: 27px
+    }
+
+    .player-slider {
+        margin-top: 20px
+    }
+
+    .single-slider__text .heading-uppercase {
+        line-height: 35px
+    }
+
+    .single-slider__text .heading-bold {
+        line-height: 36px
+    }
+
+    .single-slider__text .paragraph {
+        line-height: 32px
+    }
+
+    .single-slider__text .heading {
+        line-height: 35px
+    }
+
+    .header-inner .join-wrapper .join {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start
+    }
+
+    .header-inner .join-wrapper .join__text {
+        font-size: 28px
+    }
+
+    .header-inner .join-wrapper .join .decoration-text {
+        font-size: 50.9395px
+    }
+
+    .header-inner .join-wrapper .direction-arrow {
+        width: 16px
+    }
+
+    .liga-table-wrapper {
+        padding: 20px 5px 30px 15px;
+        max-width: 100%
+    }
+
+    .liga-switch__item {
+        font-size: 30px;
+        margin-right: 25px
+    }
+
+    .liga-switch__item_active {
+        font-size: 85px
+    }
+
+    .header-about-us {
+        bottom: -133px
+    }
+
+    .header-about-us__icon img {
+        width: 95px
+    }
+
+    .header-about-us__text {
+        font-size: 18px;
+        padding-top: 40px
+    }
+
+    .liga-info {
+        padding: 105px 0 0 15px
+    }
+
+    .board {
+        padding: 80px 0 0 25px
+    }
+
+    .gallery__item_large {
+        margin-bottom: 10px
+    }
+
+    .board-line {
+        display: none
+    }
+
+    .content-wrapper,.liga-info {
+        padding-right: 110px;
+        max-width: 100%
+    }
+
+    .liga-info {
+        padding-right: 118px
+    }
+
+    .video {
+        padding-top: 50px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    .video .video-box:first-child {
+        width: 65%;
+        margin-right: 1.6vw
+    }
+
+    .video .video-box:last-child {
+        width: 35%
+    }
+
+    .video__item {
+        max-width: 29vw
+    }
+
+    .video__item svg {
+        width: 85px
+    }
+
+    .video__item_large {
+        width: 100%;
+        max-width: 100%
+    }
+
+    .video__item_large img {
+        max-height: 35.74vw
+    }
+
+    .video__item_large svg {
+        width: 190px
+    }
+
+    .section-title-image {
+        width: 1090px
+    }
+
+    .partners-section {
+        margin-left: 25px;
+        margin-right: 110px;
+        max-width: 100%
+    }
+
+    .partners-section .section-title {
+        margin-left: -7px;
+        line-height: 48px
+    }
+
+    .header-title {
+        font-size: 30px;
+        padding-bottom: 10px;
+        line-height: 42px
+    }
+
+    .logo svg {
+        width: 275px
+    }
+
+    .header {
+        padding: 40px 100px 0 10px
+    }
+
+    .liga-table-switch__item {
+        font-size: 20px
+    }
+
+    .liga-table-switch__item_active {
+        font-size: 33.3202px!important
+    }
+
+    .liga-table__item {
+        padding: 14px 47px 14px 14px
+    }
+
+    .liga-table {
+        max-height: 256px
+    }
+
+    .gallery-wrapper {
+        margin-top: 25px
+    }
+
+    .section-title {
+        font-size: 88px;
+        line-height: 120px
+    }
+
+    .partners-slider {
+        padding-top: 35px
+    }
+
+    .next-liga {
+        max-width: 75px
+    }
+
+    .liga-table__group {
+        max-width: 350px
+    }
+
+    .logo {
+        padding-right: 0
+    }
+
+    .about-team {
+        left: 8.73vw
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .team-content-wrapper {
+        padding-top:120px
+    }
+
+    .about-team {
+        left: 5.73vw
+    }
+
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-width: 82vw;
+        max-height: 50.63vw
+    }
+
+    .logo svg {
+        width: 255px
+    }
+
+    .header-title {
+        font-size: 26px;
+        line-height: 35px
+    }
+
+    .header-about-us__text {
+        display: none
+    }
+
+    .header-about-us {
+        bottom: 0;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        transform: translateY(50%)
+    }
+
+    .header-about-us {
+        right: 90px
+    }
+
+    .header-about-us__icon img {
+        width: 65px
+    }
+
+    .partners-slider__item img {
+        width: 170px;
+        height: 170px
+    }
+
+    .team-info__logo,.team-info__logo-text {
+        max-width: 85px;
+        max-height: 85px
+    }
+
+    .liga-table__item {
+        font-size: 21px
+    }
+
+    .liga-table-calendar-game .liga-table__item {
+        margin-bottom: 35px
+    }
+
+    .liga-table__item-counter {
+        padding: 5px 10px 0 10px
+    }
+
+    .section-title {
+        font-size: 80px
+    }
+
+    .section-title-image {
+        width: 890px
+    }
+
+    .video {
+        padding-top: 35px
+    }
+
+    .video__description {
+        font-size: 13px;
+        padding: 30px 5px 20px 10px
+    }
+
+    .inputs-group .input-form {
+        width: 100%;
+        margin-right: 0
+    }
+
+    .feedback-form .inputs-group {
+        margin-top: 30px
+    }
+
+    .feedback-form .inputs-group .input-form {
+        margin-bottom: 25px
+    }
+
+    .team-content__line {
+        display: none
+    }
+
+    .team-content {
+        max-width: 82.59vw
+    }
+
+    .player-slider__photo {
+        left: 56%;
+        max-width: 135px;
+        max-height: 135px
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .liga-table__item {
+        font-size:19px
+    }
+
+    .video__item_large img {
+        max-height: 100%
+    }
+
+    .gallery__item:not(.gallery__item_large) {
+        margin-bottom: 15px
+    }
+
+    .about-team__logo_text {
+        font-size: 8.83vw;
+        width: 16.44vw;
+        height: 16.44vw
+    }
+
+    .photo-gallery .slick-active img {
+        height: 44.42vw!important
+    }
+
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-height: 60.63vw
+    }
+
+    .single-slider__text .heading-uppercase {
+        font-size: 3vw
+    }
+
+    .single-slider__text .heading-bold {
+        font-size: 2.7vw
+    }
+
+    .single-slider__text .paragraph {
+        font-size: 2vw
+    }
+
+    .single-slider__text .heading {
+        font-size: 2.7vw
+    }
+
+    .input-form {
+        font-size: 18px;
+        margin-bottom: 25px
+    }
+
+    .liga-table,.liga-table-switch-wrapper {
+        min-width: 1028.03px
+    }
+
+    .liga-table__item-counter {
+        margin-right: 25px
+    }
+
+    .liga-table__group {
+        max-width: 300px
+    }
+
+    .liga-switch__item {
+        font-size: 26px;
+        margin-right: 15px;
+        font-size: 24px
+    }
+
+    .liga-switch__item_active {
+        font-size: 62px
+    }
+
+    .next-liga {
+        max-width: 60px
+    }
+
+    .logo svg {
+        width: 220px
+    }
+
+    .liga-info {
+        padding: 50px 118px 0 15px
+    }
+
+    .liga-table__group {
+        max-width: 320px
+    }
+
+    .liga-table__item-a-draw,.liga-table__item-goals-scored,.liga-table__item-losers,.liga-table__item-missed-goals,.liga-table__item-played,.liga-table__item-points,.liga-table__item-red-card,.liga-table__item-won,.liga-table__item-yellow-cards {
+        max-width: 50px
+    }
+
+    .chanell-logo {
+        width: 135px;
+        height: 135px
+    }
+
+    .liga-table-wrapper {
+        padding: 20px 5px 15px 15px
+    }
+
+    .partners-slider {
+        padding-left: 25px;
+        padding-right: 25px
+    }
+
+    .partners-section .slick-arrow {
+        width: 50px
+    }
+
+    .video {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .video .video-box:first-child {
+        margin-bottom: 10px;
+        width: 100%
+    }
+
+    .video .video-box:first-child .video__item_large {
+        max-width: 100%;
+        max-height: 100%
+    }
+
+    .video .video-box:last-child {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 100%
+    }
+
+    .video .video-box:last-child .video__item {
+        max-width: -webkit-calc((100% / 2) - (15px / 2));
+        max-width: calc((100% / 2) - (15px / 2));
+        max-height: 180px
+    }
+
+    .video .video-box:last-child .video__item img {
+        height: 100%
+    }
+
+    .video .video-box:last-child .video__item svg {
+        width: 125px
+    }
+
+    .video .video-box:last-child .video__item_chanell {
+        max-height: none
+    }
+
+    .video .video-box:last-child .video__item_chanell img {
+        -o-object-fit: cover;
+        object-fit: cover;
+        height: 100%
+    }
+
+    .gallery__item {
+        width: -webkit-calc((100% / 2) - (10px / 2));
+        width: calc((100% / 2) - (10px / 2));
+        margin-right: 10px
+    }
+
+    .gallery__item:nth-child(odd) {
+        margin-right: 0
+    }
+
+    .gallery__item_large {
+        width: 100%
+    }
+
+    .player-slider__photo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        max-width: 185px;
+        max-height: 185px
+    }
+
+    .player-slider__item {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        background: 0 0;
+        padding: 0;
+        background-image: url(../img/background-image-palayer-mobile.png);
+        background-size: cover;
+        background-position: top left;
+        padding-top: 130px;
+        margin-top: 100px;
+        max-height: none;
+        font-size: 30px;
+        padding-bottom: 20px
+    }
+
+    .player-slider__item-inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .player-slider__item-wrapper {
+        height: 100%
+    }
+
+    .player-slider__name {
+        font-weight: 600;
+        margin-bottom: 15px
+    }
+
+    .player-slider__year {
+        font-size: 27px
+    }
+
+    .player-slider .slick-arrow {
+        height: 52px;
+        width: 52px;
+        top: 30%
+    }
+
+    .about-team__slogan {
+        padding-right: 100px
+    }
+
+    .teams-slider__item a {
+        font-size: 20px
+    }
+
+    .about-team {
+        -webkit-box-align: end;
+        -webkit-align-items: end;
+        -ms-flex-align: end;
+        align-items: end;
+        bottom: -45%
+    }
+}
+
+@media screen and (max-width: 775px) {
+    .about-team__logo_text {
+        font-size:8.83vw;
+        width: 15.44vw;
+        height: 15.44vw
+    }
+
+    .team-content {
+        margin-left: 23px
+    }
+
+    .player-slider .slick-arrow {
+        top: 33%
+    }
+
+    .about-team__logo {
+        max-width: 17.39vw
+    }
+
+    .about-team__logo {
+        margin-right: 30px
+    }
+
+    .teams-header {
+        padding: 6.6vw 0 17.5vw 12.23vw
+    }
+
+    .team-content .heading,.team-content .heading-bold {
+        font-size: 25px
+    }
+
+    .player-slider__item {
+        font-size: 26px;
+        padding-top: 110px
+    }
+
+    .player-slider__year {
+        font-size: 24px
+    }
+
+    .team-content {
+        max-width: 100%;
+        padding-right: 130px
+    }
+
+    .teams-slider {
+        max-width: 71.01vw
+    }
+
+    .player-slider__photo {
+        max-width: 170px;
+        max-height: 170px
+    }
+
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-height: 80vh
+    }
+
+    .input-form {
+        font-size: 17px;
+        padding: 24px 0 22px 14px
+    }
+
+    .header-about-us {
+        right: 125px
+    }
+
+    .header {
+        padding: 40px 115px 0 0;
+        margin-left: -10px
+    }
+
+    .header-content {
+        display: none
+    }
+
+    .header-inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-top: 0
+    }
+
+    .header-inner .join-wrapper,.logo {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    .logo svg {
+        max-width: 375px;
+        margin-top: -35px;
+        width: 100%
+    }
+
+    .header-inner {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+
+    .header-inner .join-wrapper {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1;
+        position: relative;
+        top: 0
+    }
+
+    .header-inner .join-wrapper .join {
+        -webkit-box-align: baseline;
+        -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline
+    }
+
+    .header-inner .join-wrapper .join__text {
+        font-size: 32px
+    }
+
+    .header-inner .join-wrapper .decoration-text {
+        font-size: 55.9395px;
+        top: -13px
+    }
+
+    .mobile-header-content {
+        display: block;
+        padding: 0 110px 0 25px;
+        max-width: 100%
+    }
+
+    .header-title {
+        font-size: 34px;
+        padding-top: 100px;
+        margin-bottom: 16px;
+        background-color: rgba(237,207,164,.14)
+    }
+
+    .header-text {
+        font-size: 15px
+    }
+
+    .liga-info {
+        padding: 20px 118px 0 15px
+    }
+
+    .header-about-us__icon img {
+        width: 95px
+    }
+
+    .liga-switch__item {
+        font-size: 21px
+    }
+
+    .liga-switch__item_active {
+        font-size: 52px
+    }
+
+    .next-liga {
+        max-width: 52px
+    }
+
+    .section-title {
+        font-size: 62px
+    }
+
+    .gallery-wrapper .section-title {
+        margin-left: -4px;
+        line-height: 104px
+    }
+
+    .section-title-image {
+        width: 780px
+    }
+
+    .video {
+        padding-top: 15px
+    }
+
+    .partners-section .section-title {
+        margin-left: -5px;
+        line-height: 31px
+    }
+
+    .liga-switch {
+        padding-left: 5px
+    }
+
+    .video .video-box:last-child .video__item svg {
+        width: 12.12vw
+    }
+
+    .button {
+        font-size: 25px
+    }
+
+    .input-form {
+        font-size: 16px
+    }
+
+    .icon-wrapper {
+        padding: 13px
+    }
+}
+
+@media screen and (max-width: 665px) {
+    .about-team__logo_text {
+        font-size:7.83vw;
+        width: 17.44vw;
+        height: 15.44vw
+    }
+
+    .photo-gallery-wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    .partners-slider__item img {
+        width: 139.79px;
+        height: 139.79px
+    }
+
+    .navigation-list {
+        font-size: 38px
+    }
+
+    .liga-list__item {
+        font-size: 22px
+    }
+
+    .navigation-list__item:not(:last-child) {
+        margin-bottom: 33px
+    }
+
+    .chanell-logo {
+        width: 10vw;
+        height: 16.75vw
+    }
+
+    .video__description {
+        padding: 17px 5px 16px 10px
+    }
+
+    .video__description #link-arrow {
+        width: 50px
+    }
+
+    .liga-switch__item {
+        font-size: 20px
+    }
+
+    .liga-switch__item_active {
+        font-size: 45px
+    }
+
+    .next-liga {
+        width: 45px
+    }
+
+    .single-slider__text .heading-uppercase {
+        font-size: 3.5vw
+    }
+
+    .single-slider__text .heading-bold {
+        font-size: 3.1vw
+    }
+
+    .single-slider__text .paragraph {
+        font-size: 2.4vw
+    }
+
+    .single-slider__text .heading {
+        font-size: 3.1vw
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .liga-table-calendar,.liga-table-switch__item,.liga-table__item-a-draw,.liga-table__item-counter,.liga-table__item-description,.liga-table__item-goals-scored,.liga-table__item-losers,.liga-table__item-missed-goals,.liga-table__item-played,.liga-table__item-player,.liga-table__item-points,.liga-table__item-red-card,.liga-table__item-won,.liga-table__item-yellow-cards,.photo-gallery-inner {
+        display:none
+    }
+
+    .liga-table-calendar {
+        display: none
+    }
+
+    .liga-table-calendar svg {
+        width: 22px
+    }
+
+    .logo svg {
+        max-width: 308px
+    }
+
+    .single-slider__text {
+        overflow-y: scroll
+    }
+
+    .team-info {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        min-width: 175px;
+        text-align: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin-top: -50px
+    }
+
+    .team-info__logo {
+        width: 55px;
+        max-height: 55px
+    }
+
+    .liga-table-calendar-game .team-info {
+        min-width: auto;
+        width: 100%
+    }
+
+    .liga-table-calendar-game .liga-table__group-match {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .liga-table__group-match .team-info:first-child {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        margin-top: 0
+    }
+
+    .liga-table-calendar-game .liga-table__group-match .team-info:first-child .team-info__name {
+        padding-right: 0
+    }
+
+    .liga-table-calendar-game .liga-table__item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding: 15px 0 15px 0
+    }
+
+    .match-score {
+        margin: 0;
+        text-align: center
+    }
+
+    .liga-table-switch__item_active,.liga-table-switch__next,.liga-table-switch__prev,.liga-table__item_active {
+        display: -webkit-box!important;
+        display: -webkit-flex!important;
+        display: -ms-flexbox!important;
+        display: flex!important
+    }
+
+    .liga-table__item {
+        padding: 14px 60px 14px 14px
+    }
+
+    .liga-table-switch__item:not(:nth-child(2)) {
+        border: none
+    }
+
+    .liga-table__item_active {
+        margin-left: auto
+    }
+
+    .liga-table-switch {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        padding-right: 32px;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-right: 0
+    }
+
+    .liga-table-switch__item {
+        margin: auto
+    }
+
+    .liga-table-calendar-game .liga-table__group {
+        margin: auto;
+        margin-bottom: 25px
+    }
+
+    .liga-table__item-date {
+        margin: auto;
+        margin-bottom: 5px;
+        font-weight: 600
+    }
+
+    .liga-table,.liga-table-switch-wrapper {
+        min-width: auto
+    }
+
+    .liga-table-switch-wrapper {
+        padding-right: 20px
+    }
+
+    .photo-gallery-mobile {
+        display: block;
+        width: 100%
+    }
+
+    .line-sidebar {
+        display: none
+    }
+
+    .header-wrapper,.mobile-line {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    .mobile-line-inner .burger-icon {
+        position: fixed
+    }
+
+    .header-inner {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column
+    }
+
+    .logo {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+        -ms-flex-order: 2;
+        order: 2;
+        margin: auto;
+        margin-top: 40px;
+        max-height: 219px
+    }
+
+    .logo svg {
+        margin-top: 0
+    }
+
+    .header-inner .join-wrapper {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+        -ms-flex-order: 1;
+        order: 1
+    }
+
+    .header {
+        padding: 30px 0 0 0
+    }
+
+    .header .header-about-us {
+        display: none
+    }
+
+    .header-inner .join-wrapper {
+        margin-left: 99px
+    }
+
+    .header-inner .join-wrapper .join {
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center
+    }
+
+    .header-inner .join-wrapper .join__text {
+        font-size: 22px
+    }
+
+    .header-inner .join-wrapper .join .decoration-text {
+        font-size: 42.9556px;
+        top: -11px
+    }
+
+    .direction-arrow {
+        width: 15px;
+        margin-top: -4px
+    }
+
+    .mobile-header-content {
+        padding: 0 0 0 47px
+    }
+
+    .header-title {
+        font-size: 27.1502px;
+        font-weight: 600;
+        font-family: FuturaDemiC,Helvetica,Verdana,sans-serif
+    }
+
+    .header-text {
+        font-size: 16.9688px;
+    }
+
+    .liga-switch {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 47px
+    }
+
+    .liga-switch__item {
+        font-size: 48px;
+        line-height: 60px
+    }
+
+    .liga-switch-inner {
+        padding: 25px 0;
+        width: 100%;
+        -webkit-transition: .5s all;
+        -o-transition: .5s all;
+        transition: .5s all
+    }
+
+    .liga-switch__item_active {
+        background-color: #000;
+        width: 100%
+    }
+
+    .liga-switch__item {
+        margin-right: 0
+    }
+
+    .liga-table-wrapper {
+        border-left: none;
+        border-right: none;
+        margin-top: 0;
+        margin-left: 5px;
+        padding: 34px 5px 15px 43px
+    }
+
+    .liga-info {
+        padding: 73px 0 0 0
+    }
+
+    .next-liga {
+        max-width: 90px;
+        width: 100%;
+        display: none
+    }
+
+    .liga-table-switch__item:first-child {
+        padding-left: 0
+    }
+
+    .liga-table {
+        padding-top: 0
+    }
+
+    .liga-table-calendar-game,.liga-table-disqualification,.liga-table-scorers,.liga-table-statistics,.liga-table-teams {
+        padding-top: 25px
+    }
+
+    .section-title-image {
+        display: none
+    }
+
+    .section-title-image_mobile {
+        display: block;
+        width: 100%
+    }
+
+    .board {
+        padding: 0;
+        margin-top: 98px
+    }
+
+    .content-wrapper {
+        padding-right: 0
+    }
+
+    .section-title {
+        font-size: 59px;
+        line-height: 55px;
+        padding-left: 47px
+    }
+
+    .video {
+        padding-top: 21px
+    }
+
+    .video .video-box:first-child {
+        margin-bottom: 21px
+    }
+
+    .video .video-box:last-child .video__item .chanell-logo {
+        width: 27vw;
+        height: 27vw
+    }
+
+    .video__description {
+        padding: 26px 5px 18px 10px;
+        font-weight: 600;
+        font-size: 11.4806px
+    }
+
+    .video__description span {
+        margin: auto
+    }
+
+    #link-arrow {
+        display: none
+    }
+
+    .video .video-box:last-child .video__item {
+        max-width: 356px;
+        max-height: 200px
+    }
+
+    .video .video-box:last-child .video__item_chanell {
+        max-width: 208px;
+        margin-left: 10px
+    }
+
+    .video .video-box:last-child .video__item_chanell img {
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover
+    }
+
+    .gallery__item_large {
+        margin-bottom: 12px
+    }
+
+    .partners-section {
+        margin: 77px 0 0 0;
+        max-width: 100%
+    }
+
+    .navigation {
+        background-image: url(../img/mobile-menu-background.png);
+        background-size: cover
+    }
+
+    .navigation-top .join-wrapper .decoration-text {
+        font-size: 42.9556px
+    }
+
+    .navigation-top {
+        border-bottom: 2px solid #edcfa4;
+        padding-right: 0;
+        margin-right: 49px;
+        max-width: 367px;
+        width: 100%;
+        padding-bottom: 30px
+    }
+
+    .form-wrapper {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        border: none
+    }
+
+    .feedback-form .form-title,.form-title {
+        font-size: 48px
+    }
+
+    .feedback-form .decoration-text,.registration-form .decoration-text {
+        font-size: 64px
+    }
+
+    .feedback-form,.registration-form,.team-form .registration-form {
+        padding: 20px 26px
+    }
+
+    .feedback-text,.inputs-group {
+        max-width: 100%
+    }
+
+    .form-text {
+        height: 30vh
+    }
+
+    .feedback-text {
+        max-height: 104px;
+        font-weight: 600;
+        margin-top: 52px
+    }
+
+    .modal-header {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    .form-title-wrapper {
+        position: relative
+    }
+
+    .feedback-form,.registration-form {
+        max-height: 100vh
+    }
+
+    @supports (text-stroke:4px #EDCFA4) or (-webkit-text-stroke:4px #EDCFA4) {
+        .feedback-form .decoration-text,.registration-form .decoration-text {
+            color: transparent;
+            -webkit-text-stroke: 2px #edcfa4;
+            text-stroke: 2px #edcfa4;
+            text-shadow: none;
+            top: -40px;
+            left: -30px
+        }
+    }
+
+    .icon-wrapper {
+        display: none
+    }
+
+    .add-input-button {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+
+    .team-form .button-wrapper {
+        margin-top: 109px
+    }
+
+    .form-footer {
+        display: block
+    }
+
+    .form-wrapper .close-button {
+        display: none
+    }
+
+    .button {
+        max-width: 283px;
+        font-size: 25px
+    }
+
+    .button__arrow {
+        height: 65px
+    }
+
+    .photo-gallery-wrapper,.single-slider-wrapper {
+        padding-right: 0
+    }
+
+    .single-slider,.single-slider__text,.single-slider__video {
+        max-width: 100%
+    }
+
+    .single-slider-inner {
+        padding: 0 23px
+    }
+
+    .single-slider__text {
+        padding-top: 43px
+    }
+
+    .single-slider__text .heading-uppercase {
+        font-size: 27.5px
+    }
+
+    .single-slider__text .heading-bold {
+        font-size: 25px
+    }
+
+    .single-slider__text .paragraph {
+        font-size: 16px
+    }
+
+    .single-slider__text .heading {
+        font-size: 25px
+    }
+
+    .single-slider__video {
+        max-height: 239px
+    }
+
+    .teams-header {
+        display: none
+    }
+
+    .teams-header {
+        padding: 0
+    }
+
+    .teams-slider-mobile {
+        display: block
+    }
+
+    .team-content {
+        padding-right: 0;
+        margin-left: 0
+    }
+
+    .team-content .heading,.team-content .heading-bold,.team-content__paragraph {
+        padding: 0 27px 0 23px
+    }
+
+    .team-content-wrapper {
+        padding-top: 57px
+    }
+
+    .teams-menu-icon {
+        display: block;
+        position: fixed;
+        right: 24px;
+        top: 30px
+    }
+
+    .single-slider__video {
+        margin-top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%)
+    }
+
+    .liga-table-switch__item:not(:nth-child(1)) {
+        padding-left: 0;
+        border-left: 0
+    }
+
+    .team-info__logo-text {
+        width: 55px;
+        height: 55px;
+        font-size: 32px
+    }
+
+    .team-info {
+        max-height: none;
+        margin-top: 0
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .single-slider__text {
+        max-height:64vh;
+        margin-bottom: 83px
+    }
+
+    .liga-table-switch__item_active {
+        font-size: 23.3202px!important
+    }
+
+    .liga-list {
+        display: none
+    }
+
+    .gallery-close-button,.slider-arrow-next,.slider-arrow-prev {
+        bottom: 30px
+    }
+
+    .single-slider__text {
+        padding-top: 10px
+    }
+
+    .gallery-close-button {
+        bottom: 40px
+    }
+
+    .navigation {
+        display: block
+    }
+
+    .navigation-top {
+        padding-top: 40px;
+        margin-bottom: 60px
+    }
+
+    .social-icons-list {
+        margin-top: 60px
+    }
+
+    .navigation-list a {
+        font-size: 26px;
+        display: inline
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .liga-table__item,.liga-table__item-name {
+        font-size:16px
+    }
+
+    .liga-table__item-name {
+        width: 100%
+    }
+
+    .liga-table__group-items {
+        max-width: 30px
+    }
+
+    .liga-table__item-counter {
+        padding: 2px 10px 0 10px
+    }
+
+    .navigation {
+        width: 100%
+    }
+
+    .player-slider .prev-arrow {
+        left: 13px
+    }
+
+    .player-slider .next-arrow {
+        right: 13px
+    }
+
+    .single-slider__text .heading,.single-slider__text .heading-uppercase {
+        font-size: 5.52vw
+    }
+
+    .single-slider__text .heading-bold {
+        font-size: 5.29vw
+    }
+
+    .single-slider__text .paragraph {
+        font-size: 3.22vw
+    }
+
+    .video .video-box:last-child .video__item .chanell-logo {
+        width: 24vw;
+        height: 26vw
+    }
+
+    .decoration-text {
+        max-width: 100%;
+        overflow: hidden
+    }
+
+    .video__item_large svg {
+        width: 130px
+    }
+
+    .mobile-header-content {
+        padding: 0 0 0 25px
+    }
+
+    .liga-info {
+        padding: 50px 0 0 0
+    }
+
+    .liga-switch {
+        padding-left: 25px
+    }
+
+    .liga-table-wrapper {
+        padding: 34px 5px 15px 20px
+    }
+
+    .button-wrapper {
+        max-width: -webkit-calc(100% - 2px);
+        max-width: calc(100% - 2px);
+        min-width: auto;
+        width: 100%
+    }
+
+    .button {
+        padding: 15px 0 14px 25px;
+        max-width: 100%
+    }
+
+    .button-wrapper>svg {
+        display: none
+    }
+
+    .mobile-line .header-about-us__text-bottom {
+        width: 82px
+    }
+
+    .header-about-us__text {
+        text-align: left
+    }
+}
+
+@media screen and (max-width: 391px) {
+    .next-liga {
+        max-width:70px
+    }
+
+    .liga-switch__item {
+        font-size: 46px
+    }
+
+    .video__description {
+        font-size: 10px
+    }
+
+    .header {
+        min-height: 314px
+    }
+
+    .form-footer {
+        padding-bottom: 120px
+    }
+
+    .logo svg {
+        height: 301px
+    }
+}
+
+@media screen and (max-height: 880px) {
+    .line-sidebar {
+        padding:46px 17px 0 23px
+    }
+
+    .breadcrumbs {
+        height: 415px
+    }
+
+    .breadcrumbs_rotated {
+        font-size: 34px;
+        width: 415px
+    }
+
+    .social-icons-list__item {
+        margin-bottom: 14px
+    }
+}
+
+@media screen and (max-height: 805px) {
+    .navigation {
+        width:380px;
+        padding: 0 0 10px 55px
+    }
+
+    .navigation-top .join-wrapper .decoration-text {
+        left: -22px
+    }
+
+    .navigation-list {
+        font-size: 38px
+    }
+
+    .navigation-list__item:not(:last-child) {
+        margin-bottom: 25px
+    }
+
+    .liga-list {
+        margin-top: 10px
+    }
+
+    .breadcrumbs {
+        height: 190px
+    }
+
+    .breadcrumbs__page {
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0
+    }
+
+    .breadcrumbs__table-info {
+        display: none
+    }
+
+    .breadcrumbs_rotated {
+        width: 190px
+    }
+}
