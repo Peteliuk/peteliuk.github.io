@@ -4096,7 +4096,7 @@ body .hide {
         font-size: 34px;
         padding-top: 100px;
         margin-bottom: 16px;
-        background-color: rgba(237,207,164,.14)
+        /*background-color: rgba(237,207,164,.14)*/
     }
 
     .header-text {
