@@ -221,7 +221,7 @@
         </li>
         <li class="navigation-list__item"><a href="#video-section">YOUTUBE</a></li>
         <li class="navigation-list__item"><a href="#gallery-section">ГАЛЕРЕЯ</a></li>
-        <li class="navigation-list__item"><a href="#">ГРАВЦІ</a></li>
+        <li class="navigation-list__item"><a href="#">КОМАНДА</a></li>
         <li class="navigation-list__item"><a href="#partners-section">ПАРТНЕРИ</a></li>
       </ul>
       <ul class="social-icons-list">
@@ -255,11 +255,13 @@
         <div class="form-title-wrapper"><span class="form-title">Реєстрація</span><span class="decoration-text outline-bold">registration</span></div>
         <form>
           <div class="inputs-group" id="inputs-teams">
-            <input class="input-form col-1-2" name="team-name" placeholder="НАЗВА КОМАНДИ">
-            <input class="input-form col-1-2 no-margin" name="liga" placeholder="ЛІГА">
-            <input class="input-form col-1" name="capitan-name" placeholder="ІМ’Я КАПІТАНА">
-            <input class="input-form col-1-2" name="team-phone" placeholder="НОМЕР ТЕЛЕФОНУ">
-            <input class="input-form col-1-2 no-margin" name="team-email" placeholder="E-MAIL">
+            <input class="input-form col-1" name="name" placeholder="ІМ'Я">
+            <input class="input-form col-1-2" name="phone" placeholder="НОМЕР ТЕЛЕФОНУ">
+            <input class="input-form col-1-2 no-margin" name="email" placeholder="E-MAIL">
+            <input class="input-form col-1-2" name="height" placeholder="ЗРІСТ">
+            <input class="input-form col-1-2 no-margin" name="weight" placeholder="ВАГА">
+            <textarea class="feedback-text input-form no-margin" style="margin-top: 0;" name="experience" placeholder="ДОСВІД (до 100 символів)"></textarea>
+            
             <!-- <div class="inputs-adding">
               <input class="input-form" name="team-layer-1" placeholder="ІМ’Я ГРАВЦЯ | ДАТА НАРОДЖЕННЯ ">
               <div class="icon-wrapper add-layer-field"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.423828" y1="15.1024" x2="29.9746" y2="15.1024" stroke="#EDCFA4" stroke-width="3"/><line x1="15.3906" y1="29.6863" x2="15.3906" y2="0.135538" stroke="#EDCFA4" stroke-width="3"/></svg></div>
@@ -428,7 +430,7 @@
 
     <!-- About Us -->
 
-    <div class="single-slider-wrapper" id="about-us-slider">
+    <!-- <div class="single-slider-wrapper" id="about-us-slider">
       <div class="single-slider-inner">
         <div class="single-slider">
           <div class="single-slider__video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/w0D2nadzBSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
@@ -451,7 +453,7 @@
         </div>
         <div class="close-button gallery-close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#EDCFA4" stroke-width="3"/> <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#EDCFA4" stroke-width="3"/> </svg></div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Liga -->
 
@@ -1040,11 +1042,23 @@
     <div class="single-slider-wrapper" id="video-slider">
       <div class="single-slider-inner">
         <div class="single-slider">
-          <div class="single-slider__video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/w0D2nadzBSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="single-slider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/UiDhYtUz0RU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="single-slider__video"><iframe width="560" height="315" src="https://www.youtube.com/embed/Lv89FZpKd18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+          <div class="single-slider__video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/w0D2nadzBSQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="single-slider__video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UiDhYtUz0RU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="single-slider__video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Lv89FZpKd18" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
         </div>
-        <div class="close-button gallery-close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#EDCFA4" stroke-width="3"/> <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#EDCFA4" stroke-width="3"/> </svg></div>
+        <div class="close-button gallery-close-button">
+          <svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#CCCCCC" stroke-width="2"/>
+            <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#CCCCCC" stroke-width="3"/>
+            <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#CCCCCC" stroke-width="3"/>
+          </svg>
+        </div>
       </div>
     </div>
 
@@ -1052,24 +1066,51 @@
     
     <div class="photo-gallery-wrapper">
       <div class="photo-gallery-inner">
-        <div class="photo-gallery"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"><img class="photo-gallery__item" src="img/Slider-image-1.png" alt="gallery image"></div>
-        <div class="gallery-settings"><svg id='prev-arrow' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M10.5 1.00962L2 14L10.5 26.9904" stroke="#EDCFA4" stroke-opacity="0.5" stroke-width="3"/> <path d="M3 14L113 14" stroke="#EDCFA4" stroke-opacity="0.5" stroke-width="3"/> </svg>
-          <div class="gallery-close-button"><svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#EDCFA4" stroke-width="3"/> <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#EDCFA4" stroke-width="3"/> </svg></div><svg id='next-arrow' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M102.5 26.9904L111 14L102.5 1.00964" stroke="#EDCFA4" stroke-width="3"/> <path d="M110 14L0 14" stroke="#EDCFA4" stroke-width="3"/> </svg>
+        <div class="photo-gallery">
+          <img class="photo-gallery__item" src="img/gallery-img5.jpg" alt="gallery image">
+          <img class="photo-gallery__item" src="img/gallery-img2.jpg" alt="gallery image">
+          <img class="photo-gallery__item" src="img/gallery-img3.jpg" alt="gallery image">
+          <img class="photo-gallery__item" src="img/gallery-img4.jpg" alt="gallery image">
+          <img class="photo-gallery__item" src="img/gallery-img1.jpg" alt="gallery image">
+        </div>
+        <div class="gallery-settings">
+          <svg id='prev-arrow' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.5 1.00962L2 14L10.5 26.9904" stroke="#CCCCCC" stroke-opacity="0.5" stroke-width="3"/>
+            <path d="M3 14L113 14" stroke="#CCCCCC" stroke-opacity="0.5" stroke-width="3"/>
+          </svg>
+          <div class="gallery-close-button">
+            <svg width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#CCCCCC" stroke-width="2"/>
+              <line x1="21.6075" y1="19.5561" x2="47.6076" y2="45.5561" stroke="#CCCCCC" stroke-width="3"/>
+              <line x1="20.3534" y1="45.5561" x2="46.3534" y2="19.5561" stroke="#CCCCCC" stroke-width="3"/>
+            </svg>
+          </div>
+          <svg id='next-arrow' width="113" height="28" viewBox="0 0 113 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M102.5 26.9904L111 14L102.5 1.00964" stroke="#CCCCCC" stroke-width="3"/>
+            <path d="M110 14L0 14" stroke="#CCCCCC" stroke-width="3"/>
+          </svg>
         </div>
       </div>
       <div class="photo-gallery-mobile">
         <div class="slider-for">
-          <div class="slider-for__item"><img src="img/football.png" alt="gallery image"></div>
-          <div class="slider-for__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
-          <div class="slider-for__item"><img src="img/football.png" alt="gallery image"></div>
-          <div class="slider-for__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/gallery-img5.jpg" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/gallery-img2.jpg" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/gallery-img3.jpg" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/gallery-img4.jpg" alt="gallery image"></div>
+          <div class="slider-for__item"><img src="img/gallery-img1.jpg" alt="gallery image"></div>
         </div>
         <div class="slider-nav">
-          <div class="slider-nav__item"><img src="img/football.png" alt="gallery image"></div>
-          <div class="slider-nav__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
-          <div class="slider-nav__item"><img src="img/football.png" alt="gallery image"></div>
-          <div class="slider-nav__item"><img src="img/Slider-image-1.png" alt="gallery image"></div>
-        </div><svg class='gallery-close-button' width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg"> <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#EDCFA4" stroke-width="2"/> <line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#EDCFA4" stroke-width="3"/> <line x1="19.8056" y1="44.9393" x2="45.8056" y2="18.9393" stroke="#EDCFA4" stroke-width="3"/> </svg>
+          <div class="slider-nav__item"><img src="img/gallery-img5.jpg" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/gallery-img2.jpg" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/gallery-img3.jpg" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/gallery-img4.jpg" alt="gallery image"></div>
+          <div class="slider-nav__item"><img src="img/gallery-img1.jpg" alt="gallery image"></div>
+        </div>
+        <svg class='gallery-close-button' width="67" height="67" viewBox="0 0 67 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="33.2401" cy="33.2401" r="32.2401" stroke="#CCCCCC" stroke-width="2"/>
+          <line x1="21.0607" y1="18.9393" x2="47.0607" y2="44.9394" stroke="#CCCCCC" stroke-width="3"/>
+          <line x1="19.8056" y1="44.9393" x2="45.8056" y2="18.9393" stroke="#CCCCCC" stroke-width="3"/>
+        </svg>
       </div>
     </div>
 
