@@ -2153,7 +2153,8 @@ body {
 
 .team-content__image img {
     width: 100%;
-    height: 100%
+    height: 100%;
+    object-fit: cover;
 }
 
 .team-content .heading-bold {
@@ -2161,11 +2162,14 @@ body {
 }
 
 .team-content__line {
-    min-height: 100%
+    min-height: 100%;
+    width: 155px;
 }
 
 .team-content__line img {
-    height: 100%
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .player-slider {
@@ -2192,14 +2196,14 @@ body {
     padding: 50px 105px;
     width: 100%;
     max-height: 91px;
-    background-image: url(../img/player-slider-background.png);
+    background-image: url(../img/camo-wallpaper.jpg);
     background-size: cover;
     background-position: top left
 }
 
 .player-slider__photo {
     border-radius: 50%;
-    border: 9px solid #3b4b21;
+    border: 9px solid #cccccc;
     position: absolute;
     max-height: 222px;
     max-width: 222px;
@@ -2215,6 +2219,7 @@ body {
 
 .player-slider__photo-text {
     font-size: 95px;
+    color: #3b4b21;
     background-color: #fff;
     display: -webkit-box;
     display: -webkit-flex;
@@ -2232,6 +2237,7 @@ body {
 
 .player-slider__item-inner {
     height: 100%;
+    color: #cccccc;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -3900,11 +3906,11 @@ body .hide {
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
-        background: 0 0;
+        /*background: 0 0;*/
         padding: 0;
-        background-image: url(../img/background-image-palayer-mobile.png);
+        /*background-image: url(../img/background-image-palayer-mobile.png);
         background-size: cover;
-        background-position: top left;
+        background-position: top left;*/
         padding-top: 130px;
         margin-top: 100px;
         max-height: none;
