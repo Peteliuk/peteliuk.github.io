@@ -247,27 +247,27 @@
 										<div class="form-row">
 
 											<div class="col-12 col-md-6 form-group">
-												<input type="text" id="cf-name" name="cf-name" placeholder="Enter your name" class="form-control fc-semi-white rounded-0 required error" aria-invalid="true"><label id="cf-name-error" class="error" for="cf-name" style="display: none;">This field is required.</label>
+												<input type="text" id="cf-name" name="name" placeholder="Imię" class="form-control fc-semi-white rounded-0 required error" aria-invalid="true">
 											</div>
 
 											<div class="col-12 col-md-6 form-group">
-												<input type="email" id="cf-email" name="cf-email" placeholder="Enter your email address" class="form-control fc-semi-white rounded-0 required error"><label id="cf-email-error" class="error" for="cf-email" style="display: none;">This field is required.</label>
+												<input type="email" id="cf-email" name="email" placeholder="Adres email" class="form-control fc-semi-white rounded-0 required error">
 											</div>
 
 											<div class="col-12 form-group">
-												<input type="text" id="cf-subject" name="cf-subject" placeholder="Subject (Optional)" class="form-control fc-semi-white rounded-0">
+												<select name="device" class="form-control fc-semi-white">
+													<option value="iPhone">iPhone</option>
+													<option value="iPad">iPad</option>
+													<option value="Watch">Watch</option>
+												</select>
 											</div>
 
 											<div class="col-12 mb-4 form-group mb-5">
-												<textarea name="cf-message" id="cf-message" placeholder="Here goes your message" class="form-control fc-semi-white rounded-0 required error" rows="7"></textarea><label id="cf-message-error" class="error" for="cf-message" style="display: none;">This field is required.</label>
-											</div>
-
-											<div class="col-12 d-none">
-												<input type="text" id="cf-botcheck" name="cf-botcheck" value="" class="form-control fc-semi-white rounded-0">
+												<textarea name="message" id="cf-message" placeholder="Wiadomość" class="form-control fc-semi-white rounded-0 required error" rows="7"></textarea><span class="success mt-2 hidden">Message</span>
 											</div>
 
 											<div class="col-12 text-center">
-												<button class="btn btn-primary btn-shadow rounded-0" type="submit" id="cf-submit" name="cf-submit">Send Message</button>
+												<button class="btn btn-primary btn-shadow rounded-0" type="submit" id="cf-submit" name="cf-submit">wyślij</button>
 											</div>
 
 										</div>
@@ -308,7 +308,6 @@
 		<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="assets/vendor/fullPage.js/dist/scrolloverflow.min.js"></script>
 		<script src="assets/vendor/fullPage.js/dist/jquery.fullpage.min.js"></script>
-		<script src="assets/vendor/jquery-validation/dist/jquery.validate.min.js"></script>
 		<script src="assets/vendor/jquery-form/dist/jquery.form.min.js"></script>
 		<script src="assets/vendor/jQuery.countdown/dist/jquery.countdown.min.js"></script>
 		<script src="assets/vendor/granim.js/dist/granim.min.js"></script>
