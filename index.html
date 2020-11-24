@@ -1,97 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="icon" href="assets/img/fav.png" sizes="32x32">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Liubomyr Peteliuk</title>
+	<meta name="description" content="This is my personal website. Here You can see some information about me, my experience with front-end and back-end technologies and other.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie-edge">
-	<title>Любомир Петелюк</title>
-	<link rel="icon" href="images/fav.png" sizes="32x32">
-	<link rel="stylesheet" href="styles/styles.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-		<a class="navbar-brand"  data-toggle="modal" data-target="#exampleModalScrollable">About</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				<span class="dropdown">My projects</span>
-			</a>
-			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-				<a class="dropdown-item" href="https://github.com/Peteliuk/dekanat-api" target="_blank">"Dekanat" API</a>
-				<a class="dropdown-item" href="https://file-hosting-flask.herokuapp.com/" target="_blank">File Hosting Web App</a>
-				<a class="dropdown-item" href="https://tournament-site-flask.herokuapp.com/" target="_blank">Tournaments Manager Web App</a>
-				<a class="dropdown-item" href="https://github.com/Peteliuk/practicebot/" target="_blank">Task Manager Telegram Bot</a>
-				<a class="dropdown-item" href="https://github.com/Peteliuk/MKE" target="_blank">Mouse & Keyboard Emulator</a>
-				<a class="dropdown-item" href="https://github.com/Peteliuk/Voice-Assistant-for-PNU" target="_blank">Android app: "Voice assistant for university"</a>
-				<a class="dropdown-item" href="https://sunport.if.ua/" target="_blank">Web-site: sunport.com.ua</a>
-				<a class="dropdown-item" href="/projects/bhromaon/" target="_blank">Web-site layout: "Bhromaon"</a>
-				<a class="dropdown-item" href="/projects/logistic/" target="_blank">Web-site layout: "Logistic"</a>
-				<a class="dropdown-item" href="/projects/family_farms/" target="_blank">Web-site layout: "Family Farms"</a>
-				<a class="dropdown-item" href="/projects/creative_digital_project/" target="_blank">Web-site layout: "Creative Digital Project"</a>
-				<a class="dropdown-item" href="/projects/screen_keyboard/" target="_blank">JavaScript Screen Keyboard</a>
-				<a class="dropdown-item" href="https://github.com/Peteliuk/OPM" target="_blank">Artificial Intelligence toy car</a>
+	<!-- Header -->
+	<header class="header">
+		<nav class="header__navbar">
+			<div class="navbar__left-side-wrapper">
+				<span class="about-me">About Me</span>
+				<span class="projects dropdown-tab" data-dropdown-menu="projects">Projects 
+					<!-- Dropdown caret svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" viewBox="0 0 320 512">
+						<path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/>
+					</svg>
+				</span>
 			</div>
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					Links:
-				</li>
-				<li class="nav-item">
-					<a href="https://github.com/Peteliuk" target="_blank"><i class="fab fa-github"></i></a>
-				</li>
-				<li class="nav-item">
-					<a href="https://www.linkedin.com/in/liubomyr-peteliuk-0178421a3" target="_blank"><i class="fab fa-linkedin"></i></a>
-				</li>
-				<li class="nav-item">
-					<a href="https://t.me/liubomyr" target="_blank"><i class="fab fa-telegram"></i></a>
-				</li>
-				<li class="nav-item">
-					<a href="https://www.facebook.com/profile.php?id=100017329844463" target="_blank"><i class="fab fa-facebook"></i></a>
-				</li>
-				<li class="nav-item">
-					<a href="https://www.youtube.com/channel/UCu6M8CX5ahQpbStFR2rFuaA" target="_blank"><i class="fab fa-youtube"></i></a>
-				</li>  
-			</ul>	    
-		</div>
-	</nav>
+			<span class="navbar__languages-wrapper dropdown-tab" data-dropdown-menu="languages">Language 
+				<!-- Dropdown caret svg -->
+				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" viewBox="0 0 320 512">
+					<path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/>
+				</svg>
+			</span>
+		</nav>
+	</header>
 
-	<div class="header">
-		<p class="header__title">Liubomyr Peteliuk</p>
-		<p class="header__subtitle">Web Developer</p>
+	<!-- Content -->
+	<section class="content">
+		<div class="content__wrapper">
+			<h1 class="title">Liubomyr Peteliuk</h1>
+			<h2 class="subtitle">Web Developer</h2>
+		</div>
+	</section>
+
+	<!-- Dropdown Projects -->
+	<div class="dropdown-menu dropdown-menu--projects hidden" data-dropdown-menu="projects">
+		<div class="dropdown-menu__item">
+			<span class="item__title">"Dekan.at" API</span>
+			<p class="item__description">Nocommercial project. This project is a part of graduate work. Created with Python, Flask.</p>
+			<span class="item__links">Links: 
+				<a href="https://github.com/Peteliuk/dekanat-api" target="_blank">
+					<!-- GitHub svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">
+						<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+					</svg>
+				</a>
+			</span>
+		</div>
+		<div class="dropdown-menu__item">
+			<span class="item__title">File Hosting web app</span>
+			<p class="item__description">Nocommercial project. This is a practice project for BVBlogic. Created with Python, Flask.</p>
+			<span class="item__links">Links: 
+				<a href="https://github.com/Peteliuk/File_Hosting" target="_blank">
+					<!-- GitHub svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">
+						<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+					</svg>
+				</a>
+				<a href="https://file-hosting-flask.herokuapp.com/" target="_blank">
+					<!-- Heroku svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 400" preserveAspectRatio="xMinYMin meet">
+						<path d="M28.083 398.289V363.51c0-2.452-1.798-3.51-3.917-3.51-4.248 0-9.554 1.058-14.37 3.181v35.108H0v-64.576h9.795v21.304c4.656-1.712 10.206-3.18 15.758-3.18 8.898 0 12.246 5.469 12.246 12.976v33.476h-9.716zm27.999-21.063c.326 11.674 2.613 13.961 9.794 13.961 5.634 0 12.002-1.879 16.902-3.757l1.632 7.346c-5.226 2.37-11.593 4.655-19.183 4.655-16.33 0-18.862-8.978-18.862-23.268 0-7.835.573-14.939 2.45-21.47 4.898-1.878 11.43-2.857 19.673-2.857 13.393 0 17.473 7.43 17.473 20.41v4.98H56.082zM68.488 360c-2.935 0-7.59.082-11.427.813-.406 1.96-.899 4.655-1.062 9.636h20.41c0-6.778-1.225-10.449-7.921-10.449zm35.837 3.181v35.108h-9.797v-39.515c8.246-4.489 16.981-5.877 22.698-6.285v8.164c-4 .326-9.064.816-12.9 2.528zm38.778 36.25c-14.616 0-21.228-7.183-21.228-23.594 0-17.389 8.735-24 21.228-24 14.612 0 21.226 7.182 21.226 23.592 0 17.39-8.737 24.002-21.226 24.002zm0-39.43c-7.512 0-11.675 4.325-11.675 15.836 0 12.574 3.51 15.35 11.675 15.35 7.51 0 11.674-4.247 11.674-15.758 0-12.574-3.51-15.429-11.674-15.429zm68.49 38.288H200.08c-2.692-7.184-6.45-14.532-12.246-20.9h-5.144v20.9h-9.796v-64.576h9.796v37.062h4.573c4.98-5.144 8.816-11.509 11.511-17.797h11.02c-3.754 7.593-8.57 14.287-13.959 19.757 6.45 8.164 11.511 16.818 15.757 25.554zm18.363 1.142c-8.897 0-12.244-5.468-12.244-12.98v-33.473h9.714v34.697c0 2.452 1.794 3.512 3.917 3.512 4.246 0 10.042-1.06 14.86-3.184v-35.025H256v39.35c-11.593 6.369-20.493 7.103-26.044 7.103zM225.628 317.253H30.258C13.545 317.253 0 303.708 0 286.998V30.256C0 13.546 13.546 0 30.257 0h195.37c16.71 0 30.26 13.546 30.26 30.256v256.742c0 16.71-13.55 30.255-30.26 30.255z" fill="#6762A6"/>
+						<path d="M160.36 273.6V147.61s8.195-30.15-100.943 12.334c-.2.539-.2-116.504-.2-116.504l35.66-.22v74.991s99.846-39.325 99.846 29.824V273.6h-34.362zm20.32-184.994h-37.824c13.615-16.646 25.94-45.167 25.94-45.167h39.11s-6.696 18.587-27.225 45.167zM59.865 273.382v-71.748l35.878 35.877-35.878 35.871z" fill="#FFF"/>
+					</svg>
+				</a>
+			</span>
+		</div>
+		<div class="dropdown-menu__item">
+			<span class="item__title">Tournaments Manager web app</span>
+			<p class="item__description">Nocommercial project. This is a Term Paper for my friend. Created with Python, Flask.</p>
+			<span class="item__links">Links: 
+				<a href="https://github.com/Peteliuk/Tournament_Site" target="_blank">
+					<!-- GitHub svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">
+						<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+					</svg>
+				</a>
+				<a href="http://tournament-site-flask.herokuapp.com/" target="_blank">
+					<!-- Heroku svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 400" preserveAspectRatio="xMinYMin meet">
+						<path d="M28.083 398.289V363.51c0-2.452-1.798-3.51-3.917-3.51-4.248 0-9.554 1.058-14.37 3.181v35.108H0v-64.576h9.795v21.304c4.656-1.712 10.206-3.18 15.758-3.18 8.898 0 12.246 5.469 12.246 12.976v33.476h-9.716zm27.999-21.063c.326 11.674 2.613 13.961 9.794 13.961 5.634 0 12.002-1.879 16.902-3.757l1.632 7.346c-5.226 2.37-11.593 4.655-19.183 4.655-16.33 0-18.862-8.978-18.862-23.268 0-7.835.573-14.939 2.45-21.47 4.898-1.878 11.43-2.857 19.673-2.857 13.393 0 17.473 7.43 17.473 20.41v4.98H56.082zM68.488 360c-2.935 0-7.59.082-11.427.813-.406 1.96-.899 4.655-1.062 9.636h20.41c0-6.778-1.225-10.449-7.921-10.449zm35.837 3.181v35.108h-9.797v-39.515c8.246-4.489 16.981-5.877 22.698-6.285v8.164c-4 .326-9.064.816-12.9 2.528zm38.778 36.25c-14.616 0-21.228-7.183-21.228-23.594 0-17.389 8.735-24 21.228-24 14.612 0 21.226 7.182 21.226 23.592 0 17.39-8.737 24.002-21.226 24.002zm0-39.43c-7.512 0-11.675 4.325-11.675 15.836 0 12.574 3.51 15.35 11.675 15.35 7.51 0 11.674-4.247 11.674-15.758 0-12.574-3.51-15.429-11.674-15.429zm68.49 38.288H200.08c-2.692-7.184-6.45-14.532-12.246-20.9h-5.144v20.9h-9.796v-64.576h9.796v37.062h4.573c4.98-5.144 8.816-11.509 11.511-17.797h11.02c-3.754 7.593-8.57 14.287-13.959 19.757 6.45 8.164 11.511 16.818 15.757 25.554zm18.363 1.142c-8.897 0-12.244-5.468-12.244-12.98v-33.473h9.714v34.697c0 2.452 1.794 3.512 3.917 3.512 4.246 0 10.042-1.06 14.86-3.184v-35.025H256v39.35c-11.593 6.369-20.493 7.103-26.044 7.103zM225.628 317.253H30.258C13.545 317.253 0 303.708 0 286.998V30.256C0 13.546 13.546 0 30.257 0h195.37c16.71 0 30.26 13.546 30.26 30.256v256.742c0 16.71-13.55 30.255-30.26 30.255z" fill="#6762A6"/>
+						<path d="M160.36 273.6V147.61s8.195-30.15-100.943 12.334c-.2.539-.2-116.504-.2-116.504l35.66-.22v74.991s99.846-39.325 99.846 29.824V273.6h-34.362zm20.32-184.994h-37.824c13.615-16.646 25.94-45.167 25.94-45.167h39.11s-6.696 18.587-27.225 45.167zM59.865 273.382v-71.748l35.878 35.877-35.878 35.871z" fill="#FFF"/>
+					</svg>
+				</a>
+			</span>
+		</div>
+		<div class="dropdown-menu__item">
+			<span class="item__title">Task Manager telegram bot</span>
+			<p class="item__description">Nocommercial project. This is a practice project for BVBlogic. Created with Python, Django.</p>
+			<span class="item__links">Link:
+				<a href="https://github.com/Peteliuk/practicebot/" target="_blank">
+					<!-- GitHub svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">
+						<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+					</svg>
+				</a>
+			</span>
+		</div>
+		<div class="dropdown-menu__item">
+			<span class="item__title">Screen Keyboard</span>
+			<p class="item__description">Nocommercial project. It allows you to input text using mouse. It has ukrainian and english languages. Created with HTML, CSS, JavaScript.</p>
+			<span class="item__links">Link: 
+				<a href="https://github.com/Peteliuk/Screen_Keyboard" target="_blank">
+					<!-- GitHub svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">
+						<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+					</svg>
+				</a>
+				<a href="/projects/screen-keyboard" target="_blank">
+					<!-- External link svg -->
+					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="external-link-alt" class="svg-inline--fa fa-external-link-alt fa-w-16" role="img" viewBox="0 0 512 512">
+						<path fill="currentColor" d="M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z"/>
+					</svg>
+				</a>
+			</span>
+		</div>
+	</div>
+
+	<!-- Dropdown Languages -->
+	<div class="dropdown-menu dropdown-menu--languages hidden" data-dropdown-menu="languages">
+		<div class="dropdown-menu__item dropdown-menu__item--current-language">
+			<span class="item__title">English</span>
+		</div>
+		<div class="dropdown-menu__item">
+			<span class="item__title">Русский</span>
+		</div>
+		<div class="dropdown-menu__item">
+			<span class="item__title">Українська</span>
+		</div>
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-scrollable" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalScrollableTitle">About me</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
+	<div class="modal-wrapper">
+		<div class="modal">
+			<div class="modal__header">
+				<div class="personal-info">
+					<h4>Liubomyr Bogdanovich</h4>
+					<h3>P e t e l i u k</h3>
+					<p><span>Age:</span>21</p>
+					<p><span>Now:</span>Wordpress Developer at CIT Lab</p>
 				</div>
-				<div class="modal-body">
-					<p><b>Location:</b> Ivano-Frankivsk, Ukraine</p>
-					<p><b>Age:</b> 20 y.o.</p>
-					<p><b>Status:</b> Wordpress developer at <a href="http://citlab.net/" class="fab">CITlab</a></p>
-					<p>I'm engaged in web-development more then 1 year. Have sufficient experience with HTML5, CSS3, SCSS, JavaScript (ES6), PHP7, Wordpress, Python 3, Flask, Django, MySQL, NoSQL, and some experience with Java, Arduino, C++, Android development.</p>
+				<img src="assets/img/personal-image.jpg" alt="Personal image" class="personal-image">	
+			</div>
+			<div class="modal__body">
+				<div class="item">
+					<span class="item__title">Technologies</span>
+					<ul class="item__list">
+						<li>HTML5, CSS3, SCSS</li>
+						<li>JS (ES6), jQuery</li>
+						<li>PHP7, Wordpress</li>
+						<li>Python 3, Flask, Django</li>
+						<li>MySQL, SQLite</li>
+						<li>JSON, XML</li>
+					</ul>
+				</div>
+				<div class="item">
+					<span class="item__title">Skills</span>
+					<ul class="item__list">
+						<li>PSD & Figma to HTML</li>
+						<li>Wordpress Templates & Plugins development</li>
+						<li>Telegram Bots development</li>
+						<li>API development</li>
+						<li>Working with Stripe, PayPal, LiqPay billing systems</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal__footer">
+				<div class="links">
+					<span>Links:</span>
+					<a href="https://github.com/Peteliuk" target="_blank">
+						<!-- GitHub svg -->
+						<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">
+							<path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+						</svg>
+					</a>
+					<a href="https://t.me/liubomyr" target="_blank">
+						<!-- Telegram svg -->
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="telegram" class="svg-inline--fa fa-telegram fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+							<path fill="currentColor" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"></path>
+						</svg>
+					</a>
+					<a href="https://www.linkedin.com/in/liubomyr-peteliuk-0178421a3/" target="_blank">
+						<!-- LinkedIn svg -->
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" class="svg-inline--fa fa-linkedin fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path>
+						</svg>
+					</a>
+					<a href="https://www.facebook.com/profile.php?id=100017329844463" target="_blank">
+						<!-- Facebook svg -->
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook" class="svg-inline--fa fa-facebook fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+							<path fill="currentColor" d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path>
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/liubomyr_peteliuk/" target="_blank">
+						<!-- Instagram svg -->
+						<svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-inline--fa fa-instagram fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<!-- My JS -->
-	<script src="scripts/script.js"></script>
-	<!-- Font Awesome -->
-  	<script src="https://kit.fontawesome.com/f04bed437a.js"></script>
+	<!-- Main Script -->
+	<script src="assets/js/script.js"></script>
 </body>
 </html>
