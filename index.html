@@ -4,7 +4,7 @@
 	<link rel="icon" href="assets/img/fav.png" sizes="32x32">
 	<link rel="stylesheet" href="assets/css/style.css">
 	<title>Liubomyr Peteliuk</title>
-	<meta name="description" content="This is my personal website. Here You can see some information about me, my experience with front-end and back-end technologies and other.">
+	<meta name="description" content="Liubomyr Peteliuk's personal website.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie-edge">
@@ -15,15 +15,15 @@
 	<header class="header">
 		<nav class="header__navbar">
 			<div class="navbar__left-side-wrapper">
-				<span class="about-me">About Me</span>
-				<span class="projects dropdown-tab hidden" data-dropdown-menu="projects">Projects 
+				<span class="about-me" data-translate="about-me">About Me</span>
+				<span class="projects dropdown-tab hidden" data-translate="projects" data-dropdown-menu="projects">Projects 
 					<!-- Dropdown caret svg -->
 					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" viewBox="0 0 320 512">
 						<path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/>
 					</svg>
 				</span>
 			</div>
-			<span class="navbar__languages-wrapper dropdown-tab" data-dropdown-menu="languages">Language 
+			<span class="navbar__languages-wrapper dropdown-tab" data-translate="language" data-dropdown-menu="languages">Language 
 				<!-- Dropdown caret svg -->
 				<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" class="svg-inline--fa fa-caret-down fa-w-10" role="img" viewBox="0 0 320 512">
 					<path fill="currentColor" d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z"/>
@@ -35,8 +35,8 @@
 	<!-- Content -->
 	<section class="content">
 		<div class="content__wrapper">
-			<h1 class="title">Liubomyr Peteliuk</h1>
-			<h2 class="subtitle">Web Developer</h2>
+			<h1 class="title" data-translate="content-title">Liubomyr Peteliuk</h1>
+			<h2 class="subtitle" data-translate="content-subtitle">Web Developer</h2>
 		</div>
 	</section>
 
@@ -120,15 +120,9 @@
 
 	<!-- Dropdown Languages -->
 	<div class="dropdown-menu dropdown-menu--languages hidden" data-dropdown-menu="languages">
-		<div class="dropdown-menu__item dropdown-menu__item--current-language">
-			<span class="item__title">English</span>
-		</div>
-		<div class="dropdown-menu__item">
-			<span class="item__title">Русский</span>
-		</div>
-		<div class="dropdown-menu__item">
-			<span class="item__title">Українська</span>
-		</div>
+		<a href="/" class="dropdown-menu__item" data-lang="en">English</a>
+		<a href="/?ru" class="dropdown-menu__item" data-lang="ru">Русский</a>
+		<a href="/?ua" class="dropdown-menu__item" data-lang="ua">Українська</a>
 	</div>
 
 	<!-- Modal -->
@@ -136,17 +130,17 @@
 		<div class="modal">
 			<div class="modal__header">
 				<div class="personal-info">
-					<h4>Liubomyr Bogdanovich</h4>
-					<h3>P e t e l i u k</h3>
-					<p><span>Age:</span>21</p>
-					<p><span>Now:</span>Wordpress Developer at CIT Lab</p>
+					<h4 data-translate="personal-info-title">Liubomyr Bogdanovich</h4>
+					<h3 data-translate="personal-info-subtitle">P e t e l i u k</h3>
+					<p><span class="personal-info__key" data-translate="personal-info-age">Age:</span><span class="personal-info__value">21</span></p>
+					<p><span class="personal-info__key" data-translate="personal-info-now">Now:</span><span class="personal-info__value" data-translate="personal-info-now-value">Wordpress Developer at CIT Lab</span></p>
 				</div>
 				<img src="assets/img/personal-image.jpg" alt="Personal image" class="personal-image">
 				<span class="close-modal">X</span>	
 			</div>
 			<div class="modal__body">
 				<div class="item">
-					<span class="item__title">Technologies</span>
+					<span class="item__title" data-translate="technologies">Technologies</span>
 					<ul class="item__list">
 						<li>HTML5, CSS3, SCSS</li>
 						<li>JS (ES6), jQuery</li>
@@ -157,19 +151,19 @@
 					</ul>
 				</div>
 				<div class="item">
-					<span class="item__title">Skills</span>
+					<span class="item__title" data-translate="skills">Skills</span>
 					<ul class="item__list">
-						<li>PSD & Figma to HTML</li>
-						<li>Wordpress Templates & Plugins development</li>
-						<li>Telegram Bots development</li>
-						<li>API development</li>
-						<li>Working with Stripe, PayPal, LiqPay billing systems</li>
+						<li data-translate="psd-figma-to-html">PSD & Figma to HTML</li>
+						<li data-translate="wp-templates-plugins-dev">Wordpress Templates & Plugins development</li>
+						<li data-translate="tg-bots-dev">Telegram Bots development</li>
+						<li data-translate="api-dev">API development</li>
+						<li data-translate="working-with-billing-sys">Working with Stripe, PayPal, LiqPay billing systems</li>
 					</ul>
 				</div>
 			</div>
 			<div class="modal__body modal__body--mobile">
 				<div class="item">
-					<span class="item__title">Technologies</span>
+					<span class="item__title" data-translate="technologies">Technologies</span>
 					<ul class="item__list">
 						<li>HTML5, CSS3, SCSS</li>
 						<li>JS (ES6), jQuery</li>
@@ -180,19 +174,19 @@
 					</ul>
 				</div>
 				<div class="item">
-					<span class="item__title">Skills</span>
+					<span class="item__title" data-translate="skills">Skills</span>
 					<ul class="item__list">
-						<li>PSD & Figma to HTML</li>
-						<li>Wordpress Templates & Plugins development</li>
-						<li>Telegram Bots development</li>
-						<li>API development</li>
-						<li>Working with Stripe, PayPal, LiqPay billing systems</li>
+						<li data-translate="psd-figma-to-html">PSD & Figma to HTML</li>
+						<li data-translate="wp-templates-plugins-dev">Wordpress Templates & Plugins development</li>
+						<li data-translate="tg-bots-dev">Telegram Bots development</li>
+						<li data-translate="api-dev">API development</li>
+						<li data-translate="working-with-billing-sys">Working with Stripe, PayPal, LiqPay billing systems</li>
 					</ul>
 				</div>
 			</div>
 			<div class="modal__footer">
 				<div class="links">
-					<span>Links:</span>
+					<span data-translate="links">Links:</span>
 					<a href="https://github.com/Peteliuk" target="_blank">
 						<!-- GitHub svg -->
 						<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" class="svg-inline--fa fa-github fa-w-16" role="img" viewBox="0 0 496 512">

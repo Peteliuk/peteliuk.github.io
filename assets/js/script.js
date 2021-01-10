@@ -3041,6 +3041,69 @@
 
 // vars
 const modalWrapper = $('.modal-wrapper');
+const currentUrl = location.href;
+const translations = {
+	'en': {
+		'content-title': 'Liubomyr Peteliuk',
+		'content-subtitle': 'Web Developer',
+		'about-me': 'About Me',
+		'projects': 'Projects',
+		'language': 'Language',
+		'personal-info-title': 'Liubomyr Bogdanovich',
+		'personal-info-subtitle': 'P e t e l i u k',
+		'personal-info-age': 'Age:',
+		'personal-info-now': 'Now:',
+		'personal-info-now-value': 'Wordpress Developer at CIT Lab',
+		'technologies': 'Technologies',
+		'skills': 'Skills',
+		'psd-figma-to-html': 'PSD & Figma to HTML',
+		'wp-templates-plugins-dev': 'Wordpress Templates & Plugins development',
+		'tg-bots-dev': 'Telegram Bots development',
+		'api-dev': 'API development',
+		'working-with-billing-sys': 'Working with Stripe, PayPal, LiqPay billing systems',
+		'links': 'Links:'
+	},
+	'ru': {
+		'content-title': 'Любомир Петелюк',
+		'content-subtitle': 'Веб разработчик',
+		'about-me': 'Обо мне',
+		'projects': 'Проекты',
+		'language': 'Язык',
+		'personal-info-title': 'Любомир Богданович',
+		'personal-info-subtitle': 'П е т е л ю к',
+		'personal-info-age': 'Возраст:',
+		'personal-info-now': 'Сейчас:',
+		'personal-info-now-value': 'Wordpress разработчик в CIT Lab',
+		'technologies': 'Технологии',
+		'skills': 'Навыки',
+		'psd-figma-to-html': 'PSD & Figma в HTML',
+		'wp-templates-plugins-dev': 'Разработка Wordpress шаблонов и плагинов',
+		'tg-bots-dev': 'Разработка Telegram ботов',
+		'api-dev': 'Разработка API',
+		'working-with-billing-sys': 'Работа из системами оплаты Stripe, PayPal и LiqPay',
+		'links': 'Ссылки:'
+	},
+	'ua': {
+		'content-title': 'Любомир Петелюк',
+		'content-subtitle': 'Веб розробник',
+		'about-me': 'Про мене',
+		'projects': 'Проекти',
+		'language': 'Мова',
+		'personal-info-title': 'Любомир Богданович',
+		'personal-info-subtitle': 'П е т е л ю к',
+		'personal-info-age': 'Вік:',
+		'personal-info-now': 'Зараз:',
+		'personal-info-now-value': 'Wordpress розробник в CIT Lab',
+		'technologies': 'Технології',
+		'skills': 'Навики',
+		'psd-figma-to-html': 'PSD & Figma в HTML',
+		'wp-templates-plugins-dev': 'Розробка Wordpress шаблонів та плагінів',
+		'tg-bots-dev': 'Розробка Telegram ботів',
+		'api-dev': 'Розробка API',
+		'working-with-billing-sys': 'Робота із системами оплати Stripe, PayPal та LiqPay',
+		'links': 'Посилання:'
+	}
+}
 
 $(document).ready(function(){
 	// show/hide dropdown menu
@@ -3063,6 +3126,7 @@ $(document).ready(function(){
 		modalWrapper.removeClass('modal-wrapper--active');
 	});
 
+	// make mobile modal body slider
 	$('.modal__body--mobile').slick({
 		prevArrow: '<svg class=\'prev-arrow\' width="30" height="30" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M23.3533 28.5581L19.0068 27.3925L18.6966 28.5493L19.0025 29.7072L23.3533 28.5581ZM34.0911 51.5911L27.7041 27.4089L19.0025 29.7072L25.3895 53.8893L34.0911 51.5911ZM27.6997 29.7236L34.0867 5.9058L25.3938 3.57472L19.0068 27.3925L27.6997 29.7236Z" fill="#EDCFA4"/></svg>',
     	nextArrow: '<svg class=\'next-arrow\' width="30" height="30" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M34.387 28.9224L38.7334 30.0879L39.0436 28.9312L38.7378 27.7732L34.387 28.9224ZM23.6492 5.88939L30.0362 30.0715L38.7378 27.7732L32.3508 3.59112L23.6492 5.88939ZM30.0405 27.7568L23.6535 51.5747L32.3464 53.9057L38.7334 30.0879L30.0405 27.7568Z" fill="#EDCFA4"/></svg>',
@@ -3079,7 +3143,17 @@ $(document).ready(function(){
 
 		// close modal
 		modalWrapper[0] == e.target && modalWrapper.removeClass('modal-wrapper--active');
-	})
+	});
+
+	// translate
+
+	let langCode = 'en';
+	if(/\?ru|\?ua/g.test(currentUrl)){
+		langCode = currentUrl.slice(-2);
+	}
+
+	translateSite(langCode)
+
 });
 
 function hideDropdown(){
@@ -3091,6 +3165,15 @@ function showDropdown(tab){
 	hideDropdown();
 	tab.addClass('dropdown-tab--active');
 	$(`.dropdown-menu[data-dropdown-menu="${tab.attr('data-dropdown-menu')}"]`).removeClass('hidden');
+}
+
+function translateSite(langCode){
+	let translationsArr = translations[langCode];
+	for(let key in translationsArr){
+		$(`[data-translate="${key}"]`).text(translationsArr[key]);
+	}
+
+	$(`[data-lang="${langCode}"]`).addClass('dropdown-menu__item--current-language');
 }
 
 // Canvas

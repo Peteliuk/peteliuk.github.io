@@ -212,19 +212,19 @@ canvas {
 }
 
 .dropdown-menu--languages .dropdown-menu__item {
+	display: block;
 	padding: 15px 20px;
 	margin-bottom: 0;
 	text-align: right;
 	cursor: pointer;
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 .dropdown-menu--languages .dropdown-menu__item--current-language {
 	background: rgba(0, 115, 170, .25);
-	cursor: default;
-}
-
-.dropdown-menu--languages .dropdown-menu__item--current-language .item__title {
-	cursor: default;
 }
 
 .dropdown-menu--languages .dropdown-menu__item:not(.dropdown-menu__item--current-language):hover {
@@ -299,18 +299,18 @@ canvas {
     margin-bottom: 20px;
 }
 
-.modal__header .personal-info p {
-    font-size: 17px;
-    font-style: italic;
-    color: rgba(255, 255, 255, .85);
-}
-
-.modal__header .personal-info p span {
+.modal__header .personal-info p .personal-info__key {
 	font-size: 18px;
     font-weight: 600;
     margin-right: 10px;
     font-style: normal;
     color: rgba(255, 255, 255, 1);
+}
+
+.modal__header .personal-info p .personal-info__value {
+    font-size: 17px;
+    font-style: italic;
+    color: rgba(255, 255, 255, .85);
 }
 
 .modal__header .personal-image {
@@ -466,7 +466,8 @@ canvas {
 	}
 
 	.modal__body .item .item__list,
-	.modal__header .personal-info p {
+	.modal__header .personal-info p .personal-info__key,
+	.modal__header .personal-info p .personal-info__value, {
 		font-size: 20px;
 	}
 }
@@ -541,8 +542,8 @@ canvas {
 		font-size: 40px;
 	}
 
-	.modal__header .personal-info p,
-	.modal__header .personal-info p span,
+	.modal__header .personal-info p .personal-info__key,
+	.modal__header .personal-info p .personal-info__value,
 	.modal__body .item .item__title,
 	.modal__body .item .item__list,
 	.modal__footer .links span {
@@ -583,8 +584,12 @@ canvas {
 		font-size: 25px;
 	}
 
-	.modal__header .personal-info p,
-	.modal__header .personal-info p span,
+	.modal__header .personal-info h4 {
+		margin-bottom: 6px;
+	}
+
+	.modal__header .personal-info p .personal-info__key,
+	.modal__header .personal-info p .personal-info__value,
 	.modal__body .item .item__title,
 	.modal__body .item .item__list,
 	.modal__footer .links span {
@@ -611,6 +616,11 @@ canvas {
 	.content .content__wrapper .subtitle {
 		font-size: 18px;
 	}
+
+	/* Modal */
+	.modal__header .personal-info h4 {
+		margin-bottom: 2px;
+	}
 }
 
 
@@ -621,8 +631,8 @@ canvas {
 		font-size: 22px;
 	}
 
-	.modal__header .personal-info p,
-	.modal__header .personal-info p span,
+	.modal__header .personal-info p .personal-info__key,
+	.modal__header .personal-info p .personal-info__value,
 	.modal__body .item .item__title,
 	.modal__body .item .item__list,
 	.modal__footer .links span {
